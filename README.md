@@ -1,10 +1,10 @@
 # 邓清
 
 ## 个人信息
-Github: https://github.com/1247748612
-Telegram: @luckingforme
-工作经验：2.5年
-年龄：21
+- Github: https://github.com/1247748612
+- Telegram: @luckingforme
+- 工作经验：2.5年
+- 年龄：21
 
 ## 个人总结
 - 熟练运用React+Typescript开发项目
@@ -56,9 +56,8 @@ Telegram: @luckingforme
 
 ## 教育经历
 
-广州华立科技职业学院 
+#### 广州华立科技职业学院 
 
-计算机应用 大专
-
-2019.01 ~ 2022.01
+- 计算机应用 大专
+- 2019.01 ~ 2022.01
 

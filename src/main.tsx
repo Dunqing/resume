@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import Resume from './Resume'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Resume />
   </React.StrictMode>,
   document.getElementById('root')
 )
