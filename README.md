@@ -55,9 +55,18 @@
 - 使用RBAC模型去管理整个后台的权限，权限级别到按钮
 - 使用gitlab-ci做自动化部署对release-test-xxx分支自动发布到测试环境，对tag release-vx.x.x自动发布到正式环境但需要人为点击最后一个步骤确保无误后部署到线上
 
+### [swr-taro](https://www.npmjs.com/package/taro-swr)
+
+业务背景是由于公司的小程序对需要对接口进行管理,(替换原来实现的useRequest，api不太友好)。考虑到内部的H5使用的是SWR，统一请求管理库对维护者更加友好，所以决定把SWR适配到Taro中去
+
+1. 调研SWR具体的实现
+2. 将在Taro中不适配的方法改成为Taro原生的方法
+3. 新增revalidateOnShow，revalidateOnPullDown属性让SWR可在页面切换时，下拉时刷新请求，更加贴合小程序
+4. 发布到npm，供内部多小程序使用
+
 ### 公司内部Cli开发（独立完成）
 
-#### 2020.11 ~ 2020.01
+#### 2020.11 ~ 2021.01
 
 - publish：针对公司内部的开发流程实现了自动化推送到build分支之后自动打下tag发给测试&运维部署，并发送消息到钉钉群。
 - create：一键创建整个项目并install。现在vue模板采用webpack5搭建完成。使用的技术栈有：vue2.x全家桶、typescript4.x、axios、babel、postcss、eslint
