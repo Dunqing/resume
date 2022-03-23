@@ -6,13 +6,11 @@
 - Telegram: @luckingforme
 - 工作经验：2.5年
 - 年龄：21
-- 目前薪资：15K
-- 期望薪资：21K ~ 25K
 
 ## 个人总结
 
 - 熟练运用React+Typescript开发项目
-- 为Ant Design，Vite，ProComponents，Dumi解决过Issues，提交过PR
+- **为Ant Design，Vite，ProComponents，Dumi解决过Issues，提交过PR**
 - 看过React，Vite，SWR，Acorn等多个开源项目源码
 - 较强的学习能力和自控能力
 
@@ -57,7 +55,7 @@
 
 ### [swr-taro](https://www.npmjs.com/package/taro-swr)
 
-业务背景是由于公司的小程序对需要对接口进行管理,(替换原来实现的useRequest，api不太友好)。考虑到内部的H5使用的是SWR，统一请求管理库对维护者更加友好，所以决定把SWR适配到Taro中去
+*业务背景是由于公司的小程序对需要对接口进行管理,(替换原来实现的useRequest，api不太友好)。考虑到内部的H5使用的是SWR，统一请求管理库对维护者更加友好，所以决定把SWR适配到Taro中去*
 
 1. 调研SWR具体的实现
 2. 将在Taro中不适配的方法改成为Taro原生的方法

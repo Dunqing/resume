@@ -4,6 +4,7 @@ specifiers:
   '@types/node': ^17.0.22
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
+  '@unocss/preset-wind': ^0.29.5
   '@unocss/reset': ^0.29.5
   '@vitejs/plugin-react': ^1.0.7
   react: ^17.0.2
@@ -14,6 +15,7 @@ specifiers:
   vite: ^2.8.0
 
 dependencies:
+  '@unocss/preset-wind': registry.npmmirror.com/@unocss/preset-wind/0.29.5
   '@unocss/reset': registry.npmmirror.com/@unocss/reset/0.29.5
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2

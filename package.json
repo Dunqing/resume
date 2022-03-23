@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@unocss/preset-wind": "^0.29.5",
     "@unocss/reset": "^0.29.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
