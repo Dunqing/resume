@@ -4,6 +4,7 @@
 
 - Github: https://github.com/1247748612
 - Telegram: @luckingforme
+- Email: dengqing0821@gmail.com
 - 工作经验：2.5年
 - 年龄：21
 
