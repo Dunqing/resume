@@ -11,7 +11,4 @@ export default defineConfig({
       presetWind()
     ]
   })],
-  define: {
-    DENGQING_RESUME: JSON.stringify(readFileSync( './README.md', 'utf-8').toString()),
-  },
 })
