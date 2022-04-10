@@ -11,7 +11,7 @@
 ## 个人总结
 
 - 熟练运用React+Typescript开发项目
-- **为Antd，Vite，ProComponents，Dumi解决过Issues，提交过PR**
+- 参与开源项目，**为Antd，Vite，ProComponents，Dumi解决过Issues，提交过PR**
 - 看过React，Vite，SWR，Acorn等多个开源项目源码
 - 较强的学习能力和自控能力
 
