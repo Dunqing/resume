@@ -2,7 +2,7 @@
 
 ## 个人信息
 
-- Github: [https://github.com/1247748612](https://github.com/1247748612)
+- Github: [https://github.com/Dunqing](https://github.com/Dunqing)
 - Telegram: @luckingforme
 - Email: dengqing0821@gmail.com
 - 工作经验：2.5年
