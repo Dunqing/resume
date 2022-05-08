@@ -17,24 +17,32 @@ importers:
       '@unocss/preset-wind': ^0.29.5
       '@unocss/reset': ^0.29.5
       '@vitejs/plugin-react': ^1.0.7
+      clsx: ^1.1.1
+      hast: ^1.0.0
       react: ^17.0.2
       react-dom: ^17.0.2
       react-markdown: ^8.0.1
       remark-frontmatter: ^4.0.1
       remark-gfm: ^3.0.1
       unified: ^10.1.2
+      unist-builder: ^3.0.0
+      unist-util-is: ^5.1.1
       unist-util-visit: ^4.1.0
       unocss: ^0.29.5
       vite: ^2.9.0
     dependencies:
       '@unocss/preset-wind': 0.29.5
       '@unocss/reset': 0.29.5
+      clsx: 1.1.1
+      hast: 1.0.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-markdown: 8.0.1_6acae0b0a4a23c4372144902affe8735
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
       unified: 10.1.2
+      unist-builder: 3.0.0
+      unist-util-is: 5.1.1
       unist-util-visit: 4.1.0
       unocss: 0.29.5
     devDependencies:
@@ -682,6 +690,11 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /clsx/1.1.1:
+    resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
+    dev: false
+
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
     dependencies:
@@ -1122,6 +1135,11 @@ packages:
 
   /hast-util-whitespace/2.0.0:
     resolution: {integrity: sha512-Pkw+xBHuV6xFeJprJe2BBEoDV+AvQySaz3pPDRUs5PNZEMQjpXJJueqrpcHIXxnWTcAGi/UOCgVShlkY6kLoqg==}
+    dev: false
+
+  /hast/1.0.0:
+    resolution: {integrity: sha1-UGFeaysFg+Vgi8dsRwKXIvHgBgc=}
+    deprecated: Renamed to rehype
     dev: false
 
   /human-signals/2.1.0:
