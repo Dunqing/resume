@@ -1,10 +1,3 @@
----
-a: "前端工程师"
-b: "研发部"
-c: "深圳"
-d: ""
----
-
 # 邓清
 
 - [https://github.com/Dunqing](https://github.com/Dunqing)
