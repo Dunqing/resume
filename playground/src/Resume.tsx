@@ -5,7 +5,7 @@ import '@unocss/reset/tailwind.css'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
-import { description, meta, table } from './plugins'
+import { description, header, meta, table } from './plugins'
 
 function Resume() {
   const [markdown] = useState<string>(() => {
@@ -57,9 +57,19 @@ function Resume() {
                 return <span className="text-blue-gray-600" {...props} />
               },
               'description': ({ ...props }) => {
-                return <p {...props} className="text-sm indent">
-
-                </p>
+                return <p {...props} className="text-sm indent" />
+              },
+              'header': ({ node: _, ...props }) => {
+                return <header {...props} className="flex flex-col items-center p-4" />
+              },
+              'header-h1': ({ node: _, ...props }) => {
+                return <h1 {...props} className="text-2xl" />
+              },
+              'header-ul': ({ ...props }) => {
+                return <ul {...props} className="list-none flex flex-wrap" />
+              },
+              'header-li': ({ ...props }) => {
+                return <li className="sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400" {...props} />
               },
             }}
               remarkPlugins={[
@@ -69,6 +79,7 @@ function Resume() {
               ]}
               rehypePlugins={[
                 table,
+                header,
                 description,
               ]}
               >

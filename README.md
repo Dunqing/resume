@@ -7,13 +7,14 @@ d: ""
 
 # 邓清
 
-## 个人信息
-
-- Github: [https://github.com/Dunqing](https://github.com/Dunqing)
+- [https://github.com/Dunqing](https://github.com/Dunqing)
+>
+- dengqing0821@gmail.com
+- 2.5年
+- 21岁
+>
 - Telegram: @luckingforme
-- Email: dengqing0821@gmail.com
-- 工作经验：2.5年
-- 年龄：21
+
 
 ## 个人总结
 
