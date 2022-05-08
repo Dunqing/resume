@@ -7,9 +7,10 @@ import '@unocss/reset/tailwind.css'
 
 function Resume() {
   const [markdown] = useState<string>(() => {
-    const globResult = import.meta.globEager("../README.md", {
+    const globResult = import.meta.globEager("../../README.md", {
       as: "raw",
     })
+    console.log("🚀 ~ file: Resume.tsx ~ line 13 ~ Resume ~ globResult", globResult)
 
     return (Object.values(globResult)[0]) as unknown as string
   })
