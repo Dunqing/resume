@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
@@ -13,20 +12,20 @@ function Resume() {
     <ReactMarkdown
       components={{
         'container': ({ ...props }) => <div className="font-sans text-base bg-gray-100" {...props} />,
-        'content': ({ ...props }) => <div className="bg-white md:w-768px xs:w-full text-dark mx-auto p-y-5 sm:p-x-10 p-x-4" {...props} />,
-        'h1': ({ ...props }) => <h1 className="text-2xl text-dark font-semibold" {...props}></h1>,
+        'content': ({ ...props }) => <div className="bg-white md:w-768px xs:w-full  mx-auto p-y-5 sm:p-x-10 p-x-4" {...props} />,
+        'h1': ({ ...props }) => <h1 className="text-2xl  font-semibold" {...props}></h1>,
         'h2': ({ ...props }) => {
-          return <div className="text-xl text-dark font-semibold p-y-1 b-b">
+          return <div className="text-xl  font-semibold p-y-1 b-b">
             <h2 {...props}></h2>
           </div>
         },
-        'h3': ({ ...props }) => <h3 className="p-y-1 text-lg text-dark font-semibold" {...props}></h3>,
-        'ul': ({ ...props }) => <ul className="text-dark list-disc list-inside p-y-1" {...props}></ul>,
-        'ol': ({ ...props }) => <ol className="text-dark list-decimal list-inside p-y-1" {...props}></ol>,
-        'li': ({ ...props }) => <li className="p-y-0.25 text-dark-300" {...props}></li>,
+        'h3': ({ ...props }) => <h3 className="p-y-1 text-lg  font-semibold" {...props}></h3>,
+        'ul': ({ ...props }) => <ul className="text-0.95rem list-disc list-inside p-y-1" {...props}></ul>,
+        'ol': ({ ...props }) => <ol className="text-0.95rem list-decimal list-inside p-y-1" {...props}></ol>,
+        'li': ({ ...props }) => <li className="" {...props}></li>,
         'a': ({ ...props }) => <a className="text-blue underline" {...props}></a>,
-        'p': ({ ...props }) => <p className="text-dark-700 font-medium p-y-1" {...props}></p>,
-        'strong': ({ ...props }) => <strong className="text-dark font-semibold" {...props}></strong>,
+        'p': ({ ...props }) => <p className="font-medium p-y-1" {...props}></p>,
+        'strong': ({ ...props }) => <strong className=" font-semibold" {...props}></strong>,
         'card': ({ ...props }) => {
           return <div className="p-y-0.5 grid grid-cols-2 gap-y-0.5" {...props} />
         },
