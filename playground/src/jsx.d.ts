@@ -7,6 +7,7 @@ declare global {
       'card-item': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
       'card-item-label': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
       'card-item-value': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+      'description': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
     }
   }
 }

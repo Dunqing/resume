@@ -1,13 +1,8 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import { is } from 'unist-util-is'
-import type { Element, Root, Text } from 'hast'
+import type { Root } from 'hast'
 import { u } from 'unist-builder'
-
-const HeadingTag = ['h1', 'h2', 'h3']
-
-const isHeading = (t: any): t is Element => is(t, { type: 'element' }) && HeadingTag.includes((t as Element).tagName)
-const isText = (t: any): t is Text => is(t, { type: 'text' })
+import { isHeading, isText } from './_util'
 
 export const table: Plugin<[], Root> = function () {
   return (root) => {

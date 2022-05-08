@@ -5,7 +5,7 @@ import '@unocss/reset/tailwind.css'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
-import { meta, table } from './plugins'
+import { description, meta, table } from './plugins'
 
 function Resume() {
   const [markdown] = useState<string>(() => {
@@ -54,7 +54,12 @@ function Resume() {
                 return <span {...props} className="text-sm font-medium" />
               },
               'card-item-value': ({ ...props }) => {
-                return <span className="text-blue-gray-500" {...props} />
+                return <span className="text-blue-gray-600" {...props} />
+              },
+              'description': ({ ...props }) => {
+                return <p {...props} className="text-sm indent">
+
+                </p>
               },
             }}
               remarkPlugins={[
@@ -64,6 +69,7 @@ function Resume() {
               ]}
               rehypePlugins={[
                 table,
+                description,
               ]}
               >
               {markdown}
