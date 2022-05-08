@@ -31,7 +31,7 @@ function Resume() {
         <div className={`w-full    ${animated ? '-translate-x-100vw' : 'transition-transform translate-x-0 transition-delay-100 ease-in-out translate-x-0'} `}>
           <ReactMarkdown
             components={{
-              'h1': ({ ...props }) => <h1 className="text-xl2 text-dark font-semibold" {...props}></h1>,
+              'h1': ({ ...props }) => <h1 className="text-2xl text-dark font-semibold" {...props}></h1>,
               'h2': ({ ...props }) => {
                 return <div className="text-xl text-dark font-semibold p-y-1 b-b">
                     <h2 {...props}></h2>
