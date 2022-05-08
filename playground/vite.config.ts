@@ -7,7 +7,7 @@ import { presetWind } from 'unocss'
 export default defineConfig({
   plugins: [react(), unocss({
     presets: [
-      presetWind()
-    ]
+      presetWind(),
+    ],
   })],
 })

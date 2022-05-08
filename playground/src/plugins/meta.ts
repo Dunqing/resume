@@ -1,9 +1,9 @@
-import { Plugin } from 'unified'
-import { visit} from 'unist-util-visit'
+import type { Plugin } from 'unified'
+import { visit } from 'unist-util-visit'
 
 export const meta: Plugin<[]> = function () {
   return (root) => {
-    visit(root, {}, (element, index, parent) => {
+    visit(root, {}, () => {
     })
   }
 }
