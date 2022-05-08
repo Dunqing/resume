@@ -21,7 +21,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "playground/src"
+    "playground/src",
+    "../README.md"
   ],
   "references": [
     {

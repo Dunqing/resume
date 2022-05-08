@@ -1,21 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
+import readme from '../../README.md?raw'
 import { container, description, header, meta, table } from './plugins'
 
 function Resume() {
-  const [markdown] = useState<string>(() => {
-    const globResult = import.meta.globEager('../../README.md', {
-      as: 'raw',
-    })
-
-    return (Object.values(globResult)[0]) as unknown as string
-  })
-
   return (
     <ReactMarkdown
       components={{
@@ -74,7 +67,7 @@ function Resume() {
         container,
       ]}
     >
-      {markdown}
+      {readme}
     </ReactMarkdown>
   )
 }
