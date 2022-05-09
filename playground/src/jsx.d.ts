@@ -16,6 +16,9 @@ declare global {
       'header-avatar': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
       'header-row': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
       'header-col': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+      'task': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+      'task-item': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+      'task-item-checkbox': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
     }
   }
 }

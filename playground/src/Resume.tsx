@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
 import readme from '../../README.md?raw'
-import { card, className, container, description, header, meta } from './plugins'
+import { card, className, container, description, header, meta, task } from './plugins'
 
 function Resume() {
   return (
@@ -37,10 +37,10 @@ function Resume() {
           clsx('p-y-1 text-lg  font-semibold', className)
         } {...props}></h3>,
         'ul': ({ className, ...props }) => <ul className={
-          clsx('text-0.95rem p-l-5 list-disc p-y-1', className)
+          clsx('text-0.9rem p-l-5 list-disc p-y-1', className)
         } {...props}></ul>,
         'ol': ({ className, ...props }) => <ol className={
-          clsx('text-0.95rem p-l-5 list-decimal p-y-1', className)
+          clsx('text-0.9rem p-l-5 list-decimal p-y-1', className)
         } {...props}></ol>,
         'a': ({ className, ...props }) => <a className={
           clsx('text-blue-600 underline', className)
@@ -105,6 +105,15 @@ function Resume() {
         'code': ({ className, ...props }) => {
           return <code className={clsx('p-x-1.5 p-y-0.5 bg-neutral-100 rounded-md text-xs', className)} {...props} />
         },
+        'task': ({ className, ...props }) => <ul className={
+          clsx('text-0.9rem p-y-1', className)
+        } {...props} />,
+        'task-item': ({ className, ...props }) => <li className={
+          clsx('p-x-5', className)
+        } {...props} />,
+        'task-item-checkbox': ({ className, ...props }) => <input className={
+          clsx('-m-l-5 m-r-1 m-b-0.5 align-middle', className)
+        } {...props} />,
       }}
       remarkPlugins={[
         remarkFrontmatter,
@@ -112,6 +121,7 @@ function Resume() {
         remarkGfm,
       ]}
       rehypePlugins={[
+        task,
         rehypeRaw,
         card,
         header,
