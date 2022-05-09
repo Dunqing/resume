@@ -43,10 +43,10 @@ function Resume() {
           clsx('text-0.95rem p-l-5 list-decimal p-y-1', className)
         } {...props}></ol>,
         'a': ({ className, ...props }) => <a className={
-          clsx('text-blue underline', className)
+          clsx('text-blue-600 underline', className)
         } {...props}></a>,
         'p': ({ className, ...props }) => <p className={
-          clsx('font-medium p-y-1', className)
+          clsx('p-y-1', className)
         } {...props}></p>,
         'strong': ({ className, ...props }) => <strong className={
           clsx('font-semibold', className)
@@ -89,6 +89,21 @@ function Resume() {
         },
         'header-col': ({ className, ...props }) => {
           return <li className={clsx('sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400', className)} {...props} />
+        },
+        'table': ({ className, ...props }) => {
+          return <table className={clsx('border border-drak', className)} {...props} />
+        },
+        'th': ({ className, ...props }) => {
+          return <th className={clsx('border border-drak p-2', className)} {...props} />
+        },
+        'td': ({ className, ...props }) => {
+          return <td className={clsx('border border-drak p-2', className)} {...props} />
+        },
+        'blockquote': ({ className, ...props }) => {
+          return <blockquote className={clsx('border-l-0.3rem p-l-2 border-gray-200 m-b-4 text-gray-700', className)} {...props} />
+        },
+        'code': ({ className, ...props }) => {
+          return <code className={clsx('p-x-1.5 p-y-0.5 bg-neutral-100 rounded-md text-xs', className)} {...props} />
         },
       }}
       remarkPlugins={[
