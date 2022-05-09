@@ -1,7 +1,8 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
 import type { Element } from 'hast'
-import { isBlockquote, isUl } from './_util'
+import { u } from 'unist-builder'
+import { isBlockquote, isImage, isParagraph, isUl } from './_util'
 
 export const header: Plugin<[], Element> = function () {
   return (root) => {
@@ -10,7 +11,8 @@ export const header: Plugin<[], Element> = function () {
       tagName: 'h1',
     }, (paragraph, index, parent) => {
       const len = parent.children.length
-      const children = []
+      const ul = []
+      let avatar: Element
       const delIndex: number[] = []
 
       for (let i = index + 2; i < len; i += 2) {
@@ -19,13 +21,19 @@ export const header: Plugin<[], Element> = function () {
         if (isBlockquote(element))
           continue
 
+        // avatar
+        if (isParagraph(element) && isImage(element.children[0])) {
+          (element.children[0] as Element).tagName = 'header-avatar'
+          avatar = element.children[0] as Element
+          delIndex.unshift(i)
+          continue
+        }
+
         if (!isUl(element))
           break
 
-        children.push(element)
-
         element.tagName = 'header-row'
-
+        ul.push(element)
         visit(element, { tagName: 'li' }, (li) => {
           li.tagName = 'header-col'
         })
@@ -33,13 +41,13 @@ export const header: Plugin<[], Element> = function () {
         delIndex.unshift(i)
       }
 
-      if (children.length) {
+      if (ul.length) {
         paragraph.tagName = 'header-name'
         delIndex.forEach(i => parent.children.splice(i, 1))
         parent.children.splice(index, 1, {
           type: 'element',
           tagName: 'header',
-          children: [paragraph, ...children],
+          children: [paragraph, avatar, u('element', { tagName: 'header-content' }, ul)],
         })
       }
     })

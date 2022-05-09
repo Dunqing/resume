@@ -5,7 +5,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import readme from '../../README.md?raw'
-import { container, description, header, meta, card } from './plugins'
+import { card, container, description, header, meta } from './plugins'
 
 function Resume() {
   return (
@@ -43,8 +43,14 @@ function Resume() {
         'header': ({ node: _, ...props }) => {
           return <header {...props} className="flex flex-col items-center p-4" />
         },
+        'header-content': ({ node: _, ...props }) => {
+          return <div {...props} className="flex flex-col items-center" />
+        },
         'header-name': ({ node: _, ...props }) => {
           return <h1 {...props} className="font-bold text-2xl" />
+        },
+        'header-avatar': ({ node: _, ...props }) => {
+          return <img {...props} className="w-40 font-bold text-2xl" />
         },
         'header-row': ({ ...props }) => {
           return <ul {...props} className="list-none flex flex-wrap" />
