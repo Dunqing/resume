@@ -4,6 +4,7 @@ import '@unocss/reset/tailwind.css'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
+import rehypeRaw from 'rehype-raw'
 import readme from '../../README.md?raw'
 import { card, container, description, header, meta } from './plugins'
 
@@ -65,11 +66,15 @@ function Resume() {
         remarkGfm,
       ]}
       rehypePlugins={[
+        rehypeRaw,
         card,
         header,
         description,
         container,
       ]}
+      remarkRehypeOptions={{
+        allowDangerousHtml: true,
+      }}
     >
       {readme}
     </ReactMarkdown>
