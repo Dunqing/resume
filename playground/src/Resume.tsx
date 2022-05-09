@@ -6,58 +6,89 @@ import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
 import readme from '../../README.md?raw'
-import { card, container, description, header, meta } from './plugins'
+import { card, className, container, description, header, meta } from './plugins'
 
 function Resume() {
   return (
     <ReactMarkdown
       components={{
-        'container': ({ ...props }) => <div className="font-sans text-base bg-gray-100" {...props} />,
-        'content': ({ ...props }) => <div className="bg-white md:w-768px xs:w-full  mx-auto p-y-5 sm:p-x-10 p-x-4" {...props} />,
-        'h1': ({ ...props }) => <h1 className="text-2xl  font-semibold" {...props}></h1>,
-        'h2': ({ ...props }) => {
-          return <div className="text-xl  font-semibold p-y-1 b-b">
-            <h2 {...props}></h2>
-          </div>
+        'container': ({ className, ...props }) => <div className={
+          clsx(
+            'font-sans text-base bg-gray-100',
+            className,
+          )
+        } {...props} />,
+        'content': ({ className, ...props }) => <div className={
+          clsx(
+            'bg-white md:w-768px xs:w-full  mx-auto p-y-5 sm:p-x-10 p-x-4',
+            className,
+          )
+        } {...props} />,
+        'h1': ({ className, ...props }) => <h1 className={
+          clsx(
+            'text-2xl font-semibold',
+            className,
+          )
+        } {...props}></h1>,
+        'h2': ({ className, ...props }) => {
+          return <h2 className={clsx('text-xl font-semibold p-y-1 b-b', className)} {...props}></h2>
         },
-        'h3': ({ ...props }) => <h3 className="p-y-1 text-lg  font-semibold" {...props}></h3>,
-        'ul': ({ ...props }) => <ul className="text-0.95rem p-l-5 list-disc p-y-1" {...props}></ul>,
-        'ol': ({ ...props }) => <ol className="text-0.95rem p-l-5 list-decimal p-y-1" {...props}></ol>,
-        'a': ({ ...props }) => <a className="text-blue underline" {...props}></a>,
-        'p': ({ ...props }) => <p className="font-medium p-y-1" {...props}></p>,
-        'strong': ({ ...props }) => <strong className="font-semibold" {...props}></strong>,
-        'card': ({ ...props }) => {
-          return <div className="p-y-0.5 grid grid-cols-2 gap-y-0.5" {...props} />
+        'h3': ({ className, ...props }) => <h3 className={
+          clsx('p-y-1 text-lg  font-semibold', className)
+        } {...props}></h3>,
+        'ul': ({ className, ...props }) => <ul className={
+          clsx('text-0.95rem p-l-5 list-disc p-y-1', className)
+        } {...props}></ul>,
+        'ol': ({ className, ...props }) => <ol className={
+          clsx('text-0.95rem p-l-5 list-decimal p-y-1', className)
+        } {...props}></ol>,
+        'a': ({ className, ...props }) => <a className={
+          clsx('text-blue underline', className)
+        } {...props}></a>,
+        'p': ({ className, ...props }) => <p className={
+          clsx('font-medium p-y-1', className)
+        } {...props}></p>,
+        'strong': ({ className, ...props }) => <strong className={
+          clsx('font-semibold', className)
+        } {...props} />,
+        'card': ({ className, ...props }) => {
+          return <div className={
+            clsx('p-y-0.5 grid grid-cols-2 gap-y-0.5', className)
+          } {...props} />
         },
-        'card-item': ({ index, ...props }) => {
-          return <div {...props} className={clsx('text-sm', { 'justify-self-end': index % 2 === 1 })} />
+        'card-item': ({ className, index, ...props }) => {
+          return <div {...props} className={clsx('text-sm', { 'justify-self-end': index % 2 === 1 }, className)} />
         },
-        'card-item-label': ({ ...props }) => {
-          return <span {...props} className="text-sm font-medium" />
+        'card-item-label': ({ className, ...props }) => {
+          return <span {...props} className={
+            clsx('text-sm font-medium', className)
+          } />
         },
-        'card-item-value': ({ ...props }) => {
-          return <span className="text-blue-gray-600" {...props} />
+        'card-item-value': ({ className, ...props }) => {
+          return <span className={
+            clsx('text-blue-gray-600', className)
+          } {...props} />
         },
-        'description': ({ ...props }) => {
-          return <p {...props} className="text-sm indent" />
+        'description': ({ className, ...props }) => {
+          return <p {...props} className={clsx('text-sm indent', className)} />
         },
-        'header': ({ node: _, ...props }) => {
-          return <header {...props} className="flex flex-col items-center p-4" />
+        'header': ({ className, ...props }) => {
+          return <header {...props} className={clsx('flex flex-col items-center p-4', className)} />
         },
-        'header-content': ({ node: _, ...props }) => {
-          return <div {...props} className="flex flex-col items-center" />
+        'header-content': ({ className, ...props }) => {
+          return <div {...props} className={clsx('flex flex-col items-center', className)} />
         },
-        'header-name': ({ node: _, ...props }) => {
-          return <h1 {...props} className="font-bold text-2xl" />
+        'header-name': ({ className, ...props }) => {
+          return <h1 {...props} className={clsx('font-bold text-2xl', className)} />
         },
-        'header-avatar': ({ node: _, ...props }) => {
-          return <img {...props} className="w-40 font-bold text-2xl" />
+        'header-avatar': ({ className, ...props }) => {
+          return <img {...props} className={clsx('w-40 font-bold text-2xl', className)} />
         },
-        'header-row': ({ ...props }) => {
-          return <ul {...props} className="list-none flex flex-wrap" />
+        'header-row': ({ className, ...props }) => {
+          return <ul {...props} className={clsx('list-none flex flex-wrap', className)} />
         },
-        'header-col': ({ ...props }) => {
-          return <li className="sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400" {...props} />
+        'header-col': ({ className, ...props }) => {
+          return <li className={clsx('sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400', className)} {...props} />
         },
       }}
       remarkPlugins={[
@@ -71,6 +102,7 @@ function Resume() {
         header,
         description,
         container,
+        className,
       ]}
       remarkRehypeOptions={{
         allowDangerousHtml: true,
