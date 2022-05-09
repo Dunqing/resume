@@ -4,7 +4,7 @@ import type { Root } from 'hast'
 import { u } from 'unist-builder'
 import { isHeading, isText } from './_util'
 
-export const table: Plugin<[], Root> = function () {
+export const card: Plugin<[], Root> = function () {
   return (root) => {
     visit(root, { type: 'element', tagName: 'table' }, (table, index, parent) => {
       const prev = parent.children[index - 2]

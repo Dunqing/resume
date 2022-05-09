@@ -1,5 +1,5 @@
 export * from './meta'
-export * from './table'
+export * from './card'
 export * from './description'
 export * from './header'
 export * from './container'

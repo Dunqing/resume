@@ -5,7 +5,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import readme from '../../README.md?raw'
-import { container, description, header, meta, table } from './plugins'
+import { container, description, header, meta, card } from './plugins'
 
 function Resume() {
   return (
@@ -22,10 +22,9 @@ function Resume() {
         'h3': ({ ...props }) => <h3 className="p-y-1 text-lg  font-semibold" {...props}></h3>,
         'ul': ({ ...props }) => <ul className="text-0.95rem p-l-5 list-disc p-y-1" {...props}></ul>,
         'ol': ({ ...props }) => <ol className="text-0.95rem p-l-5 list-decimal p-y-1" {...props}></ol>,
-        'li': ({ ...props }) => <li className="" {...props}></li>,
         'a': ({ ...props }) => <a className="text-blue underline" {...props}></a>,
         'p': ({ ...props }) => <p className="font-medium p-y-1" {...props}></p>,
-        'strong': ({ ...props }) => <strong className=" font-semibold" {...props}></strong>,
+        'strong': ({ ...props }) => <strong className="font-semibold" {...props}></strong>,
         'card': ({ ...props }) => {
           return <div className="p-y-0.5 grid grid-cols-2 gap-y-0.5" {...props} />
         },
@@ -44,13 +43,13 @@ function Resume() {
         'header': ({ node: _, ...props }) => {
           return <header {...props} className="flex flex-col items-center p-4" />
         },
-        'header-h1': ({ node: _, ...props }) => {
+        'header-name': ({ node: _, ...props }) => {
           return <h1 {...props} className="font-bold text-2xl" />
         },
-        'header-ul': ({ ...props }) => {
+        'header-row': ({ ...props }) => {
           return <ul {...props} className="list-none flex flex-wrap" />
         },
-        'header-li': ({ ...props }) => {
+        'header-col': ({ ...props }) => {
           return <li className="sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400" {...props} />
         },
       }}
@@ -60,7 +59,7 @@ function Resume() {
         remarkGfm,
       ]}
       rehypePlugins={[
-        table,
+        card,
         header,
         description,
         container,

@@ -24,17 +24,17 @@ export const header: Plugin<[], Element> = function () {
 
         children.push(element)
 
-        element.tagName = 'header-ul'
+        element.tagName = 'header-row'
 
         visit(element, { tagName: 'li' }, (li) => {
-          li.tagName = 'header-li'
+          li.tagName = 'header-col'
         })
 
         delIndex.unshift(i)
       }
 
       if (children.length) {
-        paragraph.tagName = 'header-h1'
+        paragraph.tagName = 'header-name'
         delIndex.forEach(i => parent.children.splice(i, 1))
         parent.children.splice(index, 1, {
           type: 'element',
