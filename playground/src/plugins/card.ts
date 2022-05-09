@@ -14,8 +14,9 @@ export const card: Plugin<[], Root> = function () {
       const infoList: { label: any; value?: any }[] = []
 
       visit(table, { type: 'element', tagName: 'th' }, (th) => {
+        th.tagName = 'card-item-label'
         infoList.push({
-          label: isText(th.children[0]) && th.children[0].value,
+          label: th,
         })
       })
 
@@ -23,7 +24,8 @@ export const card: Plugin<[], Root> = function () {
       visit(table, { type: 'element', tagName: 'td' }, (td) => {
         if (!infoList[i])
           return
-        infoList[i++].value = isText(td.children[0]) && td.children[0].value
+        td.tagName = 'card-item-value'
+        infoList[i++].value = td
       })
 
       parent.children.splice(index, 1, {
@@ -37,14 +39,9 @@ export const card: Plugin<[], Root> = function () {
               index: ii,
             },
           }, [
-            u('element', {
-              tagName: 'card-item-label',
-              properties: {
-                className: 'font-medium',
-              },
-            }, [u('text', item.label)]),
+            item.label,
             u('text', '：'),
-            u('element', { tagName: 'card-item-value' }, [u('text', item.value)]),
+            item.value,
           ])
         }),
       })
