@@ -20,8 +20,8 @@ function Resume() {
           </div>
         },
         'h3': ({ ...props }) => <h3 className="p-y-1 text-lg  font-semibold" {...props}></h3>,
-        'ul': ({ ...props }) => <ul className="text-0.95rem list-disc list-inside p-y-1" {...props}></ul>,
-        'ol': ({ ...props }) => <ol className="text-0.95rem list-decimal list-inside p-y-1" {...props}></ol>,
+        'ul': ({ ...props }) => <ul className="text-0.95rem p-l-5 list-disc p-y-1" {...props}></ul>,
+        'ol': ({ ...props }) => <ol className="text-0.95rem p-l-5 list-decimal p-y-1" {...props}></ol>,
         'li': ({ ...props }) => <li className="" {...props}></li>,
         'a': ({ ...props }) => <a className="text-blue underline" {...props}></a>,
         'p': ({ ...props }) => <p className="font-medium p-y-1" {...props}></p>,
@@ -45,7 +45,7 @@ function Resume() {
           return <header {...props} className="flex flex-col items-center p-4" />
         },
         'header-h1': ({ node: _, ...props }) => {
-          return <h1 {...props} className="text-2xl" />
+          return <h1 {...props} className="font-bold text-2xl" />
         },
         'header-ul': ({ ...props }) => {
           return <ul {...props} className="list-none flex flex-wrap" />
