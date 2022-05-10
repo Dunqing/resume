@@ -8,8 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@unocss/preset-wind": "^0.29.5",
-    "@unocss/reset": "^0.29.5",
+    "@iconify-json/carbon": "^1.1.4",
+    "@unocss/preset-icons": "^0.33.2",
+    "@unocss/preset-wind": "^0.33.2",
+    "@unocss/reset": "^0.33.2",
     "clsx": "^1.1.1",
     "hast": "^1.0.0",
     "hast-util-has-property": "^2.0.0",
@@ -23,7 +25,8 @@
     "unist-builder": "^3.0.0",
     "unist-util-is": "^5.1.1",
     "unist-util-visit": "^4.1.0",
-    "unocss": "^0.29.5"
+    "unocss": "^0.33.2",
+    "yaml": "^2.0.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",

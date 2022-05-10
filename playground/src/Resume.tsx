@@ -5,49 +5,70 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
+import { useState } from 'react'
 import readme from '../../README.md?raw'
-import { card, className, container, description, header, meta, task } from './plugins'
+import { card, className, container, description, header, meta, task, toolbox } from './plugins'
 
 function Resume() {
+  const [dark, setDark] = useState(false)
+
   return (
     <ReactMarkdown
+      className={clsx(
+        {
+          dark,
+        },
+      )}
       components={{
         'container': ({ className, ...props }) => <div className={
           clsx(
-            'font-sans text-base bg-gray-100',
+            'font-sans text-base text-dark-400 bg-white',
+            'dark:text-light-700',
+            'dark:bg-dark-400',
             className,
           )
         } {...props} />,
         'content': ({ className, ...props }) => <div className={
           clsx(
-            'bg-white md:w-768px xs:w-full  mx-auto p-y-5 sm:p-x-10 p-x-4',
+            'border border-light-700 md:w-768px xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4',
+            'dark:border-dark-100',
             className,
           )
         } {...props} />,
         'h1': ({ className, ...props }) => <h1 className={
           clsx(
-            'text-2xl font-semibold',
+            'm-t-2 m-b-1.5 text-2xl font-semibold',
             className,
           )
-        } {...props}></h1>,
+        } {...props} />,
         'h2': ({ className, ...props }) => {
-          return <h2 className={clsx('text-xl font-semibold p-y-1 b-b', className)} {...props}></h2>
+          return <h2 className={clsx(
+            'm-t-3 m-b-1 text-xl font-semibold p-y-1 b-b border-dark',
+            'dark:border-dark-100',
+            className,
+          )} {...props}></h2>
         },
         'h3': ({ className, ...props }) => <h3 className={
-          clsx('p-y-1 text-lg  font-semibold', className)
-        } {...props}></h3>,
+          clsx('m-t-2 m-b-1 p-y-0.5 text-base font-semibold', className)
+        } {...props} />,
         'ul': ({ className, ...props }) => <ul className={
-          clsx('text-0.9rem p-l-5 list-disc p-y-1', className)
-        } {...props}></ul>,
+          clsx('m-b-2 text-0.9rem p-l-5 list-disc', 'dark:text-gray-300', className)
+        } {...props} />,
         'ol': ({ className, ...props }) => <ol className={
-          clsx('text-0.9rem p-l-5 list-decimal p-y-1', className)
-        } {...props}></ol>,
+          clsx('m-b-2 text-0.9rem p-l-5 list-decimal', className)
+        } {...props} />,
+        'li': ({ className, ...props }) => <li className={
+          clsx('p-y-0.5', className)
+        } {...props} />,
         'a': ({ className, ...props }) => <a className={
-          clsx('text-blue-600 underline', className)
-        } {...props}></a>,
+          clsx('text-blue-600 underline', 'dark:text-blue-400', className)
+        } {...props} />,
         'p': ({ className, ...props }) => <p className={
-          clsx('p-y-1', className)
-        } {...props}></p>,
+          clsx('', className)
+        } {...props} />,
+        'img': ({ className, ...props }) => <img className={
+          clsx('inline', className)
+        } {...props} />,
         'strong': ({ className, ...props }) => <strong className={
           clsx('font-semibold', className)
         } {...props} />,
@@ -66,7 +87,7 @@ function Resume() {
         },
         'card-item-value': ({ className, ...props }) => {
           return <span className={
-            clsx('text-blue-gray-600', className)
+            clsx('text-blue-gray-600', 'dark:text-blue-gray-300', className)
           } {...props} />
         },
         'description': ({ className, ...props }) => {
@@ -79,10 +100,10 @@ function Resume() {
           return <div {...props} className={clsx('flex flex-col items-center', className)} />
         },
         'header-name': ({ className, ...props }) => {
-          return <h1 {...props} className={clsx('font-bold text-2xl', className)} />
+          return <h1 {...props} className={clsx('font-bold text-3xl', className)} />
         },
         'header-avatar': ({ className, ...props }) => {
-          return <img {...props} className={clsx('w-40 font-bold text-2xl', className)} />
+          return <img {...props} className={clsx('w-40 text-3xl', className)} />
         },
         'header-row': ({ className, ...props }) => {
           return <ul {...props} className={clsx('list-none flex flex-wrap', className)} />
@@ -91,22 +112,22 @@ function Resume() {
           return <li className={clsx('sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400', className)} {...props} />
         },
         'table': ({ className, ...props }) => {
-          return <table className={clsx('border border-drak', className)} {...props} />
+          return <table className={clsx('border border-dark text-sm', 'dark:border-dark-100', className)} {...props} />
         },
         'th': ({ className, ...props }) => {
-          return <th className={clsx('border border-drak p-2', className)} {...props} />
+          return <th className={clsx('border p-2 border-dark', 'dark:border-dark-100', className)} {...props} />
         },
         'td': ({ className, ...props }) => {
-          return <td className={clsx('border border-drak p-2', className)} {...props} />
+          return <td className={clsx('border p-2 border-dark', 'dark:border-dark-100', className)} {...props} />
         },
         'blockquote': ({ className, ...props }) => {
-          return <blockquote className={clsx('border-l-0.3rem p-l-2 border-gray-200 m-b-4 text-gray-700', className)} {...props} />
+          return <blockquote className={clsx('border-l-0.3rem p-l-2 border-gray-200 m-b-4 text-gray-700', 'dark:text-gray-400', className)} {...props} />
         },
         'code': ({ className, ...props }) => {
-          return <code className={clsx('p-x-1.5 p-y-0.5 bg-neutral-100 rounded-md text-xs', className)} {...props} />
+          return <code className={clsx('p-x-1.5 p-y-0.5 bg-neutral-100 rounded-md text-xs', 'dark:bg-neutral-500', className)} {...props} />
         },
         'task': ({ className, ...props }) => <ul className={
-          clsx('text-0.9rem p-y-1', className)
+          clsx('m-b-2 text-0.9rem p-y-1', className)
         } {...props} />,
         'task-item': ({ className, ...props }) => <li className={
           clsx('p-x-5', className)
@@ -114,6 +135,22 @@ function Resume() {
         'task-item-checkbox': ({ className, ...props }) => <input className={
           clsx('-m-l-5 m-r-1 m-b-0.5 align-middle', className)
         } {...props} />,
+        'pre': ({ className, ...props }) => <pre className={
+          clsx('bg-light p-x-5 p-y-3', 'dark:bg-dark-300', className)
+        } {...props} />,
+        'toolbox': ({ node, className, ...props }) => {
+          return <div className={clsx(
+            'absolute right-4 top-2',
+            className)} {...props}>
+            {
+              node.data.theme
+                ? <button onClick={() => {
+                  setDark(!dark)
+                }} className={clsx('r-carbon-sun text-2xl', 'dark:r-carbon-moon dark:text-light')} />
+                : null
+            }
+          </div>
+        },
       }}
       remarkPlugins={[
         remarkFrontmatter,
@@ -127,6 +164,7 @@ function Resume() {
         header,
         description,
         container,
+        toolbox,
         className,
       ]}
       remarkRehypeOptions={{

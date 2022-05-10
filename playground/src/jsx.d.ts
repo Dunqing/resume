@@ -19,6 +19,7 @@ declare global {
       'task': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
       'task-item': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
       'task-item-checkbox': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+      'toolbox': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
     }
   }
 }
