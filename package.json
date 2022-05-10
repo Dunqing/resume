@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "pnpm run --filter ./packages dev --parallel",
     "play": "pnpm run --filter ./playground dev",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "check-type": "tsc --noEmit"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.0",

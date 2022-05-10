@@ -13,20 +13,20 @@ export const task: Plugin<[], Element> = function () {
         return
 
       ul.tagName = 'task'
-      ul.properties.className = []
+      ul.properties!.className = []
 
       visit(ul, {
         type: 'element',
         tagName: 'li',
       }, (li) => {
         li.tagName = 'task-item'
-        li.properties.className = []
+        li.properties!.className = []
 
         visit(li, {
           type: 'element',
           tagName: 'input',
         }, (input) => {
-          if (input.properties.type === 'checkbox')
+          if (input.properties!.type === 'checkbox')
             input.tagName = 'task-item-checkbox'
         })
       })

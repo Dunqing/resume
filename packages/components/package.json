@@ -1,10 +1,6 @@
 {
   "name": "@resumejs/components",
   "version": "0.0.0",
-  "scripts": {
-    "dev": "vite build --watch",
-    "build": "vite build --clean"
-  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "exports": {
@@ -15,6 +11,14 @@
     "./style": {
       "import": "./dist/style.css"
     }
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build --clean"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.4",
@@ -43,9 +47,5 @@
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
     "vite": "^2.9.0"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
   }
 }

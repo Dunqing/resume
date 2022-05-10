@@ -21,12 +21,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "playground/src",
-    "../README.md"
+    "packages",
+    "playground",
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
 }

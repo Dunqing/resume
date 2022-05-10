@@ -22,6 +22,6 @@
   },
   "include": [
     "src",
-    "jsx.d.ts",
+    "jsx.d.ts"
   ]
 }

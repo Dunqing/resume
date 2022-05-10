@@ -79,6 +79,7 @@ importers:
       '@vitejs/plugin-react': ^1.0.7
       react: ^17.0.2
       react-dom: ^17.0.2
+      unocss: ^0.33.2
       vite: ^2.9.0
     dependencies:
       '@iconify-json/carbon': 1.1.4
@@ -88,6 +89,7 @@ importers:
       '@unocss/reset': 0.33.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      unocss: 0.33.2_vite@2.9.0
     devDependencies:
       '@types/react': 17.0.41
       '@types/react-dom': 17.0.14

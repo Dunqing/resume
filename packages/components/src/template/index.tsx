@@ -70,7 +70,7 @@ export const generateComponents = ({
           } {...props} />
     },
     'card-item': ({ className, index, ...props }) => {
-      return <div {...props} className={clsx('text-sm', { 'justify-self-end': index % 2 === 1 }, className)} />
+      return <div {...props} className={clsx('text-sm', { 'justify-self-end': index! % 2 === 1 }, className)} />
     },
     'card-item-label': ({ className, ...props }) => {
       return <span {...props} className={

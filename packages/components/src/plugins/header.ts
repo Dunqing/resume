@@ -10,13 +10,13 @@ export const header: Plugin<[], Element> = function () {
       type: 'element',
       tagName: 'h1',
     }, (paragraph, index, parent) => {
-      const len = parent.children.length
+      const len = parent!.children.length
       const ul = []
       let avatar: Element
       const delIndex: number[] = []
 
-      for (let i = index + 2; i < len; i += 2) {
-        const element = parent.children[i] as Element
+      for (let i = index! + 2; i < len; i += 2) {
+        const element = parent!.children[i] as Element
 
         if (isBlockquote(element))
           continue
@@ -43,11 +43,11 @@ export const header: Plugin<[], Element> = function () {
 
       if (ul.length) {
         paragraph.tagName = 'header-name'
-        delIndex.forEach(i => parent.children.splice(i, 1))
-        parent.children.splice(index, 1, {
+        delIndex.forEach(i => parent!.children.splice(i, 1))
+        parent!.children.splice(index!, 1, {
           type: 'element',
           tagName: 'header',
-          children: [paragraph, avatar, u('element', { tagName: 'header-content' }, ul)],
+          children: [paragraph, avatar!, u('element', { tagName: 'header-content' }, ul)],
         })
       }
     })
