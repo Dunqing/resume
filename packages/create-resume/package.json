@@ -1,0 +1,31 @@
+{
+  "name": "create-resume",
+  "version": "0.0.0",
+  "packageManager": "pnpm@6.32.3",
+  "description": "create resume project",
+  "keywords": [
+    "create",
+    "vite",
+    "resume",
+    "markdown"
+  ],
+  "homepage": "https://vite-ant-design-pro.vercel.app",
+  "bugs": {
+    "url": "https://github.com/Dunqing/resume/issues"
+  },
+  "license": "MIT",
+  "author": "dengqing <dengqing0821@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1247748612/Dungqing/resume.git"
+  },
+  "sideEffects": false,
+  "bin": {
+    "create-resume": "index.js"
+  },
+  "dependencies": {
+    "kolorist": "^1.5.1",
+    "minimist": "^1.2.6",
+    "prompts": "^2.4.2"
+  }
+}
