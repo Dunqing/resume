@@ -1,6 +1,9 @@
 module.exports = {
-  extends: ['@antfu/react'],
+  plugins: ['prettier'],
+  extends: ['@antfu/react', 'prettier'],
   rules: {
     'react/prop-types': 'off',
+    'prettier/prettier': 'error',
+    'antfu/if-newline': 'off',
   },
 }
