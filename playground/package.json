@@ -9,12 +9,16 @@
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.4",
+    "@iconify-json/mdi": "^1.1.2",
     "@resumejs/components": "workspace:*",
     "@unocss/preset-icons": "^0.33.2",
     "@unocss/preset-wind": "^0.33.2",
     "@unocss/reset": "^0.33.2",
+    "monaco-editor": "^0.33.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-monaco-editor": "^0.48.0",
+    "react-router-dom": "^6.3.0",
     "unocss": "^0.33.2"
   },
   "devDependencies": {

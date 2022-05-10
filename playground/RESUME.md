@@ -1,18 +1,17 @@
 ---
 theme: true
 print: true
-github: "https://github.com/Dunqing"
+github: "https://github.com/Dunqing/resume"
 ---
 
-# 邓清
+# 张三
 
 ![头像](https://notion-avatar.vercel.app/api/svg/eyJmYWNlIjo5LCJub3NlIjoxMCwibW91dGgiOjEsImV5ZXMiOjcsImV5ZWJyb3dzIjoxMSwiZ2xhc3NlcyI6MCwiaGFpciI6MTEsImFjY2Vzc29yaWVzIjoxMywiZGV0YWlscyI6MCwiYmVhcmQiOjAsImZsaXAiOjAsImNvbG9yIjoicmdiYSgyNTUsIDAsIDAsIDApIiwic2hhcGUiOiJub25lIn0=)
 
 - [https://github.com/Dunqing](https://github.com/Dunqing/resume)
 >
-- dengqing0821@gmail.com
-- 2.5年
-- 21岁
+- google@gmail.com
+- 3年
 >
 - Telegram: @luckingforme
 
@@ -26,42 +25,39 @@ github: "https://github.com/Dunqing"
 
 ## 工作经历
 
-### 深圳金猪速运有限公司
+### 深圳某公司
 
 |职位|工作时间|部门|地址|
 |:----:|:----:|:----:|:----:|
 |前端工程师|2021.01 ~ 至今|研发部|深圳|
 
-- 主要负责金猪速运产品以及金猪数据产品的迭代开发
-- 使用Taro+webview+React+Typescript混合开发小程序
+- 参与项目开发和迭代
+- 使用 xxx 完成了 xxx
 - 使用React+Typescript+Antd+ProComponent开发后台
-- 抽离edraw，taro-swr 等库做为npm库供多项目使用
-- 把控代码格式和质量，代码审查和合并merge request
+- 抽离 edraw，taro-swr 等库做为 npm 库供多项目使用
+- 把控代码格式和质量，代码审查和合并 merge request
 
-### 深圳驱动新媒体有限公司（前端工程师）
+### 深圳某公司
 
 |职位|工作时间|地址|
 |:----:|:----:|:----:|
 |前端工程师|2020-08 ~ 2021-01|深圳|
 
 - 主要负责新项目的开发和一些还在迭代中的项目需求开发。
-- 采用uniapp框架开发”车主特卖“小程序，在其中负责搭建小程序这个项目，封装一些针对微信原生api和promise化。
-- 负责迭代”车芝嘛“小程序，该小程序基于wepy开发。另外还负责小程序后台的迭代和bug修复。
+- 采用 uniapp 框架开发”车主特卖“小程序，在其中负责搭建小程序这个项目，封装一些针对微信原生 api 和 promise 化。
+- 负责迭代”车芝嘛“小程序，该小程序基于 wepy 开发。另外还负责小程序后台的迭代和 bug 修复。
 
 ## 专业技能
-1. 熟练使用React，Typescript，Taro，Umi 开发项目
-2. 熟练使用Vite，Rollup，Webpack 等编译工具
+1. 熟练使用 React, Typescript, Taro, Umi 开发项目
+2. 熟练使用 Vite, Rollup，Webpack 等编译工具
 3. 熟练使用 jest + enzyme / React Testing Libray 做代码测试
 4. 掌握gitlab-ci + docker 自动化部署
 5. 熟悉pnpm monorepo
-6. 了解 Vue2，Express，Nestjs，Eslint，Prettier，Husky
+6. 了解 Vue2, Express, Nestjs, Eslint, Prettier, Husky
 
 ## 项目经历
 
 ### Walle后台（项目负责人）
-
-
-#### 
 
 - 使用Ant Design Pro做初始项目，后经过迭代改造使用pnpm monorepo进行整合项目
 - 使用Authing做登录鉴权便于和飞书人员数据进行整合
@@ -87,13 +83,20 @@ github: "https://github.com/Dunqing"
 - **create**：一键创建整个项目并install。现在vue模板采用webpack5搭建完成。使用的技术栈有：vue2.x全家桶、typescript4.x、axios、babel、postcss、eslint
 - **deploy**：自动部署代码到服务器
 
+
+## 开源项目
+
+- [resume](https://github.com/Dunqing/resume) 用  Markdown 写简历
+- [vite-ant-design-pro](https://github.com/Dunqing/vite-ant-design-pro) 基于 Vite 的 ant-design-pro
+- [unplugin-moment-to-dayjs](https://github.com/Dunqing/unplugin-moment-to-dayjs) 基于 Vite 的 ant-design-pro
+- [unplugin-moment-to-dayjs](https://github.com/Dunqing/unplugin-moment-to-dayjs) 使用 dayjs 替换moment，支持在 vite, rollup, webpack 中使用
 ## 教育经历
 
-### 广州华立科技职业学院 
+### Github开源大学
 
-|专业|学历|时间|
-|:----:|:----:|:----:|
-|计算机应用|大专|2020.11 ~ 2021.01|
+|专业|时间|
+|:----:|:----:|
+|开源捣鼓|2019.01 - 2021.01|
 
 ## 其他
 
