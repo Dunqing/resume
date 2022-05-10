@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "pnpm run --filter ./packages dev --parallel",
     "play": "pnpm run --filter ./playground dev",
     "lint": "eslint . --fix"
   },

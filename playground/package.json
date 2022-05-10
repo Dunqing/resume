@@ -9,24 +9,12 @@
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.4",
+    "@resumejs/components": "workspace:*",
     "@unocss/preset-icons": "^0.33.2",
     "@unocss/preset-wind": "^0.33.2",
     "@unocss/reset": "^0.33.2",
-    "clsx": "^1.1.1",
-    "hast": "^1.0.0",
-    "hast-util-has-property": "^2.0.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-markdown": "^8.0.1",
-    "rehype-raw": "^6.1.1",
-    "remark-frontmatter": "^4.0.1",
-    "remark-gfm": "^3.0.1",
-    "unified": "^10.1.2",
-    "unist-builder": "^3.0.0",
-    "unist-util-is": "^5.1.1",
-    "unist-util-visit": "^4.1.0",
-    "unocss": "^0.33.2",
-    "yaml": "^2.0.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
