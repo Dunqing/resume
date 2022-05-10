@@ -1,12 +1,22 @@
 import type { Plugin } from 'unified'
 import type { Root } from 'hast'
 import { u } from 'unist-builder'
+import { visit } from 'unist-util-visit'
 
 export const toolbox: Plugin<[], Root> = function () {
   return (root, file) => {
-    root.children.unshift(u('element', {
-      tagName: 'toolbox',
-      data: file.data.meta as any,
-    }, []))
+    visit(
+      root,
+      {
+        type: 'element',
+        tagName: 'content',
+      },
+      content => content.children.unshift(
+        u('element', {
+          tagName: 'toolbox',
+          data: file.data.meta as any,
+        }, []),
+      ),
+    )
   }
 }

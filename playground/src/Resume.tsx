@@ -23,8 +23,7 @@ function Resume() {
         'container': ({ className, ...props }) => <div className={
           clsx(
             'font-sans text-base text-dark-400 bg-white',
-            'dark:text-light-700',
-            'dark:bg-dark-400',
+            'dark:text-light-700 dark:bg-dark-400',
             className,
           )
         } {...props} />,
@@ -32,6 +31,7 @@ function Resume() {
           clsx(
             'border border-light-700 md:w-768px xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4',
             'dark:border-dark-100',
+            'relative',
             className,
           )
         } {...props} />,
