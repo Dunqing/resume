@@ -22,11 +22,19 @@ import { generateComponents } from './template'
 
 interface ResumeProps extends ReactMarkdownOptions {}
 
-export const Resume = ({ children }: ResumeProps) => {
+export const Resume = (props: ResumeProps) => {
+  const {
+    children,
+    components,
+    rehypePlugins = [],
+    remarkPlugins = [],
+    remarkRehypeOptions,
+  } = props
+
   const [dark, setDark] = useState(false)
 
   const toggleTheme = () => {
-    setDark(!dark)
+    setDark((d) => !d)
   }
 
   const print = () => {
@@ -35,12 +43,20 @@ export const Resume = ({ children }: ResumeProps) => {
 
   return (
     <ReactMarkdown
-      className={clsx({
-        dark,
-      })}
-      components={generateComponents({ print, toggleTheme })}
-      remarkPlugins={[remarkFrontmatter, meta, remarkGfm]}
+      className={clsx(
+        {
+          dark,
+        },
+        'r-resume',
+        props.className
+      )}
+      components={{
+        ...components,
+        ...generateComponents({ print, toggleTheme }),
+      }}
+      remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
       rehypePlugins={[
+        ...rehypePlugins,
         task,
         rehypeRaw,
         card,
@@ -52,6 +68,7 @@ export const Resume = ({ children }: ResumeProps) => {
       ]}
       remarkRehypeOptions={{
         allowDangerousHtml: true,
+        ...remarkRehypeOptions,
       }}
     >
       {children}
