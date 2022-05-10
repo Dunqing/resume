@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build --clean"
+    "build": "vite build --emptyOutDir"
   },
   "peerDependencies": {
     "react": "^17.0.2",
