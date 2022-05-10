@@ -9,6 +9,7 @@ export const PrintButton = ({ print, onClick }: PrintButtonProps) => {
 
   return (
     <button
+      title="打印"
       onClick={onClick}
       className={clsx(
         'r-carbon-printer text-lg hover:text-gray transition-colors',

@@ -9,6 +9,7 @@ export const ThemeButton = ({ theme, onClick }: ThemeButtonProps) => {
 
   return (
     <button
+      title="主题"
       onClick={onClick}
       className={clsx(
         'r-carbon-sun text-lg hover:text-gray transition-colors',

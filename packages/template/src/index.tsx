@@ -2,7 +2,7 @@ import 'uno.css'
 import '@unocss/reset/tailwind.css'
 import clsx from 'clsx'
 import type { Components } from 'react-markdown'
-import { PrintButton, ThemeButton } from './toolbox'
+import { GithubLink, PrintButton, ThemeButton } from './toolbox'
 
 interface GenerateComponentOptions {
   print: () => void
@@ -302,6 +302,7 @@ export const generateComponents = ({
           className={clsx('absolute right-4 top-2 flex gap-x-1.5', className)}
           {...props}
         >
+          <GithubLink github={meta.github} />
           <PrintButton
             onClick={print}
             print={meta.print}
