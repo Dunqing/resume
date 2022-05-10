@@ -5,14 +5,22 @@ import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
 import { useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
-import { card, className, container, description, header, meta, task, toolbox } from './plugins'
+import {
+  card,
+  className,
+  container,
+  description,
+  header,
+  meta,
+  task,
+  toolbox,
+} from './plugins'
 
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
 import { generateComponents } from './template'
 
-interface ResumeProps extends ReactMarkdownOptions {
-}
+interface ResumeProps extends ReactMarkdownOptions {}
 
 export const Resume = ({ children }: ResumeProps) => {
   const [dark, setDark] = useState(false)
@@ -27,19 +35,11 @@ export const Resume = ({ children }: ResumeProps) => {
 
   return (
     <ReactMarkdown
-      className={clsx(
-        {
-          dark,
-        },
-      )}
-      components={
-        generateComponents({ print, toggleTheme })
-      }
-      remarkPlugins={[
-        remarkFrontmatter,
-        meta,
-        remarkGfm,
-      ]}
+      className={clsx({
+        dark,
+      })}
+      components={generateComponents({ print, toggleTheme })}
+      remarkPlugins={[remarkFrontmatter, meta, remarkGfm]}
       rehypePlugins={[
         task,
         rehypeRaw,
@@ -60,4 +60,3 @@ export const Resume = ({ children }: ResumeProps) => {
 }
 
 export default Resume
-

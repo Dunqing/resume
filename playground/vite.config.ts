@@ -6,12 +6,15 @@ import UnocssIcons from '@unocss/preset-icons'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), unocss({
-    presets: [
-      UnocssIcons({
-        prefix: 'r-',
-      }),
-      presetWind(),
-    ],
-  })],
+  plugins: [
+    react(),
+    unocss({
+      presets: [
+        UnocssIcons({
+          prefix: 'r-',
+        }),
+        presetWind(),
+      ],
+    }),
+  ],
 })

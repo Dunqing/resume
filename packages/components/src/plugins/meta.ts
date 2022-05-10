@@ -5,10 +5,14 @@ import yaml from 'yaml'
 
 export const meta: Plugin<[], YAML> = function () {
   return (root, file) => {
-    visit(root, {
-      type: 'yaml',
-    }, (el) => {
-      file.data.meta = yaml.parse(el.value)
-    })
+    visit(
+      root,
+      {
+        type: 'yaml',
+      },
+      (el) => {
+        file.data.meta = yaml.parse(el.value)
+      }
+    )
   }
 }

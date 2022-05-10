@@ -5,10 +5,7 @@ import '@resumejs/components/style'
 import '@unocss/reset/tailwind.css'
 
 function App() {
-  return (
-    <Resume>{readme}</Resume>
-  )
+  return <Resume>{readme}</Resume>
 }
 
 export default App
-

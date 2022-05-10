@@ -5,12 +5,15 @@ interface ThemeButtonProps {
 }
 
 export const ThemeButton = ({ theme, onClick }: ThemeButtonProps) => {
-  if (!theme)
-    return null
+  if (!theme) return null
 
-  return <button
-  onClick={onClick}
-  className={clsx(
-    'r-carbon-sun text-lg hover:text-gray transition-colors',
-    'dark:r-carbon-moon dark:text-light')} />
+  return (
+    <button
+      onClick={onClick}
+      className={clsx(
+        'r-carbon-sun text-lg hover:text-gray transition-colors',
+        'dark:r-carbon-moon dark:text-light'
+      )}
+    />
+  )
 }

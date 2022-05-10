@@ -11,12 +11,17 @@ export const toolbox: Plugin<[], Root> = function () {
         type: 'element',
         tagName: 'content',
       },
-      content => content.children.unshift(
-        u('element', {
-          tagName: 'toolbox',
-          data: file.data.meta as any,
-        }, []),
-      ),
+      (content) =>
+        content.children.unshift(
+          u(
+            'element',
+            {
+              tagName: 'toolbox',
+              data: file.data.meta as any,
+            },
+            []
+          )
+        )
     )
   }
 }

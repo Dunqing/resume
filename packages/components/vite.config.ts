@@ -8,20 +8,24 @@ import packageJson from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [dts(), react(), unocss({
-    inspector: false,
-    presets: [
-      UnocssIcons({
-        prefix: 'r-',
-      }),
-      presetWind(),
-    ],
-  })],
+  plugins: [
+    dts(),
+    react(),
+    unocss({
+      inspector: false,
+      presets: [
+        UnocssIcons({
+          prefix: 'r-',
+        }),
+        presetWind(),
+      ],
+    }),
+  ],
   build: {
     lib: {
       entry: 'src/index.ts',
       formats: ['es', 'cjs'],
-      fileName: format => `index.${format === 'cjs' ? 'js' : 'mjs'}`,
+      fileName: (format) => `index.${format === 'cjs' ? 'js' : 'mjs'}`,
     },
     emptyOutDir: false,
     rollupOptions: {

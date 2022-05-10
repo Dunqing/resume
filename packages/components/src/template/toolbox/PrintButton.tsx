@@ -5,12 +5,15 @@ interface PrintButtonProps {
 }
 
 export const PrintButton = ({ print, onClick }: PrintButtonProps) => {
-  if (!print)
-    return null
+  if (!print) return null
 
-  return <button
-  onClick={onClick}
-  className={clsx(
-    'r-carbon-printer text-lg hover:text-gray transition-colors',
-    'dark:text-light')} />
+  return (
+    <button
+      onClick={onClick}
+      className={clsx(
+        'r-carbon-printer text-lg hover:text-gray transition-colors',
+        'dark:text-light'
+      )}
+    />
+  )
 }
