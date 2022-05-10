@@ -42,17 +42,16 @@ export const header: Plugin<[], Element> = function () {
           delIndex.unshift(i)
         }
 
-        if (ul.length) {
+        if (avatar! || ul.length) {
+          if (avatar!) ul.unshift(avatar)
+          ul.unshift(paragraph)
+
           paragraph.tagName = 'header-name'
           delIndex.forEach((i) => parent!.children.splice(i, 1))
           parent!.children.splice(index!, 1, {
             type: 'element',
             tagName: 'header',
-            children: [
-              paragraph,
-              avatar!,
-              u('element', { tagName: 'header-content' }, ul),
-            ],
+            children: ul,
           })
         }
       }
