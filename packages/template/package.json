@@ -1,5 +1,5 @@
 {
-  "name": "@resumejs/components",
+  "name": "@resumejs/template",
   "version": "0.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -23,7 +23,10 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
-    "@resumejs/template": "workspace:*",
+    "@iconify-json/carbon": "^1.1.4",
+    "@unocss/preset-icons": "^0.33.2",
+    "@unocss/preset-wind": "^0.33.2",
+    "@unocss/reset": "^0.33.2",
     "clsx": "^1.1.1",
     "hast": "^1.0.0",
     "hast-util-has-property": "^2.0.0",
@@ -37,6 +40,7 @@
     "unist-builder": "^3.0.0",
     "unist-util-is": "^5.1.1",
     "unist-util-visit": "^4.1.0",
+    "unocss": "^0.33.2",
     "vite-plugin-dts": "^1.1.1",
     "yaml": "^2.0.1"
   },

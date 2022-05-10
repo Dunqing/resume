@@ -5,6 +5,8 @@ import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
 import { useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
+import { generateComponents } from '@resumejs/template'
+import '@resumejs/template/style'
 import {
   card,
   className,
@@ -15,10 +17,6 @@ import {
   task,
   toolbox,
 } from './plugins'
-
-import 'uno.css'
-import '@unocss/reset/tailwind.css'
-import { generateComponents } from './template'
 
 interface ResumeProps extends ReactMarkdownOptions {}
 
@@ -51,8 +49,11 @@ export const Resume = (props: ResumeProps) => {
         props.className
       )}
       components={{
+        ...generateComponents({
+          print,
+          toggleTheme,
+        }),
         ...components,
-        ...generateComponents({ print, toggleTheme }),
       }}
       remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
       rehypePlugins={[

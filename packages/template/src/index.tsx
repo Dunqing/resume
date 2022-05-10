@@ -1,3 +1,5 @@
+import 'uno.css'
+import '@unocss/reset/tailwind.css'
 import clsx from 'clsx'
 import type { Components } from 'react-markdown'
 import { PrintButton, ThemeButton } from './toolbox'
