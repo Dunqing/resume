@@ -8,9 +8,18 @@ import rehypeRaw from 'rehype-raw'
 import { useState } from 'react'
 import readme from '../../README.md?raw'
 import { card, className, container, description, header, meta, task, toolbox } from './plugins'
+import { PrintButton, ThemeButton } from './components'
 
 function Resume() {
   const [dark, setDark] = useState(false)
+
+  const toggleTheme = () => {
+    setDark(!dark)
+  }
+
+  const print = () => {
+    window.print()
+  }
 
   return (
     <ReactMarkdown
@@ -139,16 +148,12 @@ function Resume() {
           clsx('bg-light p-x-5 p-y-3', 'dark:bg-dark-300', className)
         } {...props} />,
         'toolbox': ({ node, className, ...props }) => {
+          const meta = node.data || {} as any
           return <div className={clsx(
-            'absolute right-4 top-2',
+            'absolute right-4 top-2 flex gap-x-1.5',
             className)} {...props}>
-            {
-              node.data.theme
-                ? <button onClick={() => {
-                  setDark(!dark)
-                }} className={clsx('r-carbon-sun text-2xl', 'dark:r-carbon-moon dark:text-light')} />
-                : null
-            }
+              <PrintButton onClick={print} print={meta.print} />
+              <ThemeButton onClick={toggleTheme} theme={meta.theme} />
           </div>
         },
       }}

@@ -1,5 +1,6 @@
 ---
 theme: true
+print: true
 ---
 
 # 邓清
