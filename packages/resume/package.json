@@ -1,12 +1,6 @@
 {
   "name": "@resumejs/resume",
   "version": "0.0.7",
-  "exports": {
-    "./entry": {
-      "require": "./entry/main.tsx",
-      "import": "./entry/main.tsx"
-    }
-  },
   "bin": {
     "resume": "./dist/index.ts.mjs"
   },
