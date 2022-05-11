@@ -28,16 +28,13 @@ export const entry = (): Plugin => {
         const ms = new MagicString(`
           import React from 'react'
           import ReactDOM from 'react-dom'
-          import 'uno.css'
           import { Resume } from '@resumejs/components'
           import '@resumejs/components/style'
           import md from 'virtual:resume'
 
           const Show = () => {
             return (
-              <div className="flex justify-center">
-                <Resume className="md:w-screen-md">{md}</Resume>
-              </div>
+              <Resume className="md">{md}</Resume>
             )
           }
 

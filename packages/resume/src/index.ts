@@ -2,8 +2,6 @@ import path, { isAbsolute } from 'path'
 import type { InlineConfig } from 'vite'
 import { build, createServer, preview } from 'vite'
 import react from '@vitejs/plugin-react'
-import unocssVite from 'unocss/vite'
-import presetWind from '@unocss/preset-wind'
 import minimist from 'minimist'
 import { loadResume } from './plugins/loadResume'
 import { entry } from './plugins/entry'
@@ -32,9 +30,6 @@ const getViteConfig = () => {
     plugins: [
       react(),
       entry(),
-      unocssVite({
-        presets: [presetWind()],
-      }),
       loadResume(),
     ],
   }
