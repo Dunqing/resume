@@ -1,6 +1,6 @@
 {
   "name": "@resumejs/resume",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "bin": {
     "resume": "./dist/index.ts.mjs"
   },
