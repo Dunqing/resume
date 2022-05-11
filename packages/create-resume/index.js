@@ -14,7 +14,10 @@ const cwd = process.cwd()
 const TEMPLATES = [
   {
     name: 'react-ts',
-    display: 'Typescript',
+    color: yellow,
+  },
+  {
+    name: 'template-markdown',
     color: yellow,
   },
 ]

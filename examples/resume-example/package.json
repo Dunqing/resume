@@ -1,12 +1,12 @@
 {
   "name": "resume-example",
   "private": true,
+  "scripts": {
+    "dev": "resume"
+  },
   "dependencies": {
     "@resumejs/core": "workspace:*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "scripts": {
-    "dev": "resume"
   }
 }

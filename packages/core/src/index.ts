@@ -1,6 +1,6 @@
 import path, { isAbsolute } from 'path'
 import type { InlineConfig } from 'vite'
-import { build, createServer } from 'vite'
+import { build, createServer, preview } from 'vite'
 import react from '@vitejs/plugin-react'
 import unocssVite from 'unocss/vite'
 import presetWind from '@unocss/preset-wind'
@@ -30,11 +30,11 @@ const getViteConfig = () => {
     logLevel: 'info',
     configFile,
     plugins: [
-      entry(__dirname),
+      react(),
+      entry(),
       unocssVite({
         presets: [presetWind()],
       }),
-      react(),
       loadResume(),
     ],
   }
@@ -44,6 +44,10 @@ const getViteConfig = () => {
 
 if (_.includes('build')) {
   build(getViteConfig())
+} else if (_.includes('preview')) {
+  preview(getViteConfig()).then((res) => {
+    res.printUrls()
+  })
 } else {
   createServer(getViteConfig()).then((res) => {
     res.listen(3000).then(() => {

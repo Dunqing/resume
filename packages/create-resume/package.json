@@ -19,10 +19,10 @@
     "type": "git",
     "url": "git+https://github.com/1247748612/Dungqing/resume.git"
   },
-  "sideEffects": false,
   "bin": {
     "create-resume": "index.js"
   },
+  "sideEffects": false,
   "dependencies": {
     "kolorist": "^1.5.1",
     "minimist": "^1.2.6",

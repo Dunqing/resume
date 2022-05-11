@@ -10,11 +10,6 @@ export const loadResume = (): Plugin => {
       config = _config
     },
     async resolveId(id) {
-      // const react = await this.resolve('react')
-      // console.log(
-      //   '🚀 ~ file: loadResume.ts ~ line 14 ~ resolveId ~ react',
-      //   react
-      // )
       if (id === virtualModuleId) {
         return `\0${id}`
       }

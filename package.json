@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm run --parallel --filter ./packages/* dev",
+    "dev": "pnpm run --parallel --filter './packages/*' dev",
+    "build": "pnpm run --filter './packages/*' build",
     "play": "pnpm run --filter ./playground dev",
     "lint": "eslint . --fix",
     "check-type": "tsc --noEmit"

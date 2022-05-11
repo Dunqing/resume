@@ -1,5 +1,5 @@
 import { Resume } from '@resumejs/components'
-import md from '../../RESUME.md?raw'
+import md from '../../README.md?raw'
 
 const Show = () => {
   return (
