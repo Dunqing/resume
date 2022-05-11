@@ -29,7 +29,7 @@
 1. 创建
 
 ```shell
-pnpm create resume
+pnpm create resumejs
 ```
 
 2. 选择模板
