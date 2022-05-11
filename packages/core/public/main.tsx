@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Show from './Show'
+import Show from 'F:\\dengqing\\resume\\packages\\core\\public\\Show.tsx'
 import 'uno.css'
 import '@resumejs/components/style'
 
