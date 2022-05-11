@@ -1,6 +1,6 @@
 {
   "name": "@resumejs/resume",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "exports": {
     "./entry": {
       "require": "./entry/main.tsx",
