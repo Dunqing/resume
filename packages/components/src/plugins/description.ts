@@ -1,6 +1,6 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import type { Element } from 'hast'
+import type { Element } from 'rehype'
 import { isHeading, isImage, isTable } from './_util'
 
 export const description: Plugin<[], Element> = function () {

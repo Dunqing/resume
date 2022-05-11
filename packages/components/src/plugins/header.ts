@@ -1,6 +1,6 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import type { Element } from 'hast'
+import type { Element } from 'rehype'
 import { isBlockquote, isImage, isParagraph, isUl } from './_util'
 
 export const header: Plugin<[], Element> = function () {

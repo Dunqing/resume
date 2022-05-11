@@ -1,4 +1,4 @@
-import type { Element, Text } from 'hast'
+import type { Element, Text } from 'rehype'
 import { is } from 'unist-util-is'
 
 const HeadingTag = ['h1', 'h2', 'h3']

@@ -1,5 +1,5 @@
 import type { Plugin } from 'unified'
-import type { Root } from 'hast'
+import type { Root } from 'rehype'
 import { u } from 'unist-builder'
 
 export const container: Plugin<[], Root> = function () {

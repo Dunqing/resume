@@ -1,6 +1,6 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import type { Element } from 'hast'
+import type { Element } from 'rehype'
 import clsx from 'clsx'
 
 export const className: Plugin<[], Element> = function () {
