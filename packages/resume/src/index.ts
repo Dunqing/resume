@@ -29,6 +29,9 @@ const getViteConfig = () => {
   const _config: InlineConfig = {
     logLevel: 'info',
     configFile,
+    optimizeDeps: {
+      entries: ["@resumejs/core"]
+    },
     plugins: [
       react(),
       entry(),

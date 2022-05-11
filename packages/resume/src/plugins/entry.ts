@@ -1,4 +1,5 @@
 import type { Plugin } from 'vite'
+import MagicString from 'magic-string'
 
 export const entry = (): Plugin => {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
@@ -24,9 +25,13 @@ export const entry = (): Plugin => {
     },
     load(id) {
       if (id === RESUME_ENTRY) {
-        return `
-          import "@resumejs/resume/entry"
-        `
+        const ms = new MagicString(`
+          import "@resumejs/core"
+        `)
+        return {
+          code: ms.toString(),
+          map: ms.generateMap()
+        }
       }
     },
   }
