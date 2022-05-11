@@ -3,8 +3,6 @@ import resume from '../../README.md?raw'
 
 export const Show = () => {
   return (
-    <div className="flex justify-center">
-      <Resume className="md:w-screen-md">{resume}</Resume>
-    </div>
+    <Resume>{resume}</Resume>
   )
 }
