@@ -1,7 +1,6 @@
 {
   "name": "@resumejs/resume",
   "version": "0.0.2",
-  "private": true,
   "exports": {
     "./entry": {
       "require": "./entry/main.tsx",
