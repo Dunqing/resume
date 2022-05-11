@@ -23,11 +23,11 @@ importers:
 
   examples/resume-example:
     specifiers:
-      '@resumejs/core': workspace:*
+      '@resumejs/resume': workspace:*
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@resumejs/core': link:../../packages/core
+      '@resumejs/resume': link:../../packages/resume
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
 
@@ -76,36 +76,6 @@ importers:
       '@vitejs/plugin-react': 1.3.2
       vite: 2.9.8
 
-  packages/core:
-    specifiers:
-      '@resumejs/components': workspace:*
-      '@types/minimist': ^1.2.2
-      '@types/react': ^17.0.33
-      '@types/react-dom': ^17.0.10
-      '@unocss/preset-wind': ^0.33.2
-      '@vitejs/plugin-react': ^1.0.7
-      kolorist: ^1.5.1
-      minimist: ^1.2.6
-      react: ^17.0.2
-      react-dom: ^17.0.2
-      unbuild: ^0.7.4
-      unocss: ^0.33.2
-      vite: ^2.9.0
-    devDependencies:
-      '@resumejs/components': link:../components
-      '@types/minimist': 1.2.2
-      '@types/react': 17.0.45
-      '@types/react-dom': 17.0.16
-      '@unocss/preset-wind': 0.33.2
-      '@vitejs/plugin-react': 1.3.2
-      kolorist: 1.5.1
-      minimist: 1.2.6
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      unbuild: 0.7.4
-      unocss: 0.33.2_vite@2.9.8
-      vite: 2.9.8
-
   packages/create-resume:
     specifiers:
       kolorist: ^1.5.1
@@ -115,6 +85,16 @@ importers:
       kolorist: 1.5.1
       minimist: 1.2.6
       prompts: 2.4.2
+
+  packages/create-resume/template-markdown:
+    specifiers:
+      '@resumejs/resume': latest
+      react: ^17.0.2
+      react-dom: ^17.0.2
+    dependencies:
+      '@resumejs/resume': link:../../resume
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
 
   packages/create-resume/template-react-ts:
     specifiers:
@@ -145,6 +125,36 @@ importers:
       '@types/react': 17.0.45
       '@types/react-dom': 17.0.16
       '@vitejs/plugin-react': 1.3.2
+      vite: 2.9.8
+
+  packages/resume:
+    specifiers:
+      '@resumejs/components': workspace:*
+      '@types/minimist': ^1.2.2
+      '@types/react': ^17.0.33
+      '@types/react-dom': ^17.0.10
+      '@unocss/preset-wind': ^0.33.2
+      '@vitejs/plugin-react': ^1.0.7
+      kolorist: ^1.5.1
+      minimist: ^1.2.6
+      react: ^17.0.2
+      react-dom: ^17.0.2
+      unbuild: ^0.7.4
+      unocss: ^0.33.2
+      vite: ^2.9.0
+    devDependencies:
+      '@resumejs/components': link:../components
+      '@types/minimist': 1.2.2
+      '@types/react': 17.0.45
+      '@types/react-dom': 17.0.16
+      '@unocss/preset-wind': 0.33.2
+      '@vitejs/plugin-react': 1.3.2
+      kolorist: 1.5.1
+      minimist: 1.2.6
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      unbuild: 0.7.4
+      unocss: 0.33.2_vite@2.9.8
       vite: 2.9.8
 
   packages/template:

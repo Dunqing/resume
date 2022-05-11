@@ -25,7 +25,7 @@ export const entry = (): Plugin => {
     load(id) {
       if (id === RESUME_ENTRY) {
         return `
-          import "@resumejs/core/entry"
+          import "@resumejs/resume/entry"
         `
       }
     },

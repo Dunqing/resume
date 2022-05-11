@@ -1,5 +1,5 @@
 {
-  "name": "@resumejs/core",
+  "name": "@resumejs/resume",
   "version": "0.0.0",
   "private": true,
   "exports": {

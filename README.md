@@ -63,7 +63,7 @@ export default function App() {
 }
 ```
 
-## @resumejs/core
+## @resumejs/resume
 
 - cli 支持，使用方式和 vite 一样
 - 默认使用运行目录下的 README.md 做为你的简历 markdown
