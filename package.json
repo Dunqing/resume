@@ -8,7 +8,7 @@
     "play": "pnpm run --filter ./playground dev",
     "lint": "eslint . --fix",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp packages/*/package.json --no-verify --commit --push --tag && pnpm publish --filter './packages/*'",
+    "release": "bumpp packages/*/package.json --no-verify --commit --push --tag && pnpm publish --filter './packages/*' --access public",
     "check-type": "tsc --noEmit"
   },
   "dependencies": {
