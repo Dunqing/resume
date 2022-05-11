@@ -78,7 +78,7 @@ importers:
       '@vitejs/plugin-react': 1.3.2
       vite: 2.9.8
 
-  packages/create-resume:
+  packages/create-resumejs:
     specifiers:
       kolorist: ^1.5.1
       minimist: ^1.2.6
@@ -88,7 +88,7 @@ importers:
       minimist: 1.2.6
       prompts: 2.4.2
 
-  packages/create-resume/template-markdown:
+  packages/create-resumejs/template-markdown:
     specifiers:
       '@resumejs/resume': latest
       react: ^17.0.2
@@ -98,7 +98,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
 
-  packages/create-resume/template-react-ts:
+  packages/create-resumejs/template-react-ts:
     specifiers:
       '@iconify-json/carbon': ^1.1.4
       '@iconify-json/mdi': ^1.1.2

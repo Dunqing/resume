@@ -22,7 +22,7 @@
 
 ## 使用方式
 
-## create-resume
+## create-resumejs
 
 快速创建简历项目，支持在 Vercel 中部署
 
@@ -69,7 +69,7 @@ export default function App() {
 - 默认使用运行目录下的 README.md 做为你的简历 markdown
 - 支持 vite.config.ts 配置文件
 
-> 可以直接使用 create-resume 创建项目
+> 可以直接使用 create-resumejs 创建项目
 
 ### Install
 

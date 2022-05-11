@@ -20,7 +20,7 @@
     "url": "git+https://github.com/1247748612/Dungqing/resume.git"
   },
   "bin": {
-    "create-resumejs": "index.js"
+    "create-resumejsjs": "index.js"
   },
   "sideEffects": false,
   "dependencies": {
