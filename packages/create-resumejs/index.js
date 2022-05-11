@@ -17,7 +17,7 @@ const TEMPLATES = [
     color: yellow,
   },
   {
-    name: 'template-markdown',
+    name: 'markdown',
     color: yellow,
   },
 ]
