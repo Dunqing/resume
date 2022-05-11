@@ -1,5 +1,5 @@
 {
-  "name": "create-resume",
+  "name": "create-resumejs",
   "version": "0.0.2",
   "packageManager": "pnpm@6.32.3",
   "description": "create resume project",
@@ -20,7 +20,7 @@
     "url": "git+https://github.com/1247748612/Dungqing/resume.git"
   },
   "bin": {
-    "create-resume": "index.js"
+    "create-resumejs": "index.js"
   },
   "sideEffects": false,
   "dependencies": {
