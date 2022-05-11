@@ -74,7 +74,7 @@ export default function App() {
 ### Install
 
 ```shell
-pnpm add @resumjes/core
+pnpm add @resumjes/resume
 ```
 
 需要安装依赖 react 和 react-dom
