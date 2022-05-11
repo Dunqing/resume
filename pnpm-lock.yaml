@@ -25,12 +25,12 @@ importers:
 
   examples/resume-example:
     specifiers:
-      '@resumejs/core': workspace:*
+      '@resumejs/components': workspace:*
       '@resumejs/resume': workspace:*
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@resumejs/core': link:../../packages/core
+      '@resumejs/components': link:../../packages/components
       '@resumejs/resume': link:../../packages/resume
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -107,12 +107,12 @@ importers:
 
   packages/create-resumejs/template-markdown:
     specifiers:
-      '@resumejs/core': latest
+      '@resumejs/components': latest
       '@resumejs/resume': latest
       react: ^17.0.2
       react-dom: ^17.0.2
     dependencies:
-      '@resumejs/core': link:../../core
+      '@resumejs/components': link:../../components
       '@resumejs/resume': link:../../resume
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -150,6 +150,7 @@ importers:
 
   packages/resume:
     specifiers:
+      '@resumejs/components': workspace:*
       '@resumejs/core': workspace:*
       '@types/minimist': ^1.2.2
       '@types/react': ^17.0.33
@@ -165,6 +166,7 @@ importers:
       unocss: ^0.33.2
       vite: ^2.9.0
     dependencies:
+      '@resumejs/components': link:../components
       '@resumejs/core': link:../core
       '@types/minimist': 1.2.2
       '@types/react': 17.0.45
