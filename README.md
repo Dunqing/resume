@@ -1,5 +1,7 @@
 # Resume
 
+### [Playground](https://resumejs.vercel.app/) ｜ [简历示例](https://resumejs.vercel.app/#/resume)
+
 ## 项目介绍
 
 ### 初衷
