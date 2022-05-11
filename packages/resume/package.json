@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub"
+    "dev": "unbuild --stub",
+    "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
     "@resumejs/components": "workspace:*",
