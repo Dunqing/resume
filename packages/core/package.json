@@ -1,6 +1,6 @@
 {
   "name": "@resumejs/core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "module": "./src/main.tsx",
   "peerDependencies": {
     "react": "^17.0.2",
