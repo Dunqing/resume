@@ -23,7 +23,7 @@ const App = () => {
   const location = useLocation()
   return (
     <div className="relative">
-      <div className="absolute left-24 top-8 flex gap-x-2 z-1000">
+      <div className="absolute left-4 top-2 flex gap-x-2 z-1000">
         <a
           href="https://github.com/Dunqing/resume"
           target="_blank"
