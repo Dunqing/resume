@@ -18,7 +18,9 @@
 - 支持嵌入 HTML
 - 支持打印 PDF
 - 支持在线预览
+- 支持自定义模板
 - 支持多模板组合使用
+- 支持样式覆盖
 
 ## 使用方式
 
@@ -100,3 +102,16 @@ resume build
 ```shell
 resume preview
 ```
+
+## 自定义的写简历的markdown规则
+
+1. 一级标题下的内容包括一级标题为简历头部的信息 可自定义`header`组件
+    - 一级标题为名字 可自定义`header-name`组件
+    - 图片作为头像 可自定义`header-avatar`组件
+    - 包裹所有列表项 可自定义`header-content`组件
+    - 每个列表为行 可自定义`header-row`组件
+    - 列表的项为列 可自定义`header-col`组件
+
+2. 三级标题下方的第一段内容
+  - 表格将更改为三级标题的描述信息，可自定义`card`, `card-item`, `card-item-label`, `card-item-value`组件
+  - 标题下或Table下第一行文本将会更改为描述内容 可自定义`description`组件
