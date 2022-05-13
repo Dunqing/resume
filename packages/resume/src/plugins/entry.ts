@@ -47,7 +47,7 @@ export const entry = (): Plugin => {
         `)
         return {
           code: ms.toString(),
-          map: ms.generateMap()
+          map: ms.generateMap(),
         }
       }
     },

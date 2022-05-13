@@ -27,11 +27,7 @@ const getViteConfig = () => {
   const _config: InlineConfig = {
     logLevel: 'info',
     configFile,
-    plugins: [
-      react(),
-      entry(),
-      loadResume(),
-    ],
+    plugins: [react(), entry(), loadResume()],
   }
 
   return _config
