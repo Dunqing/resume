@@ -11,12 +11,12 @@
     "@iconify-json/carbon": "^1.1.4",
     "@iconify-json/mdi": "^1.1.2",
     "@resumejs/components": "latest",
-    "@unocss/preset-icons": "^0.33.2",
-    "@unocss/preset-wind": "^0.33.2",
-    "@unocss/reset": "^0.33.2",
+    "@unocss/preset-icons": "^0.33.4",
+    "@unocss/preset-wind": "^0.33.4",
+    "@unocss/reset": "^0.33.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "unocss": "^0.33.2"
+    "unocss": "^0.33.4"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
