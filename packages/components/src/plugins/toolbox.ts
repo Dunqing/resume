@@ -1,5 +1,5 @@
 import type { Plugin } from 'unified'
-import type { Root } from 'rehype'
+import type { Root } from 'hast'
 import { u } from 'unist-builder'
 import { visit } from 'unist-util-visit'
 

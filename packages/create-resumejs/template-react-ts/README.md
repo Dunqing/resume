@@ -1,7 +1,7 @@
 ---
 theme: true
 print: true
-github: "https://github.com/Dunqing/resume"
+github: 'https://github.com/Dunqing/resume'
 ---
 
 # 张三

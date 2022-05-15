@@ -40,6 +40,7 @@ importers:
   packages/components:
     specifiers:
       '@resumejs/template': workspace:*
+      '@types/hast': ^2.3.4
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
       '@vitejs/plugin-react': ^1.0.7
@@ -48,7 +49,6 @@ importers:
       react: ^17.0.2
       react-dom: ^17.0.2
       react-markdown: ^8.0.1
-      rehype: ^12.0.1
       rehype-raw: ^6.1.1
       remark-frontmatter: ^4.0.1
       remark-gfm: ^3.0.1
@@ -61,12 +61,12 @@ importers:
       yaml: ^2.0.1
     dependencies:
       '@resumejs/template': link:../template
+      '@types/hast': 2.3.4
       clsx: 1.1.1
       hast-util-has-property: 2.0.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-markdown: 8.0.3_hx2b44akkvgcgvvtmk7ds2qk6q
-      rehype: 12.0.1
       rehype-raw: 6.1.1
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
@@ -167,6 +167,7 @@ importers:
     specifiers:
       '@iconify-json/carbon': ^1.1.4
       '@iconify-json/mdi': ^1.1.2
+      '@types/hast': ^2.3.4
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
       '@unocss/preset-icons': ^0.33.4
@@ -178,7 +179,6 @@ importers:
       react: ^17.0.2
       react-dom: ^17.0.2
       react-markdown: ^8.0.1
-      rehype: ^12.0.1
       rehype-raw: ^6.1.1
       remark-frontmatter: ^4.0.1
       remark-gfm: ^3.0.1
@@ -193,6 +193,7 @@ importers:
     dependencies:
       '@iconify-json/carbon': 1.1.4
       '@iconify-json/mdi': 1.1.12
+      '@types/hast': 2.3.4
       '@unocss/preset-icons': 0.33.4
       '@unocss/preset-wind': 0.33.4
       '@unocss/reset': 0.33.4
@@ -201,7 +202,6 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-markdown: 8.0.3_hx2b44akkvgcgvvtmk7ds2qk6q
-      rehype: 12.0.1
       rehype-raw: 6.1.1
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
@@ -1467,17 +1467,9 @@ packages:
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: false
 
-  /character-entities-html4/2.1.0:
-    resolution: {integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==}
-    dev: false
-
   /character-entities-legacy/1.1.4:
     resolution: {integrity: sha512-3Xnr+7ZFS1uxeiUDvV02wQ+QDbc55o97tIV5zHScSPJpcLm/r0DFPcoY3tYRp+VZukxuMeKgXYmsXQHO05zQeA==}
     dev: true
-
-  /character-entities-legacy/3.0.0:
-    resolution: {integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==}
-    dev: false
 
   /character-entities/1.2.4:
     resolution: {integrity: sha512-iBMyeEHxfVnIakwOuDXpVkc54HijNgCyQB2w0VfGQThle6NXn50zU6V/u+LDhxHcDUPojn6Kpga3PTAD8W1bQw==}
@@ -2879,13 +2871,6 @@ packages:
     resolution: {integrity: sha512-4Qf++8o5v14us4Muv3HRj+Er6wTNGA/N9uCaZMty4JWvyFKLdhULrv4KE1b65AthsSO9TXSZnjuxS8ecIyhb0w==}
     dev: false
 
-  /hast-util-is-element/2.1.2:
-    resolution: {integrity: sha512-thjnlGAnwP8ef/GSO1Q8BfVk2gundnc2peGQqEg2kUt/IqesiGg/5mSwN2fE7nLzy61pg88NG6xV+UrGOrx9EA==}
-    dependencies:
-      '@types/hast': 2.3.4
-      '@types/unist': 2.0.6
-    dev: false
-
   /hast-util-parse-selector/3.1.0:
     resolution: {integrity: sha512-AyjlI2pTAZEOeu7GeBPZhROx0RHBnydkQIXlhnFzDi0qfXTmGUWoCYZtomHbrdrheV4VFUlPcfJ6LMF5T6sQzg==}
     dependencies:
@@ -2906,21 +2891,6 @@ packages:
       vfile: 5.3.2
       web-namespaces: 2.0.1
       zwitch: 2.0.2
-    dev: false
-
-  /hast-util-to-html/8.0.3:
-    resolution: {integrity: sha512-/D/E5ymdPYhHpPkuTHOUkSatxr4w1ZKrZsG0Zv/3C2SRVT0JFJG53VS45AMrBtYk0wp5A7ksEhiC8QaOZM95+A==}
-    dependencies:
-      '@types/hast': 2.3.4
-      ccount: 2.0.1
-      comma-separated-tokens: 2.0.2
-      hast-util-is-element: 2.1.2
-      hast-util-whitespace: 2.0.0
-      html-void-elements: 2.0.1
-      property-information: 6.1.1
-      space-separated-tokens: 2.0.1
-      stringify-entities: 4.0.2
-      unist-util-is: 5.1.1
     dev: false
 
   /hast-util-to-parse5/7.0.0:
@@ -4388,37 +4358,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /rehype-parse/8.0.4:
-    resolution: {integrity: sha512-MJJKONunHjoTh4kc3dsM1v3C9kGrrxvA3U8PxZlP2SjH8RNUSrb+lF7Y0KVaUDnGH2QZ5vAn7ulkiajM9ifuqg==}
-    dependencies:
-      '@types/hast': 2.3.4
-      hast-util-from-parse5: 7.1.0
-      parse5: 6.0.1
-      unified: 10.1.2
-    dev: false
-
   /rehype-raw/6.1.1:
     resolution: {integrity: sha512-d6AKtisSRtDRX4aSPsJGTfnzrX2ZkHQLE5kiUuGOeEoLpbEulFF4hj0mLPbsa+7vmguDKOVVEQdHKDSwoaIDsQ==}
     dependencies:
       '@types/hast': 2.3.4
       hast-util-raw: 7.2.1
-      unified: 10.1.2
-    dev: false
-
-  /rehype-stringify/9.0.3:
-    resolution: {integrity: sha512-kWiZ1bgyWlgOxpqD5HnxShKAdXtb2IUljn3hQAhySeak6IOQPPt6DeGnsIh4ixm7yKJWzm8TXFuC/lPfcWHJqw==}
-    dependencies:
-      '@types/hast': 2.3.4
-      hast-util-to-html: 8.0.3
-      unified: 10.1.2
-    dev: false
-
-  /rehype/12.0.1:
-    resolution: {integrity: sha512-ey6kAqwLM3X6QnMDILJthGvG1m1ULROS9NT4uG9IDCuv08SFyLlreSuvOa//DgEvbXx62DS6elGVqusWhRUbgw==}
-    dependencies:
-      '@types/hast': 2.3.4
-      rehype-parse: 8.0.4
-      rehype-stringify: 9.0.3
       unified: 10.1.2
     dev: false
 
@@ -4704,13 +4648,6 @@ packages:
       define-properties: 1.1.4
       es-abstract: 1.20.0
     dev: true
-
-  /stringify-entities/4.0.2:
-    resolution: {integrity: sha512-MTxTVcEkorNtBbNpoFJPEh0kKdM6+QbMjLbaxmvaPMmayOXdr/AIVIIJX7FReUVweRBFJfZepK4A4AKgwuFpMQ==}
-    dependencies:
-      character-entities-html4: 2.1.0
-      character-entities-legacy: 3.0.0
-    dev: false
 
   /strip-ansi/6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}

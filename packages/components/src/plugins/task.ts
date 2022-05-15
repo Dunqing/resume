@@ -1,6 +1,6 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import type { Element } from 'rehype'
+import type { Element } from 'hast'
 
 export const task: Plugin<[], Element> = function () {
   return (root) => {
