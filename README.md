@@ -1,6 +1,6 @@
 # Resume
 
-### [Playground](https://resumejs.vercel.app/) ｜ [简历示例](https://resumejs.vercel.app/#/resume)
+### [Playground](https://resume.todev.cc/) ｜ [简历示例](https://resume.todev.cc/resume)
 
 ## 项目介绍
 
