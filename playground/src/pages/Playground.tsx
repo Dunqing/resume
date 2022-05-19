@@ -33,7 +33,7 @@ function Playground() {
   }
 
   return (
-    <div className="flex items-center flex-col justify-center relative sm:black">
+    <div className="playground flex items-center flex-col justify-center relative sm:black">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 w-90% lg:m-t-15 overflow-hidden lg:border">
         <div className="xs:block sm:hidden font-bold">
           <span className="text-red">注意</span>：请在大屏幕下编辑简历！

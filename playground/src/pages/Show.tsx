@@ -4,5 +4,9 @@ import './show.css'
 
 export const Show = () => {
   const [resume] = useResume()
-  return <Resume>{resume || ''}</Resume>
+  return (
+    <div className="show-resume">
+      <Resume>{resume || ''}</Resume>
+    </div>
+  )
 }
