@@ -7,7 +7,7 @@ import 'uno.css'
 import '@resumejs/components/style'
 import '@unocss/reset/tailwind.css'
 import './playground.css'
-import { useResume } from '../hooks/useResume'
+import useResume from '../hooks/useResume'
 
 languages.register({
   id: 'markdown',

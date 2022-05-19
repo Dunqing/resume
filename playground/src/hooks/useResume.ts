@@ -3,6 +3,8 @@ import readme from '../../README.md?raw'
 
 const RESUME_KEY = 'MARKDOWN_RESUME_KEY'
 
-export const useResume = () => {
+const useResume = () => {
   return useLocalStorage(RESUME_KEY, readme)
 }
+
+export default useResume
