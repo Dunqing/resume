@@ -1,12 +1,6 @@
 import clsx from 'clsx'
 import type { RouteObject } from 'react-router-dom'
-import {
-  Link,
-  NavLink,
-  Navigate,
-  useLocation,
-  useRoutes,
-} from 'react-router-dom'
+import { Link, Navigate, useLocation, useRoutes } from 'react-router-dom'
 import Playground from './pages/Playground'
 import { Show } from './pages/Show'
 
