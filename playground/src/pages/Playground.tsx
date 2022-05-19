@@ -2,11 +2,12 @@ import type { ChangeHandler } from 'react-monaco-editor'
 import MonacoEditor from 'react-monaco-editor'
 import { Resume } from '@resumejs/components'
 import { languages } from 'monaco-editor'
-import { useEffect, useRef, useState } from 'react'
-import readme from '../../README.md?raw'
+import { useEffect, useRef } from 'react'
 import 'uno.css'
 import '@resumejs/components/style'
 import '@unocss/reset/tailwind.css'
+import './playground.css'
+import { useResume } from '../hooks/useResume'
 
 languages.register({
   id: 'markdown',
@@ -15,13 +16,14 @@ languages.register({
 function Playground() {
   const monacoRef = useRef<MonacoEditor | null>(null)
 
+  const [code, setCode] = useResume()
+
   useEffect(() => {
     window.addEventListener('resize', () => {
       monacoRef.current?.forceUpdate()
     })
   })
 
-  const [code, setCode] = useState(readme)
   const options = {
     selectOnLineNumbers: true,
   }
@@ -31,18 +33,24 @@ function Playground() {
   }
 
   return (
-    <div className="flex items-center flex-col h-100vh justify-center relative">
-      <h1 className="text-3xl m-b-3 font-bold">Resume Playground</h1>
-      <div className="grid grid-cols-2 w-90% h-90% overflow-hidden">
-        <MonacoEditor
-          ref={monacoRef}
-          language="markdown"
-          value={code}
-          options={options}
-          theme="vs-dark"
-          onChange={onEditorChange}
-        />
-        <Resume className="overflow-y-scroll">{code}</Resume>
+    <div className="flex items-center flex-col justify-center relative sm:black">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 w-90% lg:m-t-15 overflow-hidden lg:border">
+        <div className="xs:block sm:hidden font-bold">
+          <span className="text-red">注意</span>：请在大屏幕下编辑简历！
+        </div>
+        <div className="hidden md:block h-55rem">
+          <MonacoEditor
+            ref={monacoRef}
+            language="markdown"
+            value={code}
+            options={options}
+            theme="vs-dark"
+            onChange={onEditorChange}
+          />
+        </div>
+        <Resume className="lg:overflow-y-scroll lg:h-55rem">
+          {code || ''}
+        </Resume>
       </div>
     </div>
   )

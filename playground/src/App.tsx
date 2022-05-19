@@ -1,11 +1,18 @@
+import clsx from 'clsx'
 import type { RouteObject } from 'react-router-dom'
-import { Link, Navigate, useLocation, useRoutes } from 'react-router-dom'
+import {
+  Link,
+  NavLink,
+  Navigate,
+  useLocation,
+  useRoutes,
+} from 'react-router-dom'
 import Playground from './pages/Playground'
 import { Show } from './pages/Show'
 
 const routes: RouteObject[] = [
   {
-    path: '/playground',
+    path: '/',
     element: <Playground />,
   },
   {
@@ -14,7 +21,7 @@ const routes: RouteObject[] = [
   },
   {
     path: '*',
-    element: <Navigate to="/playground" />,
+    element: <Navigate to="/" />,
   },
 ]
 
@@ -23,41 +30,34 @@ const App = () => {
   const location = useLocation()
   return (
     <div className="relative">
-      <div className="absolute left-4 top-2 flex gap-x-2 z-1000">
-        <a
-          href="https://github.com/Dunqing/resume"
-          target="_blank"
-          className="hover:text-blue-700 transition-colors underline cursor flex items-center"
-          rel="noreferrer"
+      <header
+        className={clsx(
+          'justify-between p-x-4 p-2 lg:absolute top-2 w-full z-100',
+          location.pathname.startsWith('/resume') ? 'hidden' : 'flex'
+        )}
+      >
+        <h1 className="text-2xl font-semibold">在线简历</h1>
+        <div
+          className={clsx(
+            'flex items-center gap-x-2 xs:text-sm text-md leading-normal underline'
+          )}
         >
-          <i
-            className="
+          <Link to="/resume">生成简历</Link>
+          <a
+            href="https://github.com/Dunqing"
+            className="flex items-center gap-x-0.5"
+          >
+            <i
+              className="
             inline-block
             r-mdi-github text-lg
             dark:text-light
-            m-r-1
           "
-          />
-          <span>项目地址</span>
-        </a>
-        {location.pathname.startsWith('/playground') ? null : (
-          <Link
-            to="/playground"
-            className="hover:text-blue-700 underline transition-colors cursor flex items-center"
-          >
-            <span>Playground</span>
-          </Link>
-        )}
-        {location.pathname.startsWith('/resume') ? null : (
-          <Link
-            to="/resume"
-            className="hover:text-blue-700 underline transition-colors cursor flex items-center"
-          >
-            <span>简历示例</span>
-          </Link>
-        )}
-      </div>
-      {element}
+            />
+          </a>
+        </div>
+      </header>
+      <div>{element}</div>
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import { Resume } from '@resumejs/components'
-import resume from '../../README.md?raw'
+import { useResume } from '../hooks/useResume'
+import './show.css'
 
 export const Show = () => {
-  return <Resume>{resume}</Resume>
+  const [resume] = useResume()
+  return <Resume>{resume || ''}</Resume>
 }
