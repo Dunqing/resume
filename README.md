@@ -117,3 +117,8 @@ resume preview
 
 - 表格将更改为三级标题的描述信息，可自定义`card`, `card-item`, `card-item-label`, `card-item-value`组件
 - 标题下或 Table 下第一行文本将会更改为描述内容 可自定义`description`组件
+
+
+## 怎么自定义模板？
+
+[参考默认模板](packages/template/src/index.tsx)
