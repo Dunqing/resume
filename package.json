@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm --parallel --filter '{packages/*}' dev",
-    "build": "pnpm --filter '{packages/*}' build",
-    "play": "pnpm run --filter ./playground dev",
+    "dev": "pnpm --parallel --filter {packages/*} dev",
+    "build": "pnpm --filter {packages/*} build",
+    "play": "pnpm --filter ./playground dev",
     "lint": "eslint . --fix",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp packages/*/package.json --no-verify --commit --push --tag && pnpm publish --filter {packages/*} --access public",
+    "release": "bumpp packages/*/package.json --no-verify --commit --push --tag && pnpm --filter {packages/*} publish --access public",
     "check-type": "tsc --noEmit"
   },
   "dependencies": {
