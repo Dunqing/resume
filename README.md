@@ -1,6 +1,6 @@
 # Resume
 
-### [Playground](https://resume.todev.cc/) ｜ [简历示例](https://resume.todev.cc/resume)
+### [在线编写简历](https://resume.todev.cc/)
 
 ## 项目介绍
 
