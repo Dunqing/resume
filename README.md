@@ -65,6 +65,11 @@ export default function App() {
 }
 ```
 
+### 使用示例
+
+- [vite-ant-design-pro](https://github.com/Dunqing/vite-ant-design-pro/tree/main/playground/src/pages/Resume)
+
+
 ## @resumejs/resume
 
 - cli 支持，使用方式和 vite 一样
