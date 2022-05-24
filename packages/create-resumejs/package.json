@@ -9,7 +9,7 @@
     "resume",
     "markdown"
   ],
-  "homepage": "https://vite-ant-design-pro.vercel.app",
+  "homepage": "https://resume.todev.cc",
   "bugs": {
     "url": "https://github.com/Dunqing/resume/issues"
   },
@@ -17,7 +17,7 @@
   "author": "dengqing <dengqing0821@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1247748612/Dungqing/resume.git"
+    "url": "git+https://github.com/Dunqing/resume.git"
   },
   "bin": {
     "create-resumejsjs": "index.js"

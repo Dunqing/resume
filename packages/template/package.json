@@ -1,6 +1,22 @@
 {
   "name": "@resumejs/template",
   "version": "0.2.1",
+  "description": "Default template of resume",
+  "keywords": [
+    "resume",
+    "components",
+    "template"
+  ],
+  "homepage": "https://resume.todev.cc",
+  "bugs": {
+    "url": "https://github.com/Dunqing/resume/issues"
+  },
+  "license": "MIT",
+  "author": "dengqing <dengqing0821@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dunqing/resume.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",

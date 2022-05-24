@@ -4,6 +4,20 @@
   "bin": {
     "resume": "./dist/index.ts.mjs"
   },
+  "keywords": [
+    "resume",
+    "cli"
+  ],
+  "homepage": "https://resume.todev.cc",
+  "bugs": {
+    "url": "https://github.com/Dunqing/resume/issues"
+  },
+  "license": "MIT",
+  "author": "dengqing <dengqing0821@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dunqing/resume.git"
+  },
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
