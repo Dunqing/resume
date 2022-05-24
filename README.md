@@ -24,7 +24,7 @@
 
 ## 使用方式
 
-## create-resumejs
+## [create-resumejs](./packages/create-resumejs/)
 
 快速创建简历项目，支持在 Vercel 中部署
 
@@ -40,7 +40,7 @@ pnpm create resumejs
 
 4. 完成你的简历！
 
-## @resumejs/components
+## [@resumejs/components](./packages/components/)
 
 在自己项目中引入该组件编写简历
 
@@ -70,7 +70,7 @@ export default function App() {
 - [vite-ant-design-pro](https://github.com/Dunqing/vite-ant-design-pro/tree/main/playground/src/pages/Resume)
 
 
-## @resumejs/resume
+## [@resumejs/resume](./packages/resume/)
 
 - cli 支持，使用方式和 vite 一样
 - 默认使用运行目录下的 README.md 做为你的简历 markdown
