@@ -34,23 +34,23 @@ function Playground() {
 
   return (
     <div className="playground flex items-center flex-col justify-center relative sm:black">
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 w-90% lg:m-t-15 overflow-hidden lg:border">
-        <div className="xs:block sm:hidden font-bold">
-          <span className="text-red">注意</span>：请在大屏幕下编辑简历！
+      <div className="text-lg xs:block sm:hidden p-y-2 font-bold">
+        <span className="text-red">注意</span>：请在大屏幕下编辑简历！
+      </div>
+      <div className="flex justify-center items-center lg:h-screen md:p-x-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 overflow-hidden lg:h-5/6">
+          <div className="hidden md:block md:h-55rem lg:h-full">
+            <MonacoEditor
+              ref={monacoRef}
+              language="markdown"
+              value={code}
+              options={options}
+              theme="vs-dark"
+              onChange={onEditorChange}
+            />
+          </div>
+          <Resume className="lg:overflow-y-scroll">{code || ''}</Resume>
         </div>
-        <div className="hidden md:block h-55rem">
-          <MonacoEditor
-            ref={monacoRef}
-            language="markdown"
-            value={code}
-            options={options}
-            theme="vs-dark"
-            onChange={onEditorChange}
-          />
-        </div>
-        <Resume className="lg:overflow-y-scroll lg:h-55rem">
-          {code || ''}
-        </Resume>
       </div>
     </div>
   )
