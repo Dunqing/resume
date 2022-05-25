@@ -107,7 +107,6 @@ importers:
   packages/create-resumejs/template-react-ts:
     specifiers:
       '@iconify-json/carbon': ^1.1.4
-      '@iconify-json/mdi': ^1.1.2
       '@resumejs/components': latest
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
@@ -121,7 +120,6 @@ importers:
       vite: ^2.9.0
     dependencies:
       '@iconify-json/carbon': 1.1.4
-      '@iconify-json/mdi': 1.1.12
       '@resumejs/components': link:../../components
       '@unocss/preset-icons': 0.33.4
       '@unocss/preset-wind': 0.33.4
@@ -166,7 +164,6 @@ importers:
   packages/template:
     specifiers:
       '@iconify-json/carbon': ^1.1.4
-      '@iconify-json/mdi': ^1.1.2
       '@types/hast': ^2.3.4
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
@@ -192,7 +189,6 @@ importers:
       yaml: ^2.0.1
     dependencies:
       '@iconify-json/carbon': 1.1.4
-      '@iconify-json/mdi': 1.1.12
       '@types/hast': 2.3.4
       '@unocss/preset-icons': 0.33.4
       '@unocss/preset-wind': 0.33.4
@@ -221,7 +217,6 @@ importers:
   playground:
     specifiers:
       '@iconify-json/carbon': ^1.1.4
-      '@iconify-json/mdi': ^1.1.2
       '@resumejs/components': workspace:*
       '@types/react': ^17.0.33
       '@types/react-dom': ^17.0.10
@@ -240,7 +235,6 @@ importers:
       vite: ^2.9.0
     dependencies:
       '@iconify-json/carbon': 1.1.4
-      '@iconify-json/mdi': 1.1.12
       '@resumejs/components': link:../packages/components
       '@unocss/preset-icons': 0.33.4
       '@unocss/preset-wind': 0.33.4
@@ -654,12 +648,6 @@ packages:
 
   /@iconify-json/carbon/1.1.4:
     resolution: {integrity: sha512-I2Y80wAR+Z3Ut68xiwBfRtw4Lwj7IqeOkCfEnWFC9/dA2ixIJEkCxy8HyNLO3z9RiSF7HZtgI8qGHhyNA2b6EQ==}
-    dependencies:
-      '@iconify/types': 1.1.0
-    dev: false
-
-  /@iconify-json/mdi/1.1.12:
-    resolution: {integrity: sha512-n2bPga58OcsIMBHtL5EHPgWqIZXA95O/VOGa4xB1u6/37XocMWZz8WBnnQas+SpFuWMxlsYxPTbvOcrQt1i9kg==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: false

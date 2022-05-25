@@ -44,7 +44,7 @@ const App = () => {
             <i
               className="
             inline-block
-            r-mdi-github text-lg
+            r-carbon-logo-github text-lg
             dark:text-light
           "
             />

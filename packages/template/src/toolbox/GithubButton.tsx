@@ -12,7 +12,7 @@ export const GithubLink = ({ github }: GithubLinkProps) => {
       title="github"
       href={github}
       className={clsx(
-        'r-mdi-github text-lg hover:text-gray transition-colors',
+        'r-carbon-logo-github text-lg hover:text-gray transition-colors',
         'dark:text-light'
       )}
     />

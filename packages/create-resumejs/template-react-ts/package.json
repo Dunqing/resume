@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.4",
-    "@iconify-json/mdi": "^1.1.2",
     "@resumejs/components": "latest",
     "@unocss/preset-icons": "^0.33.4",
     "@unocss/preset-wind": "^0.33.4",
