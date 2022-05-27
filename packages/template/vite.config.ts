@@ -13,6 +13,18 @@ export default defineConfig({
     react(),
     unocss({
       inspector: false,
+      variants: [
+        {
+          name: 'print',
+          match(matcher) {
+            if (matcher.includes('print:'))
+              return {
+                matcher: matcher.slice(6),
+                parent: '@media print',
+              }
+          },
+        },
+      ],
       presets: [
         UnocssIcons({
           prefix: 'r-',
