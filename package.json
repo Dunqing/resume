@@ -2,6 +2,7 @@
   "name": "resume",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@7.1.0",
   "scripts": {
     "dev": "pnpm --parallel --filter {packages/*} dev",
     "build": "pnpm --filter {packages/*} build",
