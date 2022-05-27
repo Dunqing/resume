@@ -1,6 +1,6 @@
 {
   "name": "create-resumejs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "packageManager": "pnpm@6.32.3",
   "description": "create resume project",
   "keywords": [
