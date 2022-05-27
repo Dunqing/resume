@@ -299,7 +299,10 @@ export const generateComponents = ({
       const meta = node.data || ({} as any)
       return (
         <div
-          className={clsx('absolute right-4 top-2 flex gap-x-1.5', className)}
+          className={clsx(
+            'absolute right-4 top-2 flex gap-x-1.5 print:hidden',
+            className
+          )}
           {...props}
         >
           <GithubLink github={meta.github} />
