@@ -1,6 +1,5 @@
-# Resume
+<div align="center"><h1>Resume</h1><h3><a href="https://resume.todev.cc/">在线简历</a></h3></div>
 
-### [在线编写简历](https://resume.todev.cc/)
 
 ## 项目介绍
 
