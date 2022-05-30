@@ -7,7 +7,9 @@ import 'uno.css'
 import '@resumejs/components/style'
 import '@unocss/reset/tailwind.css'
 import './playground.css'
+import { ErrorBoundary } from 'react-error-boundary'
 import useResume from '../hooks/useResume'
+import { FallbackComponent } from '../components/FallbackComponent'
 
 languages.register({
   id: 'markdown',
@@ -49,7 +51,12 @@ function Playground() {
               onChange={onEditorChange}
             />
           </div>
-          <Resume className="lg:overflow-y-scroll">{code || ''}</Resume>
+          <ErrorBoundary
+            resetKeys={[code]}
+            FallbackComponent={FallbackComponent}
+          >
+            <Resume className="lg:overflow-y-scroll">{code || ''}</Resume>
+          </ErrorBoundary>
         </div>
       </div>
     </div>
