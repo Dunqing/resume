@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`components > heading 1`] = `
+"<div class=\\"r-resume\\"><div class=\\"font-sans text-base text-dark-400 bg-white dark:text-light-700 dark:bg-dark-400 r-container\\" node=\\"[object Object]\\"><div class=\\"border border-light-700 md:w-full md:max-w-screen-md xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4 dark:border-dark-100 relative r-content\\" node=\\"[object Object]\\"><div class=\\"absolute right-4 top-2 flex gap-x-1.5 print:hidden r-toolbox\\"></div><pre class=\\"bg-light p-x-5 p-y-3 dark:bg-dark-300 r-pre\\" node=\\"[object Object]\\"><code class=\\"p-x-1.5 p-y-0.5 bg-neutral-100 rounded-md text-xs dark:bg-neutral-500 r-code\\" node=\\"[object Object]\\"># 张三
+
+![头像](https://notion-avatar.vercel.app/api/svg/eyJmYWNlIjo5LCJub3NlIjoxMCwibW91dGgiOjEsImV5ZXMiOjcsImV5ZWJyb3dzIjoxMSwiZ2xhc3NlcyI6MCwiaGFpciI6MTEsImFjY2Vzc29yaWVzIjoxMywiZGV0YWlscyI6MCwiYmVhcmQiOjAsImZsaXAiOjAsImNvbG9yIjoicmdiYSgyNTUsIDAsIDAsIDApIiwic2hhcGUiOiJub25lIn0=)
+
+- [https://github.com/Dunqing](https://github.com/Dunqing)
+
+&gt;
+
+- google@gmail.com
+- 3 年
+
+&gt;
+
+- Telegram: @luckingforme
+</code></pre></div></div></div>"
+`;
