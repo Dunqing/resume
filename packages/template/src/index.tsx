@@ -2,7 +2,12 @@ import 'uno.css'
 import '@unocss/reset/tailwind.css'
 import clsx from 'clsx'
 import type { Components } from 'react-markdown'
+import omit from 'omit.js'
 import { GithubLink, PrintButton, ThemeButton } from './toolbox'
+
+const omitNode = (props: any) => {
+  return omit(props, ['node'])
+}
 
 interface GenerateComponentOptions {
   print: () => void
@@ -21,7 +26,7 @@ export const generateComponents = ({
           'dark:text-light-700 dark:bg-dark-400',
           className
         )}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     content: ({ className, ...props }) => (
@@ -32,13 +37,13 @@ export const generateComponents = ({
           'relative',
           className
         )}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     h1: ({ className, ...props }) => (
       <h1
         className={clsx('m-t-2 m-b-1.5 text-2xl font-semibold', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     h2: ({ className, ...props }) => {
@@ -49,7 +54,7 @@ export const generateComponents = ({
             'dark:border-dark-100',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         ></h2>
       )
     },
@@ -59,7 +64,7 @@ export const generateComponents = ({
           'm-t-2 m-b-1 p-y-0.5 text-base font-semibold',
           className
         )}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     ul: ({ className, ...props }) => (
@@ -69,19 +74,19 @@ export const generateComponents = ({
           'dark:text-gray-300',
           className
         )}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     ol: ({ className, ...props }) => (
       <ol
         className={clsx('m-b-2 text-0.9rem p-l-5 list-decimal', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     li: ({ className, ...props }) => (
       <li
         className={clsx('p-y-0.5', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     a: ({ className, ...props }) => (
@@ -91,39 +96,39 @@ export const generateComponents = ({
           'dark:text-blue-400',
           className
         )}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     p: ({ className, ...props }) => (
       <p
         className={clsx('', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     img: ({ className, ...props }) => (
       <img
         className={clsx('inline', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     strong: ({ className, ...props }) => (
       <strong
         className={clsx('font-semibold', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     card: ({ className, ...props }) => {
       return (
         <div
           className={clsx('p-y-0.5 grid grid-cols-2 gap-y-0.5', className)}
-          {...props}
+          {...omitNode(props)}
         />
       )
     },
     'card-item': ({ className, index, ...props }) => {
       return (
         <div
-          {...props}
+          {...omitNode(props)}
           className={clsx(
             'text-sm',
             { 'justify-self-end': index! % 2 === 1 },
@@ -135,7 +140,7 @@ export const generateComponents = ({
     'card-item-label': ({ className, ...props }) => {
       return (
         <span
-          {...props}
+          {...omitNode(props)}
           className={clsx('text-sm font-medium', className)}
         />
       )
@@ -148,14 +153,14 @@ export const generateComponents = ({
             'dark:text-blue-gray-300',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         />
       )
     },
     description: ({ className, ...props }) => {
       return (
         <p
-          {...props}
+          {...omitNode(props)}
           className={clsx('text-sm indent', className)}
         />
       )
@@ -163,7 +168,7 @@ export const generateComponents = ({
     header: ({ className, ...props }) => {
       return (
         <header
-          {...props}
+          {...omitNode(props)}
           className={clsx('flex flex-col items-center p-4', className)}
         />
       )
@@ -171,7 +176,7 @@ export const generateComponents = ({
     'header-content': ({ className, ...props }) => {
       return (
         <div
-          {...props}
+          {...omitNode(props)}
           className={clsx('flex flex-col items-center', className)}
         />
       )
@@ -179,7 +184,7 @@ export const generateComponents = ({
     'header-name': ({ className, ...props }) => {
       return (
         <h1
-          {...props}
+          {...omitNode(props)}
           className={clsx('font-bold text-3xl', className)}
         />
       )
@@ -187,7 +192,7 @@ export const generateComponents = ({
     'header-avatar': ({ className, ...props }) => {
       return (
         <img
-          {...props}
+          {...omitNode(props)}
           className={clsx('w-40 text-3xl', className)}
         />
       )
@@ -195,7 +200,7 @@ export const generateComponents = ({
     'header-row': ({ className, ...props }) => {
       return (
         <ul
-          {...props}
+          {...omitNode(props)}
           className={clsx('list-none flex flex-wrap', className)}
         />
       )
@@ -207,7 +212,7 @@ export const generateComponents = ({
             'sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         />
       )
     },
@@ -219,7 +224,7 @@ export const generateComponents = ({
             'dark:border-dark-100',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         />
       )
     },
@@ -255,7 +260,7 @@ export const generateComponents = ({
             'dark:text-gray-400',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         />
       )
     },
@@ -267,32 +272,32 @@ export const generateComponents = ({
             'dark:bg-neutral-500',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         />
       )
     },
     task: ({ className, ...props }) => (
       <ul
         className={clsx('m-b-2 text-0.9rem p-y-1', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     'task-item': ({ className, ...props }) => (
       <li
         className={clsx('p-x-5', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     'task-item-checkbox': ({ className, ...props }) => (
       <input
         className={clsx('-m-l-5 m-r-1 m-b-0.5 align-middle', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     pre: ({ className, ...props }) => (
       <pre
         className={clsx('bg-light p-x-5 p-y-3', 'dark:bg-dark-300', className)}
-        {...props}
+        {...omitNode(props)}
       />
     ),
     toolbox: ({ node, className, ...props }) => {
@@ -303,7 +308,7 @@ export const generateComponents = ({
             'absolute right-4 top-2 flex gap-x-1.5 print:hidden',
             className
           )}
-          {...props}
+          {...omitNode(props)}
         >
           <GithubLink github={meta.github} />
           <PrintButton
