@@ -3,7 +3,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
 import { generateComponents } from '@resumejs/template'
 import '@resumejs/template/style'
@@ -18,12 +18,16 @@ import {
   toolbox,
 } from './plugins'
 
-interface ResumeProps extends ReactMarkdownOptions {}
+interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
+  /**
+   * 当为 false 时不设置默认主题
+   */
+  components: false | ReactMarkdownOptions['components']
+}
 
 export const Resume = (props: ResumeProps) => {
   const {
     children,
-    components,
     rehypePlugins = [],
     remarkPlugins = [],
     remarkRehypeOptions,
@@ -39,6 +43,19 @@ export const Resume = (props: ResumeProps) => {
     window.print()
   }
 
+  const components = useMemo(() => {
+    if (props.components === false) {
+      return {}
+    }
+    return {
+      ...generateComponents({
+        print,
+        toggleTheme,
+      }),
+      ...props.components,
+    }
+  }, [])
+
   return (
     <ReactMarkdown
       className={clsx(
@@ -48,13 +65,7 @@ export const Resume = (props: ResumeProps) => {
         'r-resume',
         props.className
       )}
-      components={{
-        ...generateComponents({
-          print,
-          toggleTheme,
-        }),
-        ...components,
-      }}
+      components={components}
       remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
       rehypePlugins={[
         ...rehypePlugins,
