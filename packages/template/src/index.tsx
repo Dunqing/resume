@@ -32,7 +32,7 @@ export const generateComponents = ({
     content: ({ className, ...props }) => (
       <div
         className={clsx(
-          'border border-light-700 md:w-full md:max-w-screen-md xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4',
+          'border print:border-none border-light-700 md:w-full md:max-w-screen-md xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4',
           'dark:border-dark-100',
           'relative',
           className
