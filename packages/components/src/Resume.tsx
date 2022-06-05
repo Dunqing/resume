@@ -22,7 +22,7 @@ interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
   /**
    * 当为 false 时不设置默认主题
    */
-  components: false | ReactMarkdownOptions['components']
+  components?: false | ReactMarkdownOptions['components']
 }
 
 export const Resume = (props: ResumeProps) => {
