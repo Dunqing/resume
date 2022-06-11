@@ -104,22 +104,31 @@ resume build
 resume preview
 ```
 
-## 自定义的写简历的 markdown 规则
+## [@resumejs/template](./packages/template/)
+
+**简历默认模板**
+
+## 如何自定义模板？
+
+### 自定义的写简历的 markdown 语法
 
 1. 一级标题下的内容包括一级标题为简历头部的信息 可自定义`header`组件
 
-- 一级标题为名字 可自定义`header-name`组件
-- 图片作为头像 可自定义`header-avatar`组件
-- 包裹所有列表项 可自定义`header-content`组件
-- 每个列表为行 可自定义`header-row`组件
-- 列表的项为列 可自定义`header-col`组件
+    - 一级标题为名字 可自定义`header-name`组件
+    - 图片作为头像 可自定义`header-avatar`组件
+    - 包裹所有列表项 可自定义`header-content`组件
+    - 每个列表为行 可自定义`header-row`组件
+    - 列表的项为列 可自定义`header-col`组件
 
 2. 三级标题下方的第一段内容
 
-- 表格将更改为三级标题的描述信息，可自定义`card`, `card-item`, `card-item-label`, `card-item-value`组件
-- 标题下或 Table 下第一行文本将会更改为描述内容 可自定义`description`组件
+    - 表格将更改为三级标题的描述信息，可自定义`card`, `card-item`, `card-item-label`, `card-item-value`组件
+    - 标题下或 Table 下第一行文本将会更改为描述内容 可自定义`description`组件
 
+3. FrontMatter (暗黑模式，Github, 打印按钮)
 
-## 怎么自定义模板？
+    - 可自定义 toolbox 组件
 
-[参考默认模板](packages/template/src/index.tsx)
+### 示例
+
+- [默认模板](packages/template/src/index.tsx)
