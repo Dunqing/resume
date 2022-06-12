@@ -114,47 +114,6 @@ importers:
       minimist: 1.2.6
       prompts: 2.4.2
 
-  packages/create-resumejs/template-markdown:
-    specifiers:
-      '@resumejs/components': latest
-      '@resumejs/resume': latest
-      react: ^17.0.2
-      react-dom: ^17.0.2
-    dependencies:
-      '@resumejs/components': link:../../components
-      '@resumejs/resume': link:../../resume
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-
-  packages/create-resumejs/template-react-ts:
-    specifiers:
-      '@iconify-json/carbon': ^1.1.5
-      '@resumejs/components': latest
-      '@types/react': ^17.0.45
-      '@types/react-dom': ^17.0.17
-      '@unocss/preset-icons': ^0.33.5
-      '@unocss/preset-wind': ^0.33.5
-      '@unocss/reset': ^0.33.5
-      '@vitejs/plugin-react': ^1.3.2
-      react: ^17.0.2
-      react-dom: ^17.0.2
-      unocss: ^0.33.5
-      vite: ^2.9.9
-    dependencies:
-      '@iconify-json/carbon': 1.1.5
-      '@resumejs/components': link:../../components
-      '@unocss/preset-icons': 0.33.5
-      '@unocss/preset-wind': 0.33.5
-      '@unocss/reset': 0.33.5
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      unocss: 0.33.5_vite@2.9.9
-    devDependencies:
-      '@types/react': 17.0.45
-      '@types/react-dom': 17.0.17
-      '@vitejs/plugin-react': 1.3.2
-      vite: 2.9.9
-
   packages/resume:
     specifiers:
       '@resumejs/components': workspace:*
@@ -242,6 +201,7 @@ importers:
     specifiers:
       '@iconify-json/carbon': ^1.1.5
       '@resumejs/components': workspace:*
+      '@resumejs/template-nova': workspace:*
       '@types/react': ^17.0.45
       '@types/react-dom': ^17.0.17
       '@unocss/preset-icons': ^0.33.5
@@ -261,6 +221,7 @@ importers:
     dependencies:
       '@iconify-json/carbon': 1.1.5
       '@resumejs/components': link:../packages/components
+      '@resumejs/template-nova': link:../templates/nova
       '@unocss/preset-icons': 0.33.5
       '@unocss/preset-wind': 0.33.5
       '@unocss/reset': 0.33.5
@@ -273,6 +234,61 @@ importers:
       react-router-dom: 6.3.0_sfoxds7t5ydpegc3knd667wn6m
       react-use: 17.4.0_sfoxds7t5ydpegc3knd667wn6m
       unocss: 0.33.5_vite@2.9.9
+    devDependencies:
+      '@types/react': 17.0.45
+      '@types/react-dom': 17.0.17
+      '@vitejs/plugin-react': 1.3.2
+      vite: 2.9.9
+
+  templates/nova:
+    specifiers:
+      '@iconify-json/carbon': ^1.1.5
+      '@types/hast': ^2.3.4
+      '@types/react': ^17.0.45
+      '@types/react-dom': ^17.0.17
+      '@unocss/preset-icons': ^0.33.5
+      '@unocss/preset-wind': ^0.33.5
+      '@unocss/reset': ^0.33.5
+      '@vitejs/plugin-react': ^1.3.2
+      clsx: ^1.1.1
+      hast-util-has-property: ^2.0.0
+      omit.js: ^2.0.2
+      react: ^17.0.2
+      react-dom: ^17.0.2
+      react-markdown: ^8.0.3
+      rehype-raw: ^6.1.1
+      remark-frontmatter: ^4.0.1
+      remark-gfm: ^3.0.1
+      unified: ^10.1.2
+      unist-builder: ^3.0.0
+      unist-util-is: ^5.1.1
+      unist-util-visit: ^4.1.0
+      unocss: ^0.33.5
+      vite: ^2.9.9
+      vite-plugin-dts: ^1.2.0
+      yaml: ^2.1.1
+    dependencies:
+      '@iconify-json/carbon': 1.1.5
+      '@types/hast': 2.3.4
+      '@unocss/preset-icons': 0.33.5
+      '@unocss/preset-wind': 0.33.5
+      '@unocss/reset': 0.33.5
+      clsx: 1.1.1
+      hast-util-has-property: 2.0.0
+      omit.js: 2.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-markdown: 8.0.3_hx2b44akkvgcgvvtmk7ds2qk6q
+      rehype-raw: 6.1.1
+      remark-frontmatter: 4.0.1
+      remark-gfm: 3.0.1
+      unified: 10.1.2
+      unist-builder: 3.0.0
+      unist-util-is: 5.1.1
+      unist-util-visit: 4.1.0
+      unocss: 0.33.5_vite@2.9.9
+      vite-plugin-dts: 1.2.0_vite@2.9.9
+      yaml: 2.1.1
     devDependencies:
       '@types/react': 17.0.45
       '@types/react-dom': 17.0.17
