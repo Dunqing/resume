@@ -13,20 +13,19 @@ export const card: Plugin<[], Root> = function () {
         const prev = parent!.children[index! - 2]
         if (!isHeading(prev)) return
 
-        const infoList: { label: any; value?: any }[] = []
-
+        const labels: any[] = []
         visit(table, { type: 'element', tagName: 'th' }, (th) => {
           th.tagName = 'card-item-label'
-          infoList.push({
-            label: th,
-          })
+          labels.push(th)
         })
 
         let i = 0
+        const infoList: { label: any; value?: any }[] = []
         visit(table, { type: 'element', tagName: 'td' }, (td) => {
-          if (!infoList[i]) return
+          const th = labels[i % labels.length]
+          if (!th) return
           td.tagName = 'card-item-value'
-          infoList[i++].value = td
+          infoList[i++] = { label: th, value: td }
         })
 
         parent!.children.splice(index!, 1, {
