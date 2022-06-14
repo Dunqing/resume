@@ -41,7 +41,11 @@ export const card: Plugin<[], Root> = function () {
                   index: ii,
                 },
               },
-              [item.label, u('text', '：'), item.value]
+              [
+                item.label,
+                item.label?.children.length ? u('text', '：') : '',
+                item.value,
+              ]
             )
           }),
         })
