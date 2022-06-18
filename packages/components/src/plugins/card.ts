@@ -10,6 +10,9 @@ export const card: Plugin<[], Root> = function () {
       root,
       { type: 'element', tagName: 'table' },
       (table, index, parent) => {
+        // must contains thead and tbody
+        if (table.children.length < 2) return
+
         const prev = parent!.children[index! - 2]
         if (!isHeading(prev)) return
 
@@ -21,7 +24,9 @@ export const card: Plugin<[], Root> = function () {
 
         const cardList: Element[] = []
 
-        visit(table, { tagName: 'tr' }, (tr) => {  
+        visit(
+          // tbody
+          table.children[1], { tagName: 'tr' }, (tr) => {  
           let i = 0
           const cardInfo: { label: Element; value: Element }[] = []
           visit(tr, { tagName: 'td' }, (td) => {
