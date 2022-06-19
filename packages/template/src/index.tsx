@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import type { Components } from 'react-markdown'
 import omit from 'omit.js'
 import { GithubLink, PrintButton, ThemeButton } from './toolbox'
+import './index.css'
 
 const omitProps = (props: any) => {
   return omit(props, ['node', 'ordered', 'inline'])
