@@ -45,6 +45,7 @@
     "@unocss/preset-icons": "^0.39.3",
     "@unocss/preset-wind": "^0.39.3",
     "@unocss/reset": "^0.39.3",
+    "@unocss/transformer-directives": "^0.39.3",
     "clsx": "^1.1.1",
     "hast-util-has-property": "^2.0.0",
     "omit.js": "^2.0.2",
