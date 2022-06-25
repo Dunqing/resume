@@ -169,7 +169,7 @@ export const generateComponents = ({
       return (
         <header
           {...omitProps(props)}
-          className={clsx('flex relative m-h-40 flex-col p-4', className)}
+          className={clsx('flex relative min-h-40 flex-col p-y-4', className)}
         />
       )
     },
@@ -193,7 +193,7 @@ export const generateComponents = ({
       return (
         <img
           {...omitProps(props)}
-          className={clsx('absolute top-1/2 right-10 w-40 h-40 text-3xl', className)}
+          className={clsx('absolute top-1/2 right-0 -translate-y-1/2 w-30 h-30 text-3xl', className)}
         />
       )
     },
