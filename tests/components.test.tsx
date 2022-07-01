@@ -40,16 +40,31 @@ describe('components', () => {
     expect(container.innerHTML).toMatchSnapshot()
   })
 
-  it('card', () => {
-    const md = replaceWhitespace(`
-      ### 公司内部 Cli 开发（独立完成）
+  describe('card', () => {
+    it('basic', () => {
+      const md = replaceWhitespace(`
+        ### 公司内部 Cli 开发（独立完成）
+  
+        | 担任角色 |     项目周期      |
+        | :------: | :---------------: |
+        |  负责人  | 2020.11 ~ 2021.01 |
+      `)
+      const { container } = render(<Resume components={{}}>{md}</Resume>)
+      expect(container.innerHTML).toMatchSnapshot()
+    })
 
-      | 担任角色 |     项目周期      |
-      | :------: | :---------------: |
-      |  负责人  | 2020.11 ~ 2021.01 |
-    `)
-    const { container } = render(<Resume components={{}}>{md}</Resume>)
-    expect(container.innerHTML).toMatchSnapshot()
+    it('multi row data', () => {
+      const md = replaceWhitespace(`
+        ### 公司内部 Cli 开发（独立完成）
+  
+        | 担任角色 |     项目周期      |
+        | :------: | :---------------: |
+        |  负责人  | 2020.11 ~ 2021.01 |
+        |  负责人1  | 2020.11 ~ 2021.01 |
+      `)
+      const { container } = render(<Resume components={{}}>{md}</Resume>)
+      expect(container.innerHTML).toMatchSnapshot()
+    })
   })
 
   it('description', () => {

@@ -1,0 +1,3 @@
+.r-card + .r-card {
+  @apply mt-1;
+}
