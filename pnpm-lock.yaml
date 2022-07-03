@@ -203,7 +203,6 @@ importers:
       rehype-raw: ^6.1.1
       remark-frontmatter: ^4.0.1
       remark-gfm: ^3.0.1
-      rollup: ^2.75.7
       unified: ^10.1.2
       unist-builder: ^3.0.0
       unist-util-is: ^5.1.1
@@ -211,6 +210,7 @@ importers:
       unocss: ^0.39.3
       vite: ^2.9.13
       vite-plugin-dts: ^1.2.0
+      vite-plugin-import-css: ^0.0.1
       yaml: ^2.1.1
     dependencies:
       '@iconify-json/carbon': 1.1.6
@@ -239,8 +239,8 @@ importers:
       '@types/react': 17.0.47
       '@types/react-dom': 17.0.17
       '@vitejs/plugin-react': 1.3.2
-      rollup: 2.75.7
       vite: 2.9.13
+      vite-plugin-import-css: 0.0.1
 
   playground:
     specifiers:
@@ -5830,6 +5830,17 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /vite-plugin-import-css/0.0.1:
+    resolution: {integrity: sha512-dIkwSyGOYYgcgwhaOYmTFd5QfdSa/zprt7eXOR5BFJDAJU+3uvWCQH26ntmodm+Vk7L/73SFd8gCioWrJg+KQw==}
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      vite: 2.9.13
+    transitivePeerDependencies:
+      - less
+      - sass
+      - stylus
+    dev: true
 
   /vite/2.9.13:
     resolution: {integrity: sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==}
