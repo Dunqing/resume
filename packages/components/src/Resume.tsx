@@ -6,7 +6,6 @@ import rehypeRaw from 'rehype-raw'
 import { useMemo, useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
 import { generateComponents } from '@resumejs/template'
-import '@resumejs/template/style'
 import {
   card,
   className,
