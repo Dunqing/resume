@@ -29,7 +29,6 @@ export const entry = (): Plugin => {
           import React from 'react'
           import ReactDOM from 'react-dom'
           import { Resume } from '@resumejs/components'
-          import '@resumejs/components/style'
           import md from 'virtual:resume'
 
           const Show = () => {
