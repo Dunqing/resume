@@ -3,7 +3,6 @@ import { ErrorBoundary } from 'react-error-boundary'
 import { FallbackComponent } from '../components/FallbackComponent'
 import useResume from '../hooks/useResume'
 import { generateComponents } from '@resumejs/template-nova'
-import '@resumejs/template-nova/style'
 
 export const Show = () => {
   const [resume] = useResume()

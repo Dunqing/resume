@@ -5,6 +5,7 @@ import { presetWind } from 'unocss'
 import UnocssIcons from '@unocss/preset-icons'
 import dts from 'vite-plugin-dts'
 import packageJson from './package.json'
+import importCss from 'vite-plugin-import-css'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -34,6 +35,7 @@ export default defineConfig({
         presetWind(),
       ],
     }),
+    importCss()
   ],
   build: {
     lib: {

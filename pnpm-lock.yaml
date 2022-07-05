@@ -270,8 +270,9 @@ importers:
       unist-util-is: ^5.1.1
       unist-util-visit: ^4.1.0
       unocss: ^0.33.5
-      vite: ^2.9.9
+      vite: ^2.9.13
       vite-plugin-dts: ^1.2.0
+      vite-plugin-import-css: ^0.0.1
       yaml: ^2.1.1
     dependencies:
       '@iconify-json/carbon': 1.1.5
@@ -292,14 +293,15 @@ importers:
       unist-builder: 3.0.0
       unist-util-is: 5.1.1
       unist-util-visit: 4.1.0
-      unocss: 0.33.5_vite@2.9.9
-      vite-plugin-dts: 1.2.0_vite@2.9.9
+      unocss: 0.33.5_vite@2.9.13
+      vite-plugin-dts: 1.2.0_vite@2.9.13
       yaml: 2.1.1
     devDependencies:
       '@types/react': 17.0.45
       '@types/react-dom': 17.0.17
       '@vitejs/plugin-react': 1.3.2
-      vite: 2.9.9
+      vite: 2.9.13
+      vite-plugin-import-css: 0.0.1
 
 packages:
 
@@ -1495,7 +1497,7 @@ packages:
       '@unocss/core': 0.39.3
     dev: false
 
-  /@unocss/vite/0.33.5_vite@2.9.9:
+  /@unocss/vite/0.33.5_vite@2.9.13:
     resolution: {integrity: sha512-q2Wc+/vCwIlarK3FfmdM3c9OwwmoiUjzMtdgK8Y6qNIq/26S7pEk5upplhswR6M9kjqjDbIQOKgaVrhQFlLeVQ==}
     peerDependencies:
       vite: ^2.9.0
@@ -1507,7 +1509,7 @@ packages:
       '@unocss/scope': 0.33.5
       '@unocss/transformer-directives': 0.33.5
       magic-string: 0.26.2
-      vite: 2.9.9
+      vite: 2.9.13
     dev: false
 
   /@unocss/vite/0.39.3_vite@2.9.13:
@@ -5892,7 +5894,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /unocss/0.33.5_vite@2.9.9:
+  /unocss/0.33.5_vite@2.9.13:
     resolution: {integrity: sha512-aSWxGP6LHWv9eKc0WrmuLnOG2V8jkYd6zvsvB3LhZtCBWFXHPJ25T+zZP1szLbejPgSVJVVpJhnIAjJOFXRM9g==}
     engines: {node: '>=14'}
     dependencies:
@@ -5909,7 +5911,7 @@ packages:
       '@unocss/transformer-compile-class': 0.33.5
       '@unocss/transformer-directives': 0.33.5
       '@unocss/transformer-variant-group': 0.33.5
-      '@unocss/vite': 0.33.5_vite@2.9.9
+      '@unocss/vite': 0.33.5_vite@2.9.13
     transitivePeerDependencies:
       - supports-color
       - vite
@@ -6032,24 +6034,6 @@ packages:
       - supports-color
     dev: false
 
-  /vite-plugin-dts/1.2.0_vite@2.9.9:
-    resolution: {integrity: sha512-dg0x2VKHDnpNQvx0iPKkPpX+aJNBqzusMJv1l7SwzTV8J62eLhIKzE2FKOp4oYkPlN/vi+MqNEDKvv+XE70lzA==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      vite: '>=2.4.4'
-    dependencies:
-      '@microsoft/api-extractor': 7.24.2
-      '@rushstack/node-core-library': 3.45.5
-      chalk: 4.1.2
-      debug: 4.3.4
-      fast-glob: 3.2.11
-      fs-extra: 10.1.0
-      ts-morph: 14.0.0
-      vite: 2.9.9
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /vite-plugin-import-css/0.0.1:
     resolution: {integrity: sha512-dIkwSyGOYYgcgwhaOYmTFd5QfdSa/zprt7eXOR5BFJDAJU+3uvWCQH26ntmodm+Vk7L/73SFd8gCioWrJg+KQw==}
     dependencies:
@@ -6083,30 +6067,6 @@ packages:
       rollup: 2.74.1
     optionalDependencies:
       fsevents: 2.3.2
-
-  /vite/2.9.9:
-    resolution: {integrity: sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==}
-    engines: {node: '>=12.2.0'}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-    dependencies:
-      esbuild: 0.14.40
-      postcss: 8.4.14
-      resolve: 1.22.0
-      rollup: 2.74.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
 
   /vitest/0.15.2_jsdom@19.0.0:
     resolution: {integrity: sha512-cMabuUqu+nNHafkdN7H8Z20+UZTrrUfqjGwAoLwUwrqFGWBz3gXwxndjbLf6mgSFs9lF/JWjKeNM1CXKwtk26w==}
