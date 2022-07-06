@@ -47,6 +47,20 @@ importers:
       vite: 2.9.13
       vitest: 0.15.2_jsdom@19.0.0
 
+  examples/customize-template:
+    specifiers:
+      '@resumejs/components': workspace:*
+      '@resumejs/resume': workspace:*
+      '@resumejs/template-nova': workspace:*
+      react: ^17.0.2
+      react-dom: ^17.0.2
+    dependencies:
+      '@resumejs/components': link:../../packages/components
+      '@resumejs/resume': link:../../packages/resume
+      '@resumejs/template-nova': link:../../templates/nova
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+
   examples/resume-example:
     specifiers:
       '@resumejs/components': workspace:*
