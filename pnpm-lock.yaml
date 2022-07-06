@@ -339,6 +339,7 @@ importers:
   templates/nova:
     specifiers:
       '@iconify-json/carbon': ^1.1.5
+      '@resumejs/template': workspace:*
       '@types/hast': ^2.3.4
       '@types/react': ^17.0.45
       '@types/react-dom': ^17.0.17
@@ -366,6 +367,7 @@ importers:
       yaml: ^2.1.1
     dependencies:
       '@iconify-json/carbon': 1.1.6
+      '@resumejs/template': link:../../packages/template
       '@types/hast': 2.3.4
       '@unocss/preset-icons': 0.33.5
       '@unocss/preset-wind': 0.33.5

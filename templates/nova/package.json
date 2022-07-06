@@ -2,31 +2,31 @@
   "name": "@resumejs/template-nova",
   "version": "0.3.1",
   "description": "Default template of resume",
+  "author": "dengqing <dengqing0821@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://resume.todev.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dunqing/resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dunqing/resume/issues"
+  },
   "keywords": [
     "resume",
     "components",
     "template"
   ],
-  "homepage": "https://resume.todev.cc",
-  "bugs": {
-    "url": "https://github.com/Dunqing/resume/issues"
-  },
-  "license": "MIT",
-  "author": "dengqing <dengqing0821@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dunqing/resume.git"
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build --emptyOutDir",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.5",
+    "@resumejs/template": "workspace:*",
     "@types/hast": "^2.3.4",
     "@unocss/preset-icons": "^0.33.5",
     "@unocss/preset-wind": "^0.33.5",
