@@ -13,7 +13,7 @@ interface ArgvOptions extends minimist.ParsedArgs {
   config?: string
 }
 
-const { _, config } = minimist(process.argv.slice(2), {
+const { _, config, template } = minimist(process.argv.slice(2), {
   string: '-',
 }) as ArgvOptions
 
@@ -27,7 +27,9 @@ const getViteConfig = () => {
   const _config: InlineConfig = {
     logLevel: 'info',
     configFile,
-    plugins: [react(), entry(), loadResume()],
+    plugins: [react(), entry({
+      template
+    }), loadResume()],
   }
 
   return _config
