@@ -20,7 +20,7 @@
 
 ## 使用方式
 
-## [create-resumejs](./packages/create-resumejs/)
+### [create-resumejs](./packages/create-resumejs/)
 
 快速创建简历项目，支持在 Vercel 中部署
 
@@ -36,9 +36,10 @@ pnpm create resumejs
 
 4. 完成你的简历！
 
+
 ## [@resumejs/components](./packages/components/)
 
-在自己项目中引入该组件编写简历
+以组件方式引入到自己项目
 
 ### 下载
 
@@ -104,7 +105,21 @@ resume build
 resume preview
 ```
 
-## [@resumejs/template](./packages/template/)
+### 自定义模板
+
+```shell
+resume dev --template @resumejs/template-nova
+resume build --template @resumejs/template-nova
+```
+
+[参考示例](./examples/customize-template/)
+
+
+
+## Templates
+
+- [@resumejs/template-default](./templates/default/) 默认模板
+- [@resumejs/template-nova](./templates/nova/)
 
 **简历默认模板**
 
