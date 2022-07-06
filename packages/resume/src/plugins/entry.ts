@@ -5,8 +5,7 @@ interface EntryPluginOptions {
   template?: string
 }
 
-export const entry = ({template}: EntryPluginOptions = {}): Plugin => {
-
+export const entry = ({ template }: EntryPluginOptions = {}): Plugin => {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
   return {
     name: 'resume:entry',
@@ -32,7 +31,7 @@ export const entry = ({template}: EntryPluginOptions = {}): Plugin => {
       if (id === RESUME_ENTRY) {
         let templateId
         if (template) {
-          const resolvedTemplate = await this.resolve(template);
+          const resolvedTemplate = await this.resolve(template)
           templateId = resolvedTemplate?.id || template
         }
         const ms = new MagicString(`
@@ -44,7 +43,9 @@ export const entry = ({template}: EntryPluginOptions = {}): Plugin => {
 
           const Show = () => {
             return (
-              <Resume ${templateId ? 'components={CustomizeComponents}' : ''} className="md">{md}</Resume>
+              <Resume ${
+                templateId ? 'components={CustomizeComponents}' : ''
+              } className="md">{md}</Resume>
             )
           }
 
