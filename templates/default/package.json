@@ -1,7 +1,7 @@
 {
-  "name": "@resumejs/template",
+  "name": "@resumejs/template-default",
   "version": "0.4.0",
-  "description": "Builder resume template",
+  "description": "Default template of resume",
   "author": "dengqing <dengqing0821@gmail.com>",
   "license": "MIT",
   "homepage": "https://resume.todev.cc",
@@ -14,7 +14,8 @@
   },
   "keywords": [
     "resume",
-    "components"
+    "components",
+    "template"
   ],
   "exports": {
     ".": {
@@ -36,10 +37,16 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
+    "@iconify-json/carbon": "^1.1.6",
     "@resumejs/template": "workspace:*",
     "@types/hast": "^2.3.4",
+    "@unocss/preset-icons": "^0.39.3",
+    "@unocss/preset-wind": "^0.39.3",
+    "@unocss/reset": "^0.39.3",
+    "@unocss/transformer-directives": "^0.39.3",
     "clsx": "^1.1.1",
     "hast-util-has-property": "^2.0.0",
+    "omit.js": "^2.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^8.0.3",
@@ -50,6 +57,7 @@
     "unist-builder": "^3.0.0",
     "unist-util-is": "^5.1.1",
     "unist-util-visit": "^4.1.0",
+    "unocss": "^0.39.3",
     "vite-plugin-dts": "^1.2.0",
     "yaml": "^2.1.1"
   },
@@ -57,7 +65,8 @@
     "@types/react": "^17.0.47",
     "@types/react-dom": "^17.0.17",
     "@vitejs/plugin-react": "^1.3.2",
-    "vite": "^2.9.13"
+    "vite": "^2.9.13",
+    "vite-plugin-import-css": "^0.0.1"
   },
   "publishConfig": {
     "access": "public"

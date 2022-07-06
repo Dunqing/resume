@@ -5,7 +5,8 @@ import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
 import { useMemo, useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
-import { generateComponents } from '@resumejs/template'
+import templateComponents from '@resumejs/template-default'
+import { TemplateProvider } from '@resumejs/template'
 import {
   card,
   className,
@@ -47,43 +48,47 @@ export const Resume = (props: ResumeProps) => {
       return {}
     }
     return {
-      ...generateComponents({
-        print,
-        toggleTheme,
-      }),
+      ...templateComponents,
       ...props.components,
     }
   }, [])
 
   return (
-    <ReactMarkdown
-      className={clsx(
-        {
-          dark,
-        },
-        'r-resume',
-        props.className
-      )}
-      components={components}
-      remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
-      rehypePlugins={[
-        ...rehypePlugins,
-        task,
-        rehypeRaw,
-        card,
-        header,
-        description,
-        container,
-        toolbox,
-        className,
-      ]}
-      remarkRehypeOptions={{
-        allowDangerousHtml: true,
-        ...remarkRehypeOptions,
+    <TemplateProvider
+      value={{
+        toggleTheme,
+        print,
       }}
     >
-      {children}
-    </ReactMarkdown>
+      <ReactMarkdown
+        className={clsx(
+          {
+            dark,
+          },
+          'r-resume',
+          props.className
+        )}
+        components={components}
+        remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
+        rehypePlugins={[
+          ...rehypePlugins,
+          task,
+          rehypeRaw,
+          card,
+          header,
+          description,
+          container,
+          toolbox,
+          className,
+        ]}
+        remarkRehypeOptions={{
+          allowDangerousHtml: true,
+          ...remarkRehypeOptions,
+        }}
+      >
+        {children}
+      </ReactMarkdown>
+    </TemplateProvider>
   )
 }
 

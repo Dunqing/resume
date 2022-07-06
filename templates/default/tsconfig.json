@@ -14,10 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@resumejs/components": ["./packages/components/src/index.ts"]
-    }
+    "jsx": "react-jsx"
   },
-  "include": ["packages", "tests", "playground"]
+  "include": ["src", "jsx.d.ts"]
 }

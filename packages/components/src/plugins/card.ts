@@ -1,6 +1,6 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
-import type { Root, Element } from 'hast'
+import type { Element, Root } from 'hast'
 import { u } from 'unist-builder'
 import { isHeading } from './_util'
 
@@ -26,38 +26,37 @@ export const card: Plugin<[], Root> = function () {
 
         visit(
           // tbody
-          table.children[1], { tagName: 'tr' }, (tr) => {  
-          let i = 0
-          const cardInfo: { label: Element; value: Element }[] = []
-          visit(tr, { tagName: 'td' }, (td) => {
-            const th = labels[i]
-            if (!th) return
-            td.tagName = 'card-item-value'
-            cardInfo[i++] = { label: th, value: td }
-          })
+          table.children[1],
+          { tagName: 'tr' },
+          (tr) => {
+            let i = 0
+            const cardInfo: { label: Element; value: Element }[] = []
+            visit(tr, { tagName: 'td' }, (td) => {
+              const th = labels[i]
+              if (!th) return
+              td.tagName = 'card-item-value'
+              cardInfo[i++] = { label: th, value: td }
+            })
 
-          cardList.push({
-            type: 'element',
-            tagName: 'card',
-            position: table.position,
-            children: cardInfo.map((item, ii) => {
-              return u(
-                'element',
-                {
-                  tagName: 'card-item',
-                  properties: {
-                    index: ii,
+            cardList.push({
+              type: 'element',
+              tagName: 'card',
+              position: table.position,
+              children: cardInfo.map((item, ii) => {
+                return u(
+                  'element',
+                  {
+                    tagName: 'card-item',
+                    properties: {
+                      index: ii,
+                    },
                   },
-                },
-                [
-                  item.label,
-                   u('text', item.label ? '：' : ''),
-                  item.value!,
-                ]
-              )
-            }),
-          })
-        })
+                  [item.label, u('text', item.label ? '：' : ''), item.value!]
+                )
+              }),
+            })
+          }
+        )
 
         parent?.children.splice(index!, 1, ...cardList)
       }
