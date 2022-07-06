@@ -1,5 +1,5 @@
 packages:
-  - packages/*
-  - templates/*
-  - examples/*
+  - packages/**
+  - templates/**
+  - examples/**
   - playground

@@ -62,6 +62,7 @@ importers:
   packages/components:
     specifiers:
       '@resumejs/template': workspace:*
+      '@resumejs/template-default': workspace:*
       '@types/hast': ^2.3.4
       '@types/react': ^17.0.47
       '@types/react-dom': ^17.0.17
@@ -84,6 +85,7 @@ importers:
       yaml: ^2.1.1
     dependencies:
       '@resumejs/template': link:../template
+      '@resumejs/template-default': link:../../templates/default
       '@types/hast': 2.3.4
       clsx: 1.1.1
       hast-util-has-property: 2.0.0
@@ -116,6 +118,47 @@ importers:
       minimist: 1.2.6
       prompts: 2.4.2
 
+  packages/create-resumejs/template-markdown:
+    specifiers:
+      '@resumejs/components': latest
+      '@resumejs/resume': latest
+      react: ^17.0.2
+      react-dom: ^17.0.2
+    dependencies:
+      '@resumejs/components': link:../../components
+      '@resumejs/resume': link:../../resume
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+
+  packages/create-resumejs/template-react-ts:
+    specifiers:
+      '@iconify-json/carbon': ^1.1.6
+      '@resumejs/components': latest
+      '@types/react': ^17.0.47
+      '@types/react-dom': ^17.0.17
+      '@unocss/preset-icons': ^0.39.3
+      '@unocss/preset-wind': ^0.39.3
+      '@unocss/reset': ^0.39.3
+      '@vitejs/plugin-react': ^1.3.2
+      react: ^17.0.2
+      react-dom: ^17.0.2
+      unocss: ^0.39.3
+      vite: ^2.9.13
+    dependencies:
+      '@iconify-json/carbon': 1.1.6
+      '@resumejs/components': link:../../components
+      '@unocss/preset-icons': 0.39.3
+      '@unocss/preset-wind': 0.39.3
+      '@unocss/reset': 0.39.3
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      unocss: 0.39.3_vite@2.9.13
+    devDependencies:
+      '@types/react': 17.0.47
+      '@types/react-dom': 17.0.17
+      '@vitejs/plugin-react': 1.3.2
+      vite: 2.9.13
+
   packages/resume:
     specifiers:
       '@resumejs/components': workspace:*
@@ -146,18 +189,13 @@ importers:
 
   packages/template:
     specifiers:
-      '@iconify-json/carbon': ^1.1.6
+      '@resumejs/template': workspace:*
       '@types/hast': ^2.3.4
       '@types/react': ^17.0.47
       '@types/react-dom': ^17.0.17
-      '@unocss/preset-icons': ^0.39.3
-      '@unocss/preset-wind': ^0.39.3
-      '@unocss/reset': ^0.39.3
-      '@unocss/transformer-directives': ^0.39.3
       '@vitejs/plugin-react': ^1.3.2
       clsx: ^1.1.1
       hast-util-has-property: ^2.0.0
-      omit.js: ^2.0.2
       react: ^17.0.2
       react-dom: ^17.0.2
       react-markdown: ^8.0.3
@@ -168,21 +206,14 @@ importers:
       unist-builder: ^3.0.0
       unist-util-is: ^5.1.1
       unist-util-visit: ^4.1.0
-      unocss: ^0.39.3
       vite: ^2.9.13
       vite-plugin-dts: ^1.2.0
-      vite-plugin-import-css: ^0.0.1
       yaml: ^2.1.1
     dependencies:
-      '@iconify-json/carbon': 1.1.6
+      '@resumejs/template': 'link:'
       '@types/hast': 2.3.4
-      '@unocss/preset-icons': 0.39.3
-      '@unocss/preset-wind': 0.39.3
-      '@unocss/reset': 0.39.3
-      '@unocss/transformer-directives': 0.39.3
       clsx: 1.1.1
       hast-util-has-property: 2.0.0
-      omit.js: 2.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-markdown: 8.0.3_sudpmbbyhqtxq6t4xf6jlicdem
@@ -193,7 +224,6 @@ importers:
       unist-builder: 3.0.0
       unist-util-is: 5.1.1
       unist-util-visit: 4.1.0
-      unocss: 0.39.3_vite@2.9.13
       vite-plugin-dts: 1.2.0_vite@2.9.13
       yaml: 2.1.1
     devDependencies:
@@ -201,7 +231,6 @@ importers:
       '@types/react-dom': 17.0.17
       '@vitejs/plugin-react': 1.3.2
       vite: 2.9.13
-      vite-plugin-import-css: 0.0.1
 
   playground:
     specifiers:
@@ -246,6 +275,67 @@ importers:
       '@vitejs/plugin-react': 1.3.2
       vite: 2.9.13
 
+  templates/default:
+    specifiers:
+      '@iconify-json/carbon': ^1.1.6
+      '@resumejs/template': workspace:*
+      '@types/hast': ^2.3.4
+      '@types/react': ^17.0.47
+      '@types/react-dom': ^17.0.17
+      '@unocss/preset-icons': ^0.39.3
+      '@unocss/preset-wind': ^0.39.3
+      '@unocss/reset': ^0.39.3
+      '@unocss/transformer-directives': ^0.39.3
+      '@vitejs/plugin-react': ^1.3.2
+      clsx: ^1.1.1
+      hast-util-has-property: ^2.0.0
+      omit.js: ^2.0.2
+      react: ^17.0.2
+      react-dom: ^17.0.2
+      react-markdown: ^8.0.3
+      rehype-raw: ^6.1.1
+      remark-frontmatter: ^4.0.1
+      remark-gfm: ^3.0.1
+      unified: ^10.1.2
+      unist-builder: ^3.0.0
+      unist-util-is: ^5.1.1
+      unist-util-visit: ^4.1.0
+      unocss: ^0.39.3
+      vite: ^2.9.13
+      vite-plugin-dts: ^1.2.0
+      vite-plugin-import-css: ^0.0.1
+      yaml: ^2.1.1
+    dependencies:
+      '@iconify-json/carbon': 1.1.6
+      '@resumejs/template': link:../../packages/template
+      '@types/hast': 2.3.4
+      '@unocss/preset-icons': 0.39.3
+      '@unocss/preset-wind': 0.39.3
+      '@unocss/reset': 0.39.3
+      '@unocss/transformer-directives': 0.39.3
+      clsx: 1.1.1
+      hast-util-has-property: 2.0.0
+      omit.js: 2.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-markdown: 8.0.3_sudpmbbyhqtxq6t4xf6jlicdem
+      rehype-raw: 6.1.1
+      remark-frontmatter: 4.0.1
+      remark-gfm: 3.0.1
+      unified: 10.1.2
+      unist-builder: 3.0.0
+      unist-util-is: 5.1.1
+      unist-util-visit: 4.1.0
+      unocss: 0.39.3_vite@2.9.13
+      vite-plugin-dts: 1.2.0_vite@2.9.13
+      yaml: 2.1.1
+    devDependencies:
+      '@types/react': 17.0.47
+      '@types/react-dom': 17.0.17
+      '@vitejs/plugin-react': 1.3.2
+      vite: 2.9.13
+      vite-plugin-import-css: 0.0.1
+
   templates/nova:
     specifiers:
       '@iconify-json/carbon': ^1.1.5
@@ -275,7 +365,7 @@ importers:
       vite-plugin-import-css: ^0.0.1
       yaml: ^2.1.1
     dependencies:
-      '@iconify-json/carbon': 1.1.5
+      '@iconify-json/carbon': 1.1.6
       '@types/hast': 2.3.4
       '@unocss/preset-icons': 0.33.5
       '@unocss/preset-wind': 0.33.5
@@ -285,7 +375,7 @@ importers:
       omit.js: 2.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-markdown: 8.0.3_hx2b44akkvgcgvvtmk7ds2qk6q
+      react-markdown: 8.0.3_sudpmbbyhqtxq6t4xf6jlicdem
       rehype-raw: 6.1.1
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
@@ -297,7 +387,7 @@ importers:
       vite-plugin-dts: 1.2.0_vite@2.9.13
       yaml: 2.1.1
     devDependencies:
-      '@types/react': 17.0.45
+      '@types/react': 17.0.47
       '@types/react-dom': 17.0.17
       '@vitejs/plugin-react': 1.3.2
       vite: 2.9.13
@@ -693,12 +783,6 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify-json/carbon/1.1.5:
-    resolution: {integrity: sha512-ENl8CIEo+7JcRzpJ/58i+dDc3fkNOO7gyNGg4S4JN5cAiVpvltYTVO86Oei7rpl8bKypJ0vk3B0BbzzTw7DclA==}
-    dependencies:
-      '@iconify/types': 1.1.0
-    dev: false
-
   /@iconify-json/carbon/1.1.6:
     resolution: {integrity: sha512-3a/D7qzqBO6hsDmp6/k2eFfJzL1sw1yCQOq2yr86el2CzgMmQdKYROOyCCDNBxGn+dkkc/Rx1/8OEciakAJcFg==}
     dependencies:
@@ -707,19 +791,6 @@ packages:
 
   /@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
-    dev: false
-
-  /@iconify/utils/1.0.32:
-    resolution: {integrity: sha512-m+rnw7qKHq/XF7DAi4BcFoEAcXBfqqMgQJh8brGEHeqE/RUvgDMjmxsHgWnVpFsG+VmjGyAiI7nwXdliCwEU0Q==}
-    dependencies:
-      '@antfu/install-pkg': 0.1.0
-      '@antfu/utils': 0.5.2
-      '@iconify/types': 1.1.0
-      debug: 4.3.4
-      kolorist: 1.5.1
-      local-pkg: 0.4.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /@iconify/utils/1.0.33:
@@ -1106,14 +1177,6 @@ packages:
     dependencies:
       '@types/react': 17.0.47
 
-  /@types/react/17.0.45:
-    resolution: {integrity: sha512-YfhQ22Lah2e3CHPsb93tRwIGNiSwkuz1/blk4e6QrWS0jQzCSNbGLtOEYhPg02W0yGTTmpajp7dCTbBAMN3qsg==}
-    dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
-      csstype: 3.1.0
-    dev: true
-
   /@types/react/17.0.47:
     resolution: {integrity: sha512-mk0BL8zBinf2ozNr3qPnlu1oyVTYq+4V7WA76RgxUAtf0Em/Wbid38KN6n4abEkvO4xMTBWmnP1FtQzgkEiJoA==}
     dependencies:
@@ -1352,7 +1415,7 @@ packages:
   /@unocss/preset-icons/0.33.5:
     resolution: {integrity: sha512-fJMXN8IceVS6x+HbwLEcbfA1SC8qGi1s3MJNj6u/d1HyNlDLhSFZnSneAK/EnxfZJ+/dhv1zi16wFdZCXbrHkw==}
     dependencies:
-      '@iconify/utils': 1.0.32
+      '@iconify/utils': 1.0.33
       '@unocss/core': 0.33.5
       ohmyfetch: 0.4.18
     transitivePeerDependencies:
@@ -4982,33 +5045,6 @@ packages:
 
   /react-is/18.1.0:
     resolution: {integrity: sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg==}
-    dev: false
-
-  /react-markdown/8.0.3_hx2b44akkvgcgvvtmk7ds2qk6q:
-    resolution: {integrity: sha512-We36SfqaKoVNpN1QqsZwWSv/OZt5J15LNgTLWynwAN5b265hrQrsjMtlRNwUvS+YyR3yDM8HpTNc4pK9H/Gc0A==}
-    peerDependencies:
-      '@types/react': '>=16'
-      react: '>=16'
-    dependencies:
-      '@types/hast': 2.3.4
-      '@types/prop-types': 15.7.5
-      '@types/react': 17.0.45
-      '@types/unist': 2.0.6
-      comma-separated-tokens: 2.0.2
-      hast-util-whitespace: 2.0.0
-      prop-types: 15.8.1
-      property-information: 6.1.1
-      react: 17.0.2
-      react-is: 18.1.0
-      remark-parse: 10.0.1
-      remark-rehype: 10.1.0
-      space-separated-tokens: 2.0.1
-      style-to-object: 0.3.0
-      unified: 10.1.2
-      unist-util-visit: 4.1.0
-      vfile: 5.3.2
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /react-markdown/8.0.3_sudpmbbyhqtxq6t4xf6jlicdem:

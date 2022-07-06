@@ -1,22 +1,22 @@
 {
   "name": "@resumejs/resume",
   "version": "0.4.0",
-  "bin": {
-    "resume": "./dist/index.ts.mjs"
+  "author": "dengqing <dengqing0821@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://resume.todev.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dunqing/resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dunqing/resume/issues"
   },
   "keywords": [
     "resume",
     "cli"
   ],
-  "homepage": "https://resume.todev.cc",
-  "bugs": {
-    "url": "https://github.com/Dunqing/resume/issues"
-  },
-  "license": "MIT",
-  "author": "dengqing <dengqing0821@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dunqing/resume.git"
+  "bin": {
+    "resume": "./dist/index.ts.mjs"
   },
   "scripts": {
     "build": "unbuild",

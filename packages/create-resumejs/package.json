@@ -3,26 +3,26 @@
   "version": "0.4.0",
   "packageManager": "pnpm@6.32.3",
   "description": "create resume project",
+  "author": "dengqing <dengqing0821@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://resume.todev.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dunqing/resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dunqing/resume/issues"
+  },
   "keywords": [
     "create",
     "vite",
     "resume",
     "markdown"
   ],
-  "homepage": "https://resume.todev.cc",
-  "bugs": {
-    "url": "https://github.com/Dunqing/resume/issues"
-  },
-  "license": "MIT",
-  "author": "dengqing <dengqing0821@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dunqing/resume.git"
-  },
+  "sideEffects": false,
   "bin": {
     "create-resumejsjs": "index.js"
   },
-  "sideEffects": false,
   "dependencies": {
     "kolorist": "^1.5.1",
     "minimist": "^1.2.6",

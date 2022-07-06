@@ -1,8 +1,8 @@
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
 import type { Element } from 'hast'
-import { isBlockquote, isImage, isParagraph, isUl } from './_util'
 import { u } from 'unist-builder'
+import { isBlockquote, isImage, isParagraph, isUl } from './_util'
 
 export const header: Plugin<[], Element> = function () {
   return (root) => {
@@ -20,7 +20,6 @@ export const header: Plugin<[], Element> = function () {
         const replaceWithEmpty = (index: number) => {
           parent!.children[index] = u('text', '')
         }
-
 
         for (let i = index! + 2; i < len; i += 2) {
           const element = parent!.children[i] as Element
@@ -48,7 +47,7 @@ export const header: Plugin<[], Element> = function () {
           replaceWithEmpty(i)
         }
 
-        if (avatar!) { 
+        if (avatar!) {
           avatar.tagName = 'header-avatar'
           headerChildren.unshift(avatar)
         }
