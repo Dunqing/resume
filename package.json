@@ -10,7 +10,7 @@
     "lint": "eslint . --fix",
     "prepublishOnly": "pnpm run build",
     "test": "vitest",
-    "release": "bumpp packages/*/package.json --no-verify --commit --push --tag && pnpm --filter {packages/*} publish",
+    "release": "bumpp packages/*/package.json templates/*/package.json --no-verify --commit --push --tag && pnpm --filter {packages/*} --filter {templates/*} publish",
     "check-type": "tsc --noEmit"
   },
   "dependencies": {
