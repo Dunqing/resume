@@ -1,7 +1,7 @@
 import { useLocalStorage } from 'react-use'
-import readme from '../../README.md?raw'
+import readme from '../../Nova.md?raw'
 
-const RESUME_KEY = 'MARKDOWN_RESUME_KEY'
+const RESUME_KEY = 'MARKDOWN_RESUME_NOVA_KEY'
 
 const useResume = () => {
   return useLocalStorage(RESUME_KEY, readme)

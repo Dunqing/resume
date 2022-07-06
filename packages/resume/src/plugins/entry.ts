@@ -1,7 +1,11 @@
 import type { Plugin } from 'vite'
 import MagicString from 'magic-string'
 
-export const entry = (): Plugin => {
+interface EntryPluginOptions {
+  template?: string
+}
+
+export const entry = ({ template }: EntryPluginOptions = {}): Plugin => {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
   return {
     name: 'resume:entry',
@@ -23,17 +27,25 @@ export const entry = (): Plugin => {
     resolveId(id) {
       if (id === RESUME_ENTRY) return id
     },
-    load(id) {
+    async load(id) {
       if (id === RESUME_ENTRY) {
+        let templateId
+        if (template) {
+          const resolvedTemplate = await this.resolve(template)
+          templateId = resolvedTemplate?.id || template
+        }
         const ms = new MagicString(`
           import React from 'react'
           import ReactDOM from 'react-dom'
           import { Resume } from '@resumejs/components'
+          ${templateId ? `import CustomizeComponents from '${templateId}'` : ''}
           import md from 'virtual:resume'
 
           const Show = () => {
             return (
-              <Resume className="md">{md}</Resume>
+              <Resume ${
+                templateId ? 'components={CustomizeComponents}' : ''
+              } className="md">{md}</Resume>
             )
           }
 
@@ -44,6 +56,7 @@ export const entry = (): Plugin => {
             document.getElementById('root')
           )
         `)
+
         return {
           code: ms.toString(),
           map: ms.generateMap(),

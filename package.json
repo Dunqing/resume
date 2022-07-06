@@ -4,8 +4,7 @@
   "private": true,
   "packageManager": "pnpm@7.1.0",
   "scripts": {
-    "dev": "pnpm --parallel --filter {packages/*} dev",
-    "dev:templates": "pnpm --parallel --filter {templates/*} dev",
+    "dev": "pnpm --parallel --filter {packages/*} --filter {templates/*} dev",
     "build": "pnpm --filter {packages/*} build",
     "play": "pnpm --filter ./playground dev",
     "lint": "eslint . --fix",
