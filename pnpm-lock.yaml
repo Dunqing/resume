@@ -214,7 +214,6 @@ importers:
       rehype-raw: ^6.1.1
       remark-frontmatter: ^4.0.1
       remark-gfm: ^3.0.1
-      unbuild: ^0.7.4
       unified: ^10.1.2
       unist-builder: ^3.0.0
       unist-util-is: ^5.1.1
@@ -233,7 +232,6 @@ importers:
       rehype-raw: 6.1.1
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
-      unbuild: 0.7.4
       unified: 10.1.2
       unist-builder: 3.0.0
       unist-util-is: 5.1.1
