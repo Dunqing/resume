@@ -26,7 +26,7 @@ const Toolbox: React.FC<ToolboxProps> = ({ meta, ...props }) => {
         print={meta.print}
       />
       <ThemeButton
-        onClick={() => toggleTheme}
+        onClick={() => toggleTheme()}
         theme={meta.theme}
       />
     </div>
