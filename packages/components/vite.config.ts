@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
-import importCss from 'vite-plugin-import-css'
 import packageJson from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [dts(), react(), importCss()],
+  plugins: [dts(), react()],
   build: {
     lib: {
       entry: 'src/index.ts',

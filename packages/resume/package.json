@@ -16,7 +16,7 @@
     "cli"
   ],
   "bin": {
-    "resume": "./dist/index.ts.mjs"
+    "resume": "./dist/index.mjs"
   },
   "scripts": {
     "build": "unbuild",
