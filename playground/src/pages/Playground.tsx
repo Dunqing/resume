@@ -1,14 +1,12 @@
 import type { ChangeHandler } from 'react-monaco-editor'
 import MonacoEditor from 'react-monaco-editor'
-import { Resume } from '@resumejs/components'
 import { languages } from 'monaco-editor'
 import { useEffect, useRef } from 'react'
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
 import './playground.css'
-import { ErrorBoundary } from 'react-error-boundary'
 import useResume from '../hooks/useResume'
-import { FallbackComponent } from '../components/FallbackComponent'
+import Resume from '../components/Resume'
 
 languages.register({
   id: 'markdown',
@@ -50,12 +48,7 @@ function Playground() {
               onChange={onEditorChange}
             />
           </div>
-          <ErrorBoundary
-            resetKeys={[code]}
-            FallbackComponent={FallbackComponent}
-          >
-            <Resume className="lg:overflow-y-scroll">{code || ''}</Resume>
-          </ErrorBoundary>
+          <Resume className="lg:overflow-y-scroll">{code || ''}</Resume>
         </div>
       </div>
     </div>

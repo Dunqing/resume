@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import type { RouteObject } from 'react-router-dom'
 import { Link, Navigate, useLocation, useRoutes } from 'react-router-dom'
+import Template from './components/Template'
 import Playground from './pages/Playground'
 import { Show } from './pages/Show'
 
@@ -36,6 +37,7 @@ const App = () => {
             'flex items-center gap-x-2 xs:text-sm text-md leading-normal underline'
           )}
         >
+          <Template></Template>
           <Link to="/resume">生成简历</Link>
           <a
             href="https://github.com/Dunqing"
