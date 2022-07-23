@@ -18,7 +18,7 @@ import {
   toolbox,
 } from './plugins'
 
-interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
+export interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
   /**
    * 当为 false 时不设置默认主题
    */
@@ -51,7 +51,7 @@ export const Resume = (props: ResumeProps) => {
       ...templateComponents,
       ...props.components,
     }
-  }, [])
+  }, [props.components])
 
   return (
     <TemplateProvider
@@ -91,5 +91,3 @@ export const Resume = (props: ResumeProps) => {
     </TemplateProvider>
   )
 }
-
-export default Resume
