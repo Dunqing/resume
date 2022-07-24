@@ -5,7 +5,7 @@
   "packageManager": "pnpm@7.1.0",
   "scripts": {
     "dev": "pnpm --parallel --filter {packages/*} --filter {templates/*} dev",
-    "build": "pnpm --parallel --filter {packages/*} --filter {templates/*} dev",
+    "build": "pnpm --parallel --filter {packages/*} --filter {templates/*} build",
     "play": "pnpm --filter ./playground dev",
     "lint": "eslint . --fix",
     "prepublishOnly": "pnpm run build",
