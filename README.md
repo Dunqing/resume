@@ -146,4 +146,4 @@ resume build --template @resumejs/template-nova
 
 ### 示例
 
-- [默认模板](packages/template/src/index.tsx)
+- [默认模板](templates/default/src/index.tsx)
