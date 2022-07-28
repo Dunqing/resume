@@ -1,6 +1,6 @@
 {
   "name": "create-resumejs",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "packageManager": "pnpm@6.32.3",
   "description": "create resume project",
   "author": "dengqing <dengqing0821@gmail.com>",
