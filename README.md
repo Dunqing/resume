@@ -147,3 +147,8 @@ resume build --template @resumejs/template-nova
 ### 示例
 
 - [默认模板](templates/default/src/index.tsx)
+
+
+## 相关文章
+
+[一款更加完善，且易于拓展的用 Markdown 编写简历的开源简历项目](https://juejin.cn/post/7124536546677489678)
