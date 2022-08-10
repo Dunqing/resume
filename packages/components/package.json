@@ -54,6 +54,7 @@
     "yaml": "^2.1.1"
   },
   "devDependencies": {
+    "@types/mdast": "^3.0.10",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
