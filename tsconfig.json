@@ -2,9 +2,13 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "skipLibCheck": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
-    "skipLibCheck": false,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -16,8 +20,14 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@resumejs/components": ["./packages/components/src/index.ts"]
+      "@resumejs/components": [
+        "./packages/components/src/index.ts"
+      ]
     }
   },
-  "include": ["packages", "tests", "playground"]
+  "include": [
+    "packages",
+    "tests",
+    "playground"
+  ]
 }
