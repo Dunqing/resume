@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import React from 'react'
 import type { FallbackProps } from 'react-error-boundary'
 
 export const FallbackComponent: React.FC<FallbackProps> = (props) => {
