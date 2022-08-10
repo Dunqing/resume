@@ -14,7 +14,9 @@ const TemplateContext = React.createContext<TemplateContextValues>({
   setTemplate: () => {},
 })
 
-export const TemplateProvider: React.FC = ({ children }) => {
+export const TemplateProvider = ({ children }: {
+  children: React.ReactNode
+}) => {
   const [template, setTemplate] = useLocalStorage('RESUME_TEMPLATE', 'default')
   const [components, setComponents] = useState<ResumeProps['components']>({})
 

@@ -1,3 +1,4 @@
+import React, { ReactNode } from 'react'
 import type { FallbackProps } from 'react-error-boundary'
 
 export const FallbackComponent: React.FC<FallbackProps> = (props) => {
@@ -13,5 +14,5 @@ export const FallbackComponent: React.FC<FallbackProps> = (props) => {
       </div>
     )
   }
-  return <>{props.children}</>
+  return <>{(props as unknown as { children: ReactNode }).children}</>
 }

@@ -1,10 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import { TemplateProvider } from './contexts/template'
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
+const container = createRoot(document.getElementById('root')!)
+
+container.render(
   <React.StrictMode>
     <BrowserRouter>
       <TemplateProvider>
@@ -12,5 +14,4 @@ ReactDOM.render(
       </TemplateProvider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
 )
