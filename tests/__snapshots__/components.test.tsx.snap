@@ -47,12 +47,12 @@ exports[`components > description 1`] = `
 
 exports[`components > heading 1`] = `
 "<div class=\\"r-resume\\"><div class=\\"font-sans text-base text-dark-400 bg-white dark:text-light-700 dark:bg-dark-400 r-container\\"><div class=\\"border print:border-none border-light-700 md:w-full md:max-w-screen-md xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4 dark:border-dark-100 relative r-content\\"><div class=\\"absolute right-4 top-2 flex gap-x-1.5 print:hidden r-toolbox\\"></div><header class=\\"flex flex-col items-center p-4 r-header\\"><h1 class=\\"font-bold text-3xl r-header-name\\">张三</h1><img src=\\"https://notion-avatar.vercel.app/api/svg/eyJmYWNlIjo5LCJub3NlIjoxMCwibW91dGgiOjEsImV5ZXMiOjcsImV5ZWJyb3dzIjoxMSwiZ2xhc3NlcyI6MCwiaGFpciI6MTEsImFjY2Vzc29yaWVzIjoxMywiZGV0YWlscyI6MCwiYmVhcmQiOjAsImZsaXAiOjAsImNvbG9yIjoicmdiYSgyNTUsIDAsIDAsIDApIiwic2hhcGUiOiJub25lIn0=\\" alt=\\"头像\\" class=\\"w-40 text-3xl r-header-avatar\\"><ul class=\\"list-none flex flex-wrap r-header-row\\">
-<li class=\\"sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\"><a class=\\"text-blue-600 underline dark:text-blue-400 r-a\\" href=\\"https://github.com/Dunqing\\">https://github.com/Dunqing</a></li>
+<li class=\\"sibling:before:content-[|] sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\"><a class=\\"text-blue-600 underline dark:text-blue-400 r-a\\" href=\\"https://github.com/Dunqing\\">https://github.com/Dunqing</a></li>
 </ul><ul class=\\"list-none flex flex-wrap r-header-row\\">
-<li class=\\"sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\"><a class=\\"text-blue-600 underline dark:text-blue-400 r-a\\" href=\\"mailto:google@gmail.com\\">google@gmail.com</a></li>
-<li class=\\"sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\">3 年</li>
+<li class=\\"sibling:before:content-[|] sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\"><a class=\\"text-blue-600 underline dark:text-blue-400 r-a\\" href=\\"mailto:google@gmail.com\\">google@gmail.com</a></li>
+<li class=\\"sibling:before:content-[|] sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\">3 年</li>
 </ul><ul class=\\"list-none flex flex-wrap r-header-row\\">
-<li class=\\"sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\">Telegram: @luckingforme</li>
+<li class=\\"sibling:before:content-[|] sibling:before:p-x-2 sibling:before:text-gray-400 r-header-col\\">Telegram: @luckingforme</li>
 </ul></header>
 
 
