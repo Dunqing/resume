@@ -201,7 +201,7 @@ const components: Components = {
     return (
       <li
         className={clsx(
-          'sibling:before:content-| sibling:before:p-x-2 sibling:before:text-gray-400',
+          'sibling:before:content-[|] sibling:before:p-x-2 sibling:before:text-gray-400',
           className
         )}
         {...omitProps(props)}
