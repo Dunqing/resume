@@ -1,4 +1,4 @@
-<div align="center"><img width="100%" src="https://user-images.githubusercontent.com/29533304/187476770-3554c53e-65bf-4dba-b798-b80502907dbe.svg"></img>
+<div align="center"><img width="100%" src="https://static.todev.cc/resume/logo.svg" />
 <a href="https://resume.todev.cc/">所见即所得的在线简历</a> | <a href="https://stackblitz.com/edit/node-ga2wh1?file=README.md">Stackblitz Playground</a></div>
 
 ## 项目介绍

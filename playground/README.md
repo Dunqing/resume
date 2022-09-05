@@ -6,7 +6,7 @@ github: 'https://github.com/Dunqing/resume'
 
 # 张三
 
-![头像](https://notion-avatar.vercel.app/api/svg/eyJmYWNlIjo5LCJub3NlIjoxMCwibW91dGgiOjEsImV5ZXMiOjcsImV5ZWJyb3dzIjoxMSwiZ2xhc3NlcyI6MCwiaGFpciI6MTEsImFjY2Vzc29yaWVzIjoxMywiZGV0YWlscyI6MCwiYmVhcmQiOjAsImZsaXAiOjAsImNvbG9yIjoicmdiYSgyNTUsIDAsIDAsIDApIiwic2hhcGUiOiJub25lIn0=)
+![头像](https://static.todev.cc/resume/avatar.svg)
 
 - [https://github.com/Dunqing](https://github.com/Dunqing)
 
@@ -109,5 +109,5 @@ github: 'https://github.com/Dunqing/resume'
     justify-content: center;
     padding: 0.5rem 0;
 ">
-  <img src="//github-readme-stats.vercel.app/api?username=Dunqing&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true">
+  <img src="//github-readme-stats.vercel.app/api?username=Dunqing&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
 </p>
