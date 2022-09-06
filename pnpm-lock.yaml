@@ -273,6 +273,7 @@ importers:
       react-use: ^17.4.0
       unocss: ^0.45.15
       vite: ^3.0.5
+      vite-plugin-ssr: ^0.4.31
     dependencies:
       '@iconify-json/carbon': 1.1.7
       '@resumejs/components': link:../packages/components
@@ -294,6 +295,7 @@ importers:
       '@types/react-dom': 18.0.6
       '@vitejs/plugin-react': 2.0.0_vite@3.0.5
       vite: 3.0.5
+      vite-plugin-ssr: 0.4.31_vite@3.0.5
 
   templates/default:
     specifiers:
@@ -870,6 +872,14 @@ packages:
     dependencies:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
+
+  /@brillout/json-s/0.4.6:
+    resolution: {integrity: sha512-mDgMMNFSKyN9Fy0G4yQTcWwQ1BXUE65D3i3RXPX44xD5AuIU4QQDQBi+DKiEDCS6L6nEa2frC2lCUa/ob700Aw==}
+    dev: true
+
+  /@brillout/vite-plugin-import-build/0.1.0:
+    resolution: {integrity: sha512-zn90Jwy9TKrBSB45ikPMmxvnGRRfrreeGKtb0DWbKrxlFf+0dOPSmPxxgO7EKBahQJAC8XxeUSMKcPwPmR1b4Q==}
+    dev: true
 
   /@esbuild/linux-loong64/0.15.0:
     resolution: {integrity: sha512-7ChD3qsxRPIPp9bfjspZiM/x8B1UZL7IKwp0YdnC1kKsDCB5Q8/TexedeeEbkI9inlunu8Lll2lP2wnkiXTCLA==}
@@ -1624,6 +1634,13 @@ packages:
     resolution: {integrity: sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==}
     dev: false
 
+  /@zkochan/rimraf/2.1.2:
+    resolution: {integrity: sha512-Lc2oK51J6aQWcLWTloobJun5ZF41BbTDdLvE+aMcexoVWFoFqvZmnZoyXR2IZk6NJEVoZW8tjgtvQLfTsmRs2Q==}
+    engines: {node: '>=12.10'}
+    dependencies:
+      rimraf: 3.0.2
+    dev: true
+
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
     dev: true
@@ -1773,6 +1790,13 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  /better-path-resolve/1.0.0:
+    resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
+    engines: {node: '>=4'}
+    dependencies:
+      is-windows: 1.0.2
+    dev: true
 
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
@@ -2298,6 +2322,10 @@ packages:
       string.prototype.trimend: 1.0.5
       string.prototype.trimstart: 1.0.5
       unbox-primitive: 1.0.2
+    dev: true
+
+  /es-module-lexer/0.10.5:
+    resolution: {integrity: sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==}
     dev: true
 
   /es-module-lexer/0.9.3:
@@ -4004,6 +4032,11 @@ packages:
       call-bind: 1.0.2
     dev: true
 
+  /is-windows/1.0.2:
+    resolution: {integrity: sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
@@ -5470,6 +5503,13 @@ packages:
       unified: 10.1.2
     dev: false
 
+  /rename-overwrite/4.0.2:
+    resolution: {integrity: sha512-L1sgBgagVgOgb1Z6QZr1yJgSMHI4SXQqAH0l/UbeyHnLKxECvKIlyVEmBo4BqsCAZGg0SBSyjCh68lis5PgC7g==}
+    engines: {node: '>=12.10'}
+    dependencies:
+      '@zkochan/rimraf': 2.1.2
+    dev: true
+
   /resize-observer-polyfill/1.5.1:
     resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
     dev: false
@@ -5855,6 +5895,15 @@ packages:
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
+    dev: true
+
+  /symlink-dir/5.0.1:
+    resolution: {integrity: sha512-MeXygPBopo8AmyObuCJIpXKT+mw54d2Kp6SBuxq0uXZGDkHwHDQExpSg5+TK8BA5kCGyktawu5DJG0QWYO6acw==}
+    engines: {node: '>=12.10'}
+    hasBin: true
+    dependencies:
+      better-path-resolve: 1.0.0
+      rename-overwrite: 4.0.2
     dev: true
 
   /text-table/0.2.0:
@@ -6275,6 +6324,24 @@ packages:
       - less
       - sass
       - stylus
+    dev: true
+
+  /vite-plugin-ssr/0.4.31_vite@3.0.5:
+    resolution: {integrity: sha512-8xhDMHX1CXxLianeibn6Cr+ePLNOnY25X/QjpkGa9y1Rq/WWEnh6ejnYiGbacvP2ng08bp5H5o6M4PnIyPpazg==}
+    engines: {node: '>=12.19.0'}
+    hasBin: true
+    peerDependencies:
+      vite: '>=3.0.0'
+    dependencies:
+      '@brillout/json-s': 0.4.6
+      '@brillout/vite-plugin-import-build': 0.1.0
+      cac: 6.7.12
+      es-module-lexer: 0.10.5
+      fast-glob: 3.2.11
+      picocolors: 1.0.0
+      resolve: 1.22.1
+      symlink-dir: 5.0.1
+      vite: 3.0.5
     dev: true
 
   /vite/2.9.13:

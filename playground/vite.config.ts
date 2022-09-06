@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import unocss from 'unocss/vite'
 import { presetWind } from 'unocss'
 import UnocssIcons from '@unocss/preset-icons'
+import ssr from 'vite-plugin-ssr/plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,9 @@ export default defineConfig({
         }),
         presetWind(),
       ],
+    }),
+    ssr({
+      prerender: true,
     }),
   ],
 })
