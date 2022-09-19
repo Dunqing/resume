@@ -28,6 +28,11 @@ export interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
    * 传递给模板使用的props
    */
   templateContextProps?: Partial<TemplateContextProps>
+  /**
+   * 将 dark class 插入到任意你想要的位置
+   * 不传将插入当前组件的 root tag 中
+   */
+  onDarkClass?: (className: string, action: 'add' | 'remove') => void
 }
 
 export const Resume = (props: ResumeProps) => {
@@ -42,7 +47,10 @@ export const Resume = (props: ResumeProps) => {
   const [dark, setDark] = useState(false)
 
   const toggleTheme = () => {
-    setDark((d) => !d)
+    props.onDarkClass?.('dark', !dark ? 'add' : 'remove')
+    setDark((d) => {
+      return !d
+    })
   }
 
   const print = () => {
@@ -70,7 +78,7 @@ export const Resume = (props: ResumeProps) => {
       <ReactMarkdown
         className={clsx(
           {
-            dark,
+            dark: !props.onDarkClass && dark,
           },
           'r-resume',
           props.className
