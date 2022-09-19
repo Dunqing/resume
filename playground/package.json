@@ -11,23 +11,23 @@
     "@iconify-json/carbon": "^1.1.7",
     "@resumejs/components": "workspace:*",
     "@resumejs/template-nova": "workspace:*",
-    "@unocss/preset-icons": "^0.45.15",
-    "@unocss/preset-wind": "^0.45.15",
-    "@unocss/reset": "^0.45.15",
+    "@unocss/preset-icons": "^0.45.21",
+    "@unocss/preset-wind": "^0.45.21",
+    "@unocss/reset": "^0.45.21",
     "clsx": "^1.2.1",
     "monaco-editor": "^0.34.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
-    "react-monaco-editor": "^0.49.0",
-    "react-router-dom": "^6.3.0",
+    "react-monaco-editor": "^0.50.1",
+    "react-router-dom": "^6.4.0",
     "react-use": "^17.4.0",
-    "unocss": "^0.45.15"
+    "unocss": "^0.45.21"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
+    "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
-    "vite": "^3.0.5"
+    "@vitejs/plugin-react": "^2.1.0",
+    "vite": "^3.1.2"
   }
 }

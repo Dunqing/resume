@@ -31,16 +31,16 @@
   "dependencies": {
     "@resumejs/components": "workspace:*",
     "@types/minimist": "^1.2.2",
-    "@types/react": "^18.0.17",
+    "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
-    "kolorist": "^1.5.1",
-    "magic-string": "^0.26.2",
+    "@vitejs/plugin-react": "^2.1.0",
+    "kolorist": "^1.6.0",
+    "magic-string": "^0.26.3",
     "minimist": "^1.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "unbuild": "^0.8.7",
-    "vite": "^3.0.5"
+    "unbuild": "^0.8.11",
+    "vite": "^3.1.2"
   },
   "publishConfig": {
     "access": "public"
