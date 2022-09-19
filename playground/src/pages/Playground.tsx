@@ -1,12 +1,10 @@
 import type { ChangeHandler } from 'react-monaco-editor'
 import MonacoEditor from 'react-monaco-editor'
 import { languages } from 'monaco-editor'
-import { useEffect, useRef } from 'react'
-import 'uno.css'
-import '@unocss/reset/tailwind.css'
-import './playground.css'
+import { useEffect, useRef, useState } from 'react'
 import useResume from '../hooks/useResume'
 import Resume from '../components/Resume'
+import './playground.css'
 
 languages.register({
   id: 'markdown',
@@ -16,6 +14,7 @@ function Playground() {
   const monacoRef = useRef<MonacoEditor | null>(null)
 
   const [code, setCode] = useResume()
+  const [, forceUpdate] = useState([])
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -44,11 +43,21 @@ function Playground() {
               language="markdown"
               value={code}
               options={options}
-              theme="vs-dark"
+              theme={
+                document.body.classList.contains('dark') ? 'vs-dark' : 'vs'
+              }
               onChange={onEditorChange}
             />
           </div>
-          <Resume className="lg:overflow-y-scroll">{code || ''}</Resume>
+          <Resume
+            onDarkClass={(className: string, action) => {
+              document.body.classList[action]?.(className)
+              forceUpdate([])
+            }}
+            className="lg:overflow-y-scroll"
+          >
+            {code || ''}
+          </Resume>
         </div>
       </div>
     </div>

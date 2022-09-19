@@ -1,8 +1,10 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
-import App from './App'
 import { TemplateProvider } from './contexts/template'
+import App from './App'
+import 'uno.css'
+import '@unocss/reset/tailwind.css'
 
 const container = createRoot(document.getElementById('root')!)
 
