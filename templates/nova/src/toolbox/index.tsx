@@ -10,7 +10,7 @@ interface ToolboxProps {
 }
 
 const Toolbox: React.FC<ToolboxProps> = ({ meta, ...props }) => {
-  const { toggleTheme, print } = useTemplate()
+  const { toggleTheme, print, extraToolboxButton } = useTemplate()
 
   return (
     <div
@@ -20,6 +20,7 @@ const Toolbox: React.FC<ToolboxProps> = ({ meta, ...props }) => {
         props.className
       )}
     >
+      {extraToolboxButton}
       <GithubLink github={meta.github} />
       <PrintButton
         onClick={print}

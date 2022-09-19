@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { createContext, useContext } from 'react'
 
 const noop = () => {}
@@ -5,6 +6,7 @@ const noop = () => {}
 export interface TemplateContextProps {
   toggleTheme: (theme?: string) => void
   print: () => void
+  extraToolboxButton?: ReactNode
 }
 
 const context = createContext<TemplateContextProps>({
