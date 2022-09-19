@@ -10,26 +10,25 @@ const Template: React.FC = () => {
     setTemplate(value)
   }
   return (
-    <>
-      <label>
-        请选择模板：
-        <select
-          onChange={onTemplate}
-          defaultValue={template}
-        >
-          {templateNameList.map((name) => {
-            return (
-              <option
-                value={name}
-                key={name}
-              >
-                {name}
-              </option>
-            )
-          })}
-        </select>
-      </label>
-    </>
+    <label className="text-sm">
+      切换模板：
+      <select
+        className="dark:bg-dark-400"
+        onChange={onTemplate}
+        defaultValue={template}
+      >
+        {templateNameList.map((name) => {
+          return (
+            <option
+              value={name}
+              key={name}
+            >
+              {name}
+            </option>
+          )
+        })}
+      </select>
+    </label>
   )
 }
 
