@@ -1,3 +1,4 @@
+import type * as monaco from 'monaco-editor'
 import type { ChangeHandler } from 'react-monaco-editor'
 import MonacoEditor from 'react-monaco-editor'
 import { languages } from 'monaco-editor'
@@ -23,8 +24,12 @@ function Playground() {
     })
   })
 
-  const options = {
+  const options: monaco.editor.IStandaloneEditorConstructionOptions = {
     selectOnLineNumbers: true,
+    automaticLayout: true,
+    minimap: {
+      enabled: false,
+    },
   }
 
   const onEditorChange: ChangeHandler = (value) => {
