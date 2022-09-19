@@ -6,6 +6,7 @@ import rehypeRaw from 'rehype-raw'
 import { useMemo, useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
 import templateComponents from '@resumejs/template-default'
+import type { TemplateContextProps } from '@resumejs/template'
 import { TemplateProvider } from '@resumejs/template'
 import {
   card,
@@ -23,6 +24,10 @@ export interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
    * 当为 false 时不设置默认主题
    */
   components?: false | ReactMarkdownOptions['components']
+  /**
+   * 传递给模板使用的props
+   */
+  templateContextProps?: Partial<TemplateContextProps>
 }
 
 export const Resume = (props: ResumeProps) => {
@@ -31,6 +36,7 @@ export const Resume = (props: ResumeProps) => {
     rehypePlugins = [],
     remarkPlugins = [],
     remarkRehypeOptions,
+    templateContextProps,
   } = props
 
   const [dark, setDark] = useState(false)
@@ -58,6 +64,7 @@ export const Resume = (props: ResumeProps) => {
       value={{
         toggleTheme,
         print,
+        ...templateContextProps,
       }}
     >
       <ReactMarkdown
