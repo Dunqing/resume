@@ -9,33 +9,20 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
+      - name: Set node
+        uses: actions/setup-node@v3
         with:
-          version: 7
-          run_install: false
+          node-version: 16.x
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
 
       - run: npx changelogithub
         continue-on-error: true
@@ -49,6 +36,6 @@ jobs:
         run: pnpm run build
 
       - name: Publish to NPM
-        run: pnpm --filter {packages/*} --filter {templates/*} publish --access public
+        run: pnpm --filter {packages/*} --filter {templates/*} publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
