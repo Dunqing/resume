@@ -18,6 +18,7 @@ import {
   task,
   toolbox,
 } from './plugins'
+import { RESUME_THEME_KEY } from './constants'
 
 export interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
   /**
@@ -44,13 +45,17 @@ export const Resume = (props: ResumeProps) => {
     templateContextProps,
   } = props
 
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(localStorage.getItem(RESUME_THEME_KEY) === 'dark')
 
   const toggleTheme = () => {
-    props.onDarkClass?.('dark', !dark ? 'add' : 'remove')
-    setDark((d) => {
-      return !d
-    })
+    const nextDark = !dark
+    props.onDarkClass?.('dark', nextDark ? 'add' : 'remove')
+    if (nextDark) {
+      localStorage.setItem(RESUME_THEME_KEY, 'dark')
+    } else {
+      localStorage.setItem(RESUME_THEME_KEY, 'light')
+    }
+    setDark(nextDark)
   }
 
   const print = () => {

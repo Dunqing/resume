@@ -1,0 +1,1 @@
+export const RESUME_THEME_KEY = 'RESUME_THEME'
