@@ -49,6 +49,6 @@ jobs:
         run: pnpm run build
 
       - name: Publish to NPM
-        run: pnpm run release
+        run: pnpm --filter {packages/*} --filter {templates/*} publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
