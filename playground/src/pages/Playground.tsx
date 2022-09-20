@@ -42,7 +42,7 @@ function Playground() {
         <span className="text-red">注意</span>：请在大屏幕下编辑简历！
       </div>
       <div className="flex justify-center items-center lg:h-screen">
-        <div className="grid lg:grid-cols-2 grid-cols-1 overflow-hidden h-full">
+        <div className="grid md:grid-cols-2 grid-cols-1 overflow-hidden h-full">
           <div className="hidden md:block h-full lg:h-full">
             <MonacoEditor
               ref={monacoRef}
