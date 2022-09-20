@@ -41,9 +41,9 @@ function Playground() {
       <div className="text-lg xs:block sm:hidden p-y-2 font-bold">
         <span className="text-red">注意</span>：请在大屏幕下编辑简历！
       </div>
-      <div className="flex justify-center items-center lg:h-screen">
+      <div className="flex justify-center items-center md:h-screen">
         <div className="grid md:grid-cols-2 grid-cols-1 overflow-hidden h-full">
-          <div className="hidden md:block h-full lg:h-full">
+          <div className="hidden md:block h-full md:h-full">
             <MonacoEditor
               ref={monacoRef}
               language="markdown"
@@ -55,7 +55,7 @@ function Playground() {
               onChange={onEditorChange}
             />
           </div>
-          <div className="h-full overflow-y-scroll">
+          <div className="h-full overflow-scroll">
             <Resume
               templateContextProps={{
                 extraToolboxButton: <Template></Template>,
