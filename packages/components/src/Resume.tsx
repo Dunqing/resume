@@ -3,7 +3,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import clsx from 'clsx'
 import rehypeRaw from 'rehype-raw'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { ReactMarkdownOptions } from 'react-markdown/lib/react-markdown'
 import templateComponents from '@resumejs/template-default'
 import type { TemplateContextProps } from '@resumejs/template'
@@ -46,16 +46,16 @@ export const Resume = (props: ResumeProps) => {
   } = props
 
   const [dark, setDark] = useState(localStorage.getItem(RESUME_THEME_KEY) === 'dark')
+  
+  useEffect(() => {
+    props.onDarkClass?.('dark', dark ? 'add' : 'remove')
+  }, [dark])
 
   const toggleTheme = () => {
-    const nextDark = !dark
-    props.onDarkClass?.('dark', nextDark ? 'add' : 'remove')
-    if (nextDark) {
-      localStorage.setItem(RESUME_THEME_KEY, 'dark')
-    } else {
-      localStorage.setItem(RESUME_THEME_KEY, 'light')
-    }
-    setDark(nextDark)
+    setDark((d) => {
+      localStorage.setItem(RESUME_THEME_KEY, !d ? 'dark': 'light')
+      return !d
+    })
   }
 
   const print = () => {
