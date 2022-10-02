@@ -38,7 +38,7 @@ function Playground() {
 
   return (
     <div className="dark:bg-dark-400 playground flex items-center flex-col justify-center relative sm:black">
-      <div className="text-lg xs:block sm:hidden p-y-2 font-bold">
+      <div className="print:hidden text-lg xs:block sm:hidden p-y-2 font-bold">
         <span className="text-red">注意</span>：请在大屏幕下编辑简历！
       </div>
       <div className="flex justify-center items-center md:h-screen">
@@ -55,7 +55,7 @@ function Playground() {
               onChange={onEditorChange}
             />
           </div>
-          <div className="h-full overflow-scroll">
+          <div className="h-full overflow-y-auto">
             <Resume
               templateContextProps={{
                 extraToolboxButton: <Template></Template>,
