@@ -10,36 +10,44 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode.helloWorld"
+    "onCommand:vscode.previewResumeSide"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode.helloWorld",
-        "title": "Hello World"
+        "command": "vscode.previewResumeSide",
+        "title": "Preview resume on the side"
       }
     ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "watch": "tsup",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
+  "dependencies": {
+    "@resumejs/components": "workspace:*",
+    "react": "^18",
+    "react-dom": "^18"
+  },
   "devDependencies": {
-    "@types/vscode": "^1.72.0",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.0",
     "@types/node": "18.x",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/vscode": "^1.72.0",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
     "eslint": "^8.24.0",
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
-    "typescript": "^4.8.4",
-    "@vscode/test-electron": "^2.1.5"
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4"
   }
 }
