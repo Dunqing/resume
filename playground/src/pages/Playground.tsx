@@ -42,7 +42,7 @@ function Playground() {
         <span className="text-red">注意</span>：请在大屏幕下编辑简历！
       </div>
       <div className="flex justify-center items-center md:h-screen">
-        <div className="grid md:grid-cols-2 grid-cols-1 overflow-hidden h-full">
+        <div className="grid md:grid-cols-2 grid-cols-1 md:overflow-hidden h-full">
           <div className="hidden md:block h-full md:h-full">
             <MonacoEditor
               ref={monacoRef}
@@ -55,7 +55,7 @@ function Playground() {
               onChange={onEditorChange}
             />
           </div>
-          <div className="h-full overflow-y-auto">
+          <div className="md:h-full md:overflow-y-auto">
             <Resume
               templateContextProps={{
                 extraToolboxButton: <Template></Template>,
