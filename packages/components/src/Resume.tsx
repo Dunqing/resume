@@ -45,7 +45,11 @@ export const Resume = (props: ResumeProps) => {
     templateContextProps,
   } = props
 
-  const [dark, setDark] = useState(localStorage.getItem(RESUME_THEME_KEY) === 'dark')
+  const [dark, setDark] = useState(false)
+
+  useEffect(() => {
+    setDark(localStorage.getItem(RESUME_THEME_KEY) === 'dark')
+  }, [])
   
   useEffect(() => {
     props.onDarkClass?.('dark', dark ? 'add' : 'remove')

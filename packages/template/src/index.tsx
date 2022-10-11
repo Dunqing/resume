@@ -11,7 +11,7 @@ export interface TemplateContextProps {
 
 const context = createContext<TemplateContextProps>({
   toggleTheme: noop,
-  print,
+  print: noop,
 })
 
 context.displayName = 'TemplateContext'
