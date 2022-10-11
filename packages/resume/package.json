@@ -31,7 +31,7 @@
   "dependencies": {
     "@resumejs/components": "workspace:*",
     "@types/minimist": "^1.2.2",
-    "@types/react": "^18.0.20",
+    "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
     "kolorist": "^1.6.0",
@@ -40,7 +40,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "unbuild": "^0.8.11",
-    "vite": "^3.1.2"
+    "vite": "^3.1.7"
   },
   "publishConfig": {
     "access": "public"
