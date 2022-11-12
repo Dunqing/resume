@@ -33,14 +33,14 @@
     "@types/minimist": "^1.2.2",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react": "^3.0.0-alpha.0",
     "kolorist": "^1.6.0",
-    "magic-string": "^0.26.3",
-    "minimist": "^1.2.6",
+    "magic-string": "^0.26.7",
+    "minimist": "^1.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "unbuild": "^0.8.11",
-    "vite": "^3.1.7"
+    "unbuild": "^0.9.4",
+    "vite": "^4.0.0-alpha.0"
   },
   "publishConfig": {
     "access": "public"
