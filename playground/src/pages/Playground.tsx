@@ -2,7 +2,7 @@ import type * as monaco from 'monaco-editor'
 import type { ChangeHandler } from 'react-monaco-editor'
 import MonacoEditor from 'react-monaco-editor'
 import { languages } from 'monaco-editor'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import useResume from '../hooks/useResume'
 import Resume from '../components/Resume'
 import Template from '../components/Template'
@@ -13,16 +13,8 @@ languages.register({
 })
 
 function Playground() {
-  const monacoRef = useRef<MonacoEditor | null>(null)
-
   const [code, setCode] = useResume()
   const [, forceUpdate] = useState([])
-
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      monacoRef.current?.forceUpdate()
-    })
-  })
 
   const options: monaco.editor.IStandaloneEditorConstructionOptions = {
     selectOnLineNumbers: true,
@@ -45,7 +37,6 @@ function Playground() {
         <div className="grid md:grid-cols-2 grid-cols-1 md:overflow-hidden h-full">
           <div className="hidden md:block h-full md:h-full">
             <MonacoEditor
-              ref={monacoRef}
               language="markdown"
               value={code}
               options={options}
