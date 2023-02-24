@@ -23,7 +23,6 @@ jobs:
           cache: pnpm
           registry-url: 'https://registry.npmjs.org'
 
-
       - run: npx changelogithub
         continue-on-error: true
         env:

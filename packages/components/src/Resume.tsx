@@ -50,14 +50,15 @@ export const Resume = (props: ResumeProps) => {
   useEffect(() => {
     setDark(localStorage.getItem(RESUME_THEME_KEY) === 'dark')
   }, [])
-  
+
   useEffect(() => {
     props.onDarkClass?.('dark', dark ? 'add' : 'remove')
-  }, [dark])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dark, props.onDarkClass])
 
   const toggleTheme = () => {
     setDark((d) => {
-      localStorage.setItem(RESUME_THEME_KEY, !d ? 'dark': 'light')
+      localStorage.setItem(RESUME_THEME_KEY, !d ? 'dark' : 'light')
       return !d
     })
   }
