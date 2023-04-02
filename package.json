@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@7.1.0",
+  "packageManager": "pnpm@8.1.0",
   "scripts": {
     "dev": "pnpm --parallel --filter {packages/*} --filter {templates/*} dev",
     "build": "pnpm --filter {packages/*} --filter {templates/*} build",
@@ -17,25 +17,25 @@
     "eslint-plugin-prettier": "^4.2.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config-react": "^0.35.2",
+    "@antfu/eslint-config-react": "^0.38.2",
     "@resumejs/components": "workspace:*",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "14.0.0",
-    "@types/node": "^18.14.1",
-    "@types/react": "^18.0.28",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "bumpp": "^9.0.0",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
-    "jsdom": "^21.1.0",
-    "pnpm": "^7.27.1",
-    "prettier": "^2.8.4",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "jsdom": "^21.1.1",
+    "pnpm": "^8.1.0",
+    "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vitest": "^0.28.5"
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
   },
   "pnpm": {
     "overrides": {

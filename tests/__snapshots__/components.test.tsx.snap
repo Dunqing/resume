@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`components > card > basic 1`] = `
 "<div class=\\"r-resume\\"><div class=\\"font-sans text-base text-dark-400 bg-white dark:text-light-700 dark:bg-dark-400 r-container\\"><div class=\\"border print:border-none border-light-700 md:w-full md:max-w-screen-md xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4 dark:border-dark-100 relative r-content\\"><div class=\\"absolute right-4 top-2 flex gap-x-1.5 print:hidden r-toolbox\\"></div><h3 class=\\"m-t-2 m-b-1 p-y-0.5 text-base font-semibold r-h3\\" level=\\"3\\">公司内部 Cli 开发（独立完成）</h3>

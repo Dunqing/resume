@@ -10,17 +10,17 @@
   "dependencies": {
     "@iconify-json/carbon": "^1.1.16",
     "@resumejs/components": "latest",
-    "@unocss/preset-icons": "^0.50.0",
-    "@unocss/preset-wind": "^0.50.0",
-    "@unocss/reset": "^0.50.0",
+    "@unocss/preset-icons": "^0.50.6",
+    "@unocss/preset-wind": "^0.50.6",
+    "@unocss/reset": "^0.50.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "unocss": "^0.50.0"
+    "unocss": "^0.50.6"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.1.4"
+    "vite": "^4.2.1"
   }
 }
