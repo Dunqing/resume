@@ -15,7 +15,7 @@
     "@unocss/preset-wind": "^0.50.6",
     "@unocss/reset": "^0.50.6",
     "clsx": "^1.2.1",
-    "monaco-editor": "^0.36.1",
+    "monaco-editor": "^0.37.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^4.0.3",
