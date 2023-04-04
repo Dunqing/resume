@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@8.1.0",
+  "packageManager": "pnpm@8.1.1",
   "scripts": {
     "dev": "pnpm --parallel --filter {packages/*} --filter {templates/*} dev",
     "build": "pnpm --filter {packages/*} --filter {templates/*} build",
