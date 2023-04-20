@@ -36,8 +36,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       bumpp:
         specifier: ^9.1.0
         version: 9.1.0
@@ -169,8 +169,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
@@ -236,8 +236,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
@@ -257,8 +257,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       kolorist:
         specifier: ^1.7.0
         version: 1.7.0
@@ -339,8 +339,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
@@ -400,8 +400,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
@@ -485,8 +485,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
@@ -570,8 +570,8 @@ importers:
         specifier: ^18.0.0
         version: 18.0.0
       '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        specifier: ^4.0.0
+        version: 4.0.0(vite@4.2.1)
       vite:
         specifier: ^4.2.1
         version: 4.2.1(@types/node@18.15.11)
@@ -1917,16 +1917,15 @@ packages:
       - rollup
     dev: false
 
-  /@vitejs/plugin-react@3.1.0(vite@4.2.1):
-    resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
+  /@vitejs/plugin-react@4.0.0(vite@4.2.1):
+    resolution: {integrity: sha512-HX0XzMjL3hhOYm+0s95pb0Z7F8O81G7joUHgfDd/9J/ZZf5k4xX6QAMFkKsHFxaHlf6X7GD7+XuaZ66ULiJuhQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^4.1.0-beta.0
+      vite: ^4.2.0
     dependencies:
       '@babel/core': 7.21.4
       '@babel/plugin-transform-react-jsx-self': 7.21.0(@babel/core@7.21.4)
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.21.4)
-      magic-string: 0.27.0
       react-refresh: 0.14.0
       vite: 4.2.1(@types/node@18.15.11)
     transitivePeerDependencies:
@@ -4517,6 +4516,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: false
 
   /magic-string@0.29.0:
     resolution: {integrity: sha512-WcfidHrDjMY+eLjlU+8OvwREqHwpgCeKVBUpQ3OhYYuvfaYCUgcbuBzappNzZvg/v8onU3oQj+BYpkOJe9Iw4Q==}
