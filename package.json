@@ -28,7 +28,7 @@
     "bumpp": "^9.1.0",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
-    "jsdom": "^21.1.1",
+    "jsdom": "^22.0.0",
     "pnpm": "^8.1.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
