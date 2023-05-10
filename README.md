@@ -152,3 +152,10 @@ resume build --template @resumejs/template-nova
 ## 相关文章
 
 [一款更加完善，且易于拓展的用 Markdown 编写简历的开源简历项目](https://juejin.cn/post/7124536546677489678)
+
+
+### Others
+
+This project is tested with [BrowserStack](https://browserstack.com).
+
+[MIT LICENSE](./LICENSE)
