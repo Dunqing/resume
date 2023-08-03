@@ -51,7 +51,7 @@
     "unist-util-is": "^5.2.1",
     "unist-util-visit": "^4.1.2",
     "vite-plugin-dts": "^2.1.0",
-    "yaml": "^2.2.1"
+    "yaml": "^2.2.2"
   },
   "devDependencies": {
     "@types/mdast": "^3.0.11",
