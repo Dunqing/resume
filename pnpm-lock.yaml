@@ -369,8 +369,8 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       monaco-editor:
-        specifier: ^0.37.0
-        version: 0.37.0
+        specifier: ^0.41.0
+        version: 0.41.0
       react:
         specifier: ^18.0.0
         version: 18.0.0
@@ -382,7 +382,7 @@ importers:
         version: 4.0.3(react@18.0.0)
       react-monaco-editor:
         specifier: ^0.52.0
-        version: 0.52.0(@types/react@18.0.0)(monaco-editor@0.37.0)(react@18.0.0)
+        version: 0.52.0(@types/react@18.0.0)(monaco-editor@0.41.0)(react@18.0.0)
       react-router-dom:
         specifier: ^6.10.0
         version: 6.10.0(react-dom@18.0.0)(react@18.0.0)
@@ -5074,8 +5074,8 @@ packages:
       pkg-types: 1.0.2
       ufo: 1.1.1
 
-  /monaco-editor@0.37.0:
-    resolution: {integrity: sha512-PrvIsrbD/uLQlzYqNnzrZ0yDCK+X3YoLgNx+fFZKvmgkDZxo9kJRvb5YNtCUesG4xjv44jEEKaHKE0demcEleg==}
+  /monaco-editor@0.41.0:
+    resolution: {integrity: sha512-1o4olnZJsiLmv5pwLEAmzHTE/5geLKQ07BrGxlF4Ri/AXAc2yyDGZwHjiTqD8D/ROKUZmwMA28A+yEowLNOEcA==}
     dev: false
 
   /mri@1.2.0:
@@ -5549,7 +5549,7 @@ packages:
       - supports-color
     dev: false
 
-  /react-monaco-editor@0.52.0(@types/react@18.0.0)(monaco-editor@0.37.0)(react@18.0.0):
+  /react-monaco-editor@0.52.0(@types/react@18.0.0)(monaco-editor@0.41.0)(react@18.0.0):
     resolution: {integrity: sha512-jhQSekf2JABbcpN45gKZlWfTS0QcBOZAbAWKGyfqy/KEcMXTwJpCOYGcn2Ur11SUUxWJUzhKjE2fx9BGBc5S8g==}
     peerDependencies:
       '@types/react': '>=16 <= 18'
@@ -5557,7 +5557,7 @@ packages:
       react: '>=16 <= 18'
     dependencies:
       '@types/react': 18.0.0
-      monaco-editor: 0.37.0
+      monaco-editor: 0.41.0
       prop-types: 15.8.1
       react: 18.0.0
     dev: false
