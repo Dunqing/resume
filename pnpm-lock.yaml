@@ -37,7 +37,7 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       bumpp:
         specifier: ^9.1.0
         version: 9.1.0
@@ -66,8 +66,8 @@ importers:
         specifier: ^5.0.3
         version: 5.0.3
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
       vitest:
         specifier: ^0.29.8
         version: 0.29.8(jsdom@21.1.1)
@@ -154,7 +154,7 @@ importers:
         version: 4.1.2
       vite-plugin-dts:
         specifier: ^2.1.0
-        version: 2.1.0(@types/node@18.15.11)(vite@4.2.1)
+        version: 2.1.0(@types/node@18.15.11)(vite@4.2.3)
       yaml:
         specifier: ^2.2.1
         version: 2.2.1
@@ -170,10 +170,10 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
 
   packages/create-resumejs:
     dependencies:
@@ -227,7 +227,7 @@ importers:
         version: 18.0.0(react@18.0.0)
       unocss:
         specifier: ^0.50.6
-        version: 0.50.6(postcss@8.4.21)(vite@4.2.1)
+        version: 0.50.6(postcss@8.4.21)(vite@4.2.3)
     devDependencies:
       '@types/react':
         specifier: ^18.0.0
@@ -237,10 +237,10 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
 
   packages/resume:
     dependencies:
@@ -258,7 +258,7 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       kolorist:
         specifier: ^1.7.0
         version: 1.7.0
@@ -278,8 +278,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
 
   packages/template:
     dependencies:
@@ -327,7 +327,7 @@ importers:
         version: 4.1.2
       vite-plugin-dts:
         specifier: ^2.1.0
-        version: 2.1.0(@types/node@18.15.11)(vite@4.2.1)
+        version: 2.1.0(@types/node@18.15.11)(vite@4.2.3)
       yaml:
         specifier: ^2.2.1
         version: 2.2.1
@@ -340,10 +340,10 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
 
   playground:
     dependencies:
@@ -391,7 +391,7 @@ importers:
         version: 17.4.0(react-dom@18.0.0)(react@18.0.0)
       unocss:
         specifier: ^0.50.6
-        version: 0.50.6(postcss@8.4.21)(vite@4.2.1)
+        version: 0.50.6(postcss@8.4.21)(vite@4.2.3)
     devDependencies:
       '@types/react':
         specifier: ^18.0.0
@@ -401,10 +401,10 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
 
   templates/default:
     dependencies:
@@ -470,10 +470,10 @@ importers:
         version: 4.1.2
       unocss:
         specifier: ^0.50.6
-        version: 0.50.6(postcss@8.4.21)(vite@4.2.1)
+        version: 0.50.6(postcss@8.4.21)(vite@4.2.3)
       vite-plugin-dts:
         specifier: ^2.1.0
-        version: 2.1.0(@types/node@18.15.11)(vite@4.2.1)
+        version: 2.1.0(@types/node@18.15.11)(vite@4.2.3)
       yaml:
         specifier: ^2.2.1
         version: 2.2.1
@@ -486,10 +486,10 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
       vite-plugin-import-css:
         specifier: ^0.0.1
         version: 0.0.1
@@ -555,10 +555,10 @@ importers:
         version: 4.1.2
       unocss:
         specifier: ^0.50.6
-        version: 0.50.6(postcss@8.4.21)(vite@4.2.1)
+        version: 0.50.6(postcss@8.4.21)(vite@4.2.3)
       vite-plugin-dts:
         specifier: ^2.1.0
-        version: 2.1.0(@types/node@18.15.11)(vite@4.2.1)
+        version: 2.1.0(@types/node@18.15.11)(vite@4.2.3)
       yaml:
         specifier: ^2.2.1
         version: 2.2.1
@@ -571,10 +571,10 @@ importers:
         version: 18.0.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
+        version: 3.1.0(vite@4.2.3)
       vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)
+        specifier: ^4.2.3
+        version: 4.2.3(@types/node@18.15.11)
       vite-plugin-import-css:
         specifier: ^0.0.1
         version: 0.0.1
@@ -1741,12 +1741,12 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: true
 
-  /@unocss/astro@0.50.6(vite@4.2.1):
+  /@unocss/astro@0.50.6(vite@4.2.3):
     resolution: {integrity: sha512-gSGQIh+hBCor7KbAylu4wBQaMZp3AkT8dW9E6jrecpluVxzGGdar93a79Wqs76OlWiu7hr8zOyRbSDgfkwDung==}
     dependencies:
       '@unocss/core': 0.50.6
       '@unocss/reset': 0.50.6
-      '@unocss/vite': 0.50.6(vite@4.2.1)
+      '@unocss/vite': 0.50.6(vite@4.2.3)
     transitivePeerDependencies:
       - rollup
       - vite
@@ -1897,7 +1897,7 @@ packages:
       '@unocss/core': 0.50.6
     dev: false
 
-  /@unocss/vite@0.50.6(vite@4.2.1):
+  /@unocss/vite@0.50.6(vite@4.2.3):
     resolution: {integrity: sha512-BBfNHWRTD69ToNX4NlYdORFG6uH51HCjX+vZ8HAVgYHpSeVWziG3srnGYOk5IS0pKPzQGoLBlz8rstMsGhrAjA==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0
@@ -1912,12 +1912,12 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.2.12
       magic-string: 0.30.0
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.2.3(@types/node@18.15.11)
     transitivePeerDependencies:
       - rollup
     dev: false
 
-  /@vitejs/plugin-react@3.1.0(vite@4.2.1):
+  /@vitejs/plugin-react@3.1.0(vite@4.2.3):
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1928,7 +1928,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.21.4)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.2.3(@types/node@18.15.11)
     transitivePeerDependencies:
       - supports-color
 
@@ -6465,7 +6465,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /unocss@0.50.6(postcss@8.4.21)(vite@4.2.1):
+  /unocss@0.50.6(postcss@8.4.21)(vite@4.2.3):
     resolution: {integrity: sha512-7cKiIB/ssAPvCDUcFMs0jm0FzIyQKfgIjUzBYZ5dVFthOvN5dcFh7bCZE9dIM862n7oW8FjbkTxwdTbRqqJQVQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -6474,7 +6474,7 @@ packages:
       '@unocss/webpack':
         optional: true
     dependencies:
-      '@unocss/astro': 0.50.6(vite@4.2.1)
+      '@unocss/astro': 0.50.6(vite@4.2.3)
       '@unocss/cli': 0.50.6
       '@unocss/core': 0.50.6
       '@unocss/postcss': 0.50.6(postcss@8.4.21)
@@ -6491,7 +6491,7 @@ packages:
       '@unocss/transformer-compile-class': 0.50.6
       '@unocss/transformer-directives': 0.50.6
       '@unocss/transformer-variant-group': 0.50.6
-      '@unocss/vite': 0.50.6(vite@4.2.1)
+      '@unocss/vite': 0.50.6(vite@4.2.3)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -6592,7 +6592,7 @@ packages:
       mlly: 1.2.0
       pathe: 1.1.0
       picocolors: 1.0.0
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.2.3(@types/node@18.15.11)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6603,7 +6603,7 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-dts@2.1.0(@types/node@18.15.11)(vite@4.2.1):
+  /vite-plugin-dts@2.1.0(@types/node@18.15.11)(vite@4.2.3):
     resolution: {integrity: sha512-Vw0FdCuM3VLR4hTFHh0yMEzfwI7NyFvPIMFwvE+Q0t4qtoHIfYOP/JXs7nTnHuQk87FSjlhGeIJ1fLBcktgPgA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -6619,7 +6619,7 @@ packages:
       kolorist: 1.7.0
       magic-string: 0.29.0
       ts-morph: 17.0.1
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.2.3(@types/node@18.15.11)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -6661,8 +6661,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite@4.2.1(@types/node@18.15.11):
-    resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
+  /vite@4.2.3(@types/node@18.15.11):
+    resolution: {integrity: sha512-kLU+m2q0Y434Y1kCy3TchefAdtFso0ILi0dLyFV8Us3InXTU11H/B5ZTqCKIQHzSKNxVG/yEx813EA9f1imQ9A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -6747,7 +6747,7 @@ packages:
       tinybench: 2.4.0
       tinypool: 0.4.0
       tinyspy: 1.1.1
-      vite: 4.2.1(@types/node@18.15.11)
+      vite: 4.2.3(@types/node@18.15.11)
       vite-node: 0.29.8(@types/node@18.15.11)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
