@@ -217,8 +217,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/reset':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       react:
         specifier: ^18.0.0
         version: 18.0.0
@@ -363,8 +363,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/reset':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
@@ -424,8 +424,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/reset':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       '@unocss/transformer-directives':
         specifier: ^0.50.6
         version: 0.50.6
@@ -512,8 +512,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/reset':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
@@ -1866,6 +1866,10 @@ packages:
 
   /@unocss/reset@0.50.6:
     resolution: {integrity: sha512-e1fuSEgp1p7FgpsIZKNejOKgq4gyZcDGDvi+6544x458hInM6MfiMQNP95UBJEG4JZXq6qCZ8t7tRVWS2m5IXg==}
+    dev: false
+
+  /@unocss/reset@0.55.0:
+    resolution: {integrity: sha512-TzpcOCIr16IbFxQ4vrSfEV+A8k0N4mJkhl7J3SZfAxBpNDBKAWDB6VBW9iEQY5aBYDLN3wRx1LskgEoubqBCPQ==}
     dev: false
 
   /@unocss/scope@0.50.6:
