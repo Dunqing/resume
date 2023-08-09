@@ -22,7 +22,7 @@
     "react-monaco-editor": "^0.52.0",
     "react-router-dom": "^6.10.0",
     "react-use": "^17.4.0",
-    "unocss": "^0.50.6"
+    "unocss": "^0.55.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.32",
