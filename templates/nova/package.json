@@ -41,7 +41,7 @@
     "@resumejs/template": "workspace:*",
     "@types/hast": "^2.3.4",
     "@unocss/preset-icons": "^0.50.6",
-    "@unocss/preset-wind": "^0.50.6",
+    "@unocss/preset-wind": "^0.55.0",
     "@unocss/reset": "^0.50.6",
     "clsx": "^1.2.1",
     "hast-util-has-property": "^2.0.1",

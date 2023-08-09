@@ -214,8 +214,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/preset-wind':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       '@unocss/reset':
         specifier: ^0.50.6
         version: 0.50.6
@@ -360,8 +360,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/preset-wind':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       '@unocss/reset':
         specifier: ^0.50.6
         version: 0.50.6
@@ -421,8 +421,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/preset-wind':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       '@unocss/reset':
         specifier: ^0.50.6
         version: 0.50.6
@@ -509,8 +509,8 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6
       '@unocss/preset-wind':
-        specifier: ^0.50.6
-        version: 0.50.6
+        specifier: ^0.55.0
+        version: 0.55.0
       '@unocss/reset':
         specifier: ^0.50.6
         version: 0.50.6
@@ -1786,6 +1786,16 @@ packages:
     resolution: {integrity: sha512-WMIp8xr7YSlID2whqfRGLwagp59e6u4ckPACEpoDOW8sTeSPRZm54hxPhuWXD1SQuqcwHPMtM9nzGD8UOnqQxA==}
     dev: false
 
+  /@unocss/core@0.55.0:
+    resolution: {integrity: sha512-TcTugpuhsv6OwMsP3iFIG8FVc9N5JzkojIGNAKF8I2WBftZ//3QcpEHiHc1mH3MlPYfJgUvCcT6/Gad55qmHzg==}
+    dev: false
+
+  /@unocss/extractor-arbitrary-variants@0.55.0:
+    resolution: {integrity: sha512-FCel+gJ3N8C/361yQ3gYTmbCjX3DXQ+LdxBiAawapbtTA4eXw55/f7cpiiWcHoouCRrWIEMOQN5DskAJvmMaTw==}
+    dependencies:
+      '@unocss/core': 0.55.0
+    dev: false
+
   /@unocss/inspector@0.50.6:
     resolution: {integrity: sha512-6nX1YtaL67ohn/PfSSBv3npJ8qZcdc7S9X2zE6PUD/xhwtz7Bohx9I/KtmFdjJz5WeeGR7di0uYC6xsAcFLndQ==}
     dependencies:
@@ -1829,6 +1839,13 @@ packages:
       '@unocss/core': 0.50.6
     dev: false
 
+  /@unocss/preset-mini@0.55.0:
+    resolution: {integrity: sha512-zAMLmpCBXE36CDCrMtvxNp7lN9mk5QpArPpLekR3lPZ7NTAYSxHkieCJ0TryeOYWlt1sBdrOFE8X0cQCyG96Zg==}
+    dependencies:
+      '@unocss/core': 0.55.0
+      '@unocss/extractor-arbitrary-variants': 0.55.0
+    dev: false
+
   /@unocss/preset-tagify@0.50.6:
     resolution: {integrity: sha512-ZyG/SJMobn4GZMbgrZOxT59ARp22LwgJGArCwJVosh3rraRVlb+B4x6ctMl6JOiLG5B1lHT9vZ92//u51Y0WTw==}
     dependencies:
@@ -1862,6 +1879,13 @@ packages:
     dependencies:
       '@unocss/core': 0.50.6
       '@unocss/preset-mini': 0.50.6
+    dev: false
+
+  /@unocss/preset-wind@0.55.0:
+    resolution: {integrity: sha512-H9vNXdEJVQx1UO367V3RInAUj4qrsPCXm914RNC4D7qojOuPQlipW0YD5WFklcXeI/k0f1B30VjDYGZhV0jykg==}
+    dependencies:
+      '@unocss/core': 0.55.0
+      '@unocss/preset-mini': 0.55.0
     dev: false
 
   /@unocss/reset@0.50.6:
