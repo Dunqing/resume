@@ -10,4 +10,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'antfu/if-newline': 'off',
   },
+  globals: {
+    process: true,
+  },
 }

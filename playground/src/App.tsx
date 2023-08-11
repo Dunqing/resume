@@ -18,7 +18,7 @@ const routes: RouteObject[] = [
   },
 ]
 
-const App = () => {
+function App() {
   const element = useRoutes(routes)
   return (
     <div className="relative">

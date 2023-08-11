@@ -6,7 +6,7 @@ import type { Components } from 'react-markdown'
 import omit from 'omit.js'
 import Toolbox from './toolbox'
 
-const omitProps = (props: any) => {
+function omitProps(props: any) {
   return omit(props, ['node', 'ordered', 'inline'])
 }
 
@@ -16,7 +16,7 @@ const components: Components = {
       className={clsx(
         'font-sans text-base text-dark-400 bg-white',
         'dark:text-light-700 dark:bg-dark-400',
-        className
+        className,
       )}
       {...omitProps(props)}
     />
@@ -27,7 +27,7 @@ const components: Components = {
         'border print:border-none border-light-700 md:w-full md:max-w-screen-md xs:w-full mx-auto p-y-5 sm:p-x-10 p-x-4',
         'dark:border-dark-100',
         'relative',
-        className
+        className,
       )}
       {...omitProps(props)}
     />
@@ -44,7 +44,7 @@ const components: Components = {
         className={clsx(
           'm-t-3 m-b-1 text-xl font-semibold p-y-1 b-b border-dark',
           'dark:border-dark-100',
-          className
+          className,
         )}
         {...omitProps(props)}
       ></h2>
@@ -61,7 +61,7 @@ const components: Components = {
       className={clsx(
         'm-b-2 text-0.9rem p-l-5 list-disc',
         'dark:text-gray-300',
-        className
+        className,
       )}
       {...omitProps(props)}
     />
@@ -83,7 +83,7 @@ const components: Components = {
       className={clsx(
         'text-blue-600 underline',
         'dark:text-blue-400',
-        className
+        className,
       )}
       {...omitProps(props)}
     />
@@ -121,7 +121,7 @@ const components: Components = {
         className={clsx(
           'text-sm',
           { 'justify-self-end': index! % 2 === 1 },
-          className
+          className,
         )}
       />
     )
@@ -140,7 +140,7 @@ const components: Components = {
         className={clsx(
           'text-blue-gray-600',
           'dark:text-blue-gray-300',
-          className
+          className,
         )}
         {...omitProps(props)}
       />
@@ -184,7 +184,7 @@ const components: Components = {
         {...omitProps(props)}
         className={clsx(
           'absolute top-1/2 right-0 -translate-y-1/2 w-30 h-30 text-3xl',
-          className
+          className,
         )}
       />
     )
@@ -202,7 +202,7 @@ const components: Components = {
       <li
         className={clsx(
           'sibling:before:content-[|] sibling:before:p-x-2 sibling:before:text-gray-400',
-          className
+          className,
         )}
         {...omitProps(props)}
       />
@@ -214,7 +214,7 @@ const components: Components = {
         className={clsx(
           'border border-dark text-sm',
           'dark:border-dark-100',
-          className
+          className,
         )}
         {...omitProps(props)}
       />
@@ -226,7 +226,7 @@ const components: Components = {
         className={clsx(
           'border p-2 border-dark',
           'dark:border-dark-100',
-          className
+          className,
         )}
         {...(props as any)}
       />
@@ -238,7 +238,7 @@ const components: Components = {
         className={clsx(
           'border p-2 border-dark',
           'dark:border-dark-100',
-          className
+          className,
         )}
         {...(props as any)}
       />
@@ -250,7 +250,7 @@ const components: Components = {
         className={clsx(
           'border-l-0.3rem p-l-2 border-gray-200 m-b-4 text-gray-700',
           'dark:text-gray-400',
-          className
+          className,
         )}
         {...omitProps(props)}
       />
@@ -262,7 +262,7 @@ const components: Components = {
         className={clsx(
           'p-x-1.5 p-y-0.5 bg-neutral-100 rounded-md text-xs',
           'dark:bg-neutral-500',
-          className
+          className,
         )}
         {...omitProps(props)}
       />

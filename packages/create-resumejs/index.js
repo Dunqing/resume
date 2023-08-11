@@ -3,8 +3,9 @@
 
 // Avoids autoconversion to number of the project name by defining that the args
 // non associated with an option ( _ ) needs to be parsed as a string. See #4606
-const fs = require('fs')
-const path = require('path')
+const fs = require('node:fs')
+const path = require('node:path')
+const process = require('node:process')
 const argv = require('minimist')(process.argv.slice(2), { string: ['_'] })
 const prompts = require('prompts')
 const { yellow, red, reset } = require('kolorist')
@@ -91,7 +92,7 @@ async function init() {
         onCancel: () => {
           throw new Error(`${red('✖')} Operation cancelled`)
         },
-      }
+      },
     )
   } catch (cancelled) {
     console.log(cancelled.message)
@@ -157,7 +158,7 @@ function copy(src, dest) {
 
 function isValidPackageName(projectName) {
   return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(
-    projectName
+    projectName,
   )
 }
 

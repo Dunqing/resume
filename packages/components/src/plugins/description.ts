@@ -16,7 +16,7 @@ export const description: Plugin<[], Element> = function () {
 
         const prev = parent!.children[index! - 2]
         if (isTable(prev) || isHeading(prev)) element.tagName = 'description'
-      }
+      },
     )
   }
 }

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { Resume } from '@resumejs/components'
 import { render } from '@testing-library/react'
 
-const replaceWhitespace = (md: string) => {
+function replaceWhitespace(md: string) {
   return md.replace(/\n\s*/g, '\n')
 }
 

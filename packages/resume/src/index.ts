@@ -1,4 +1,5 @@
-import path, { isAbsolute } from 'path'
+import path, { isAbsolute } from 'node:path'
+import process from 'node:process'
 import type { InlineConfig } from 'vite'
 import { build, createServer, preview } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -17,7 +18,7 @@ const { _, config, template } = minimist(process.argv.slice(2), {
   string: '-',
 }) as ArgvOptions
 
-const getViteConfig = () => {
+function getViteConfig() {
   const configFile = config
     ? isAbsolute(config)
       ? config

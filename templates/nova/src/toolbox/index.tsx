@@ -17,7 +17,7 @@ const Toolbox: React.FC<ToolboxProps> = ({ meta, ...props }) => {
       {...props}
       className={clsx(
         'absolute right-4 top-2 flex gap-x-1.5 print:hidden',
-        props.className
+        props.className,
       )}
     >
       {extraToolboxButton}

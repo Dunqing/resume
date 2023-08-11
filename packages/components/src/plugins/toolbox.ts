@@ -16,12 +16,13 @@ export const toolbox: Plugin<[], Root> = function () {
           u(
             'element',
             {
+              properties: {},
               tagName: 'toolbox',
               data: file.data.meta as any,
             },
-            []
-          )
-        )
+            [],
+          ),
+        ),
     )
   }
 }

@@ -1,7 +1,7 @@
 import { Resume } from '@resumejs/components'
 import md from '../../README.md?raw'
 
-const Show = () => {
+function Show() {
   return (
     <div className="flex justify-center">
       <Resume className="md:w-screen-md">{md}</Resume>

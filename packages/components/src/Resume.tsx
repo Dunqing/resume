@@ -36,7 +36,7 @@ export interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
   onDarkClass?: (className: string, action: 'add' | 'remove') => void
 }
 
-export const Resume = (props: ResumeProps) => {
+export function Resume(props: ResumeProps) {
   const {
     children,
     rehypePlugins = [],
@@ -91,7 +91,7 @@ export const Resume = (props: ResumeProps) => {
             dark: !props.onDarkClass && dark,
           },
           'r-resume',
-          props.className
+          props.className,
         )}
         components={components}
         remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}

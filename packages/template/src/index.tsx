@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { createContext, useContext } from 'react'
 
-const noop = () => {}
+function noop() {}
 
 export interface TemplateContextProps {
   toggleTheme: (theme?: string) => void
@@ -18,6 +18,6 @@ context.displayName = 'TemplateContext'
 
 export const TemplateProvider = context.Provider
 
-export const useTemplate = () => {
+export function useTemplate() {
   return useContext(context)
 }

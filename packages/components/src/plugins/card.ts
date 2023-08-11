@@ -41,6 +41,7 @@ export const card: Plugin<[], Root> = function () {
             cardList.push({
               type: 'element',
               tagName: 'card',
+              properties: {},
               position: table.position,
               children: cardInfo.map((item, ii) => {
                 return u(
@@ -51,15 +52,15 @@ export const card: Plugin<[], Root> = function () {
                       index: ii,
                     },
                   },
-                  [item.label, u('text', item.label ? '：' : ''), item.value!]
+                  [item.label, u('text', item.label ? '：' : ''), item.value!],
                 )
               }),
             })
-          }
+          },
         )
 
         parent?.children.splice(index!, 1, ...cardList)
-      }
+      },
     )
   }
 }

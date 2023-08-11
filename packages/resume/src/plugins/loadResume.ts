@@ -1,7 +1,7 @@
-import path from 'path'
+import path from 'node:path'
 import type { Plugin, ResolvedConfig } from 'vite'
 
-export const loadResume = (): Plugin => {
+export function loadResume(): Plugin {
   const virtualModuleId = 'virtual:resume'
   let config: ResolvedConfig
   return {
@@ -19,7 +19,7 @@ export const loadResume = (): Plugin => {
         const resumePath = path.resolve(config.root, 'README.md')
         return `
           export { default as default } from ${JSON.stringify(
-            `${resumePath}?raw`
+            `${resumePath}?raw`,
           )} 
         `
       }

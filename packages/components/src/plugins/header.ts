@@ -58,9 +58,10 @@ export const header: Plugin<[], Element> = function () {
         parent!.children.splice(index!, 1, {
           type: 'element',
           tagName: 'header',
+          properties: {},
           children: headerChildren,
         })
-      }
+      },
     )
   }
 }

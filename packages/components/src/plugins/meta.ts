@@ -12,7 +12,7 @@ export const meta: Plugin<[], YAML> = function () {
       },
       (el) => {
         file.data.meta = yaml.parse(el.value)
-      }
+      },
     )
   }
 }

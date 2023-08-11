@@ -1,10 +1,11 @@
 import clsx from 'clsx'
+
 interface ThemeButtonProps {
   theme: boolean
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const ThemeButton = ({ theme, onClick }: ThemeButtonProps) => {
+export function ThemeButton({ theme, onClick }: ThemeButtonProps) {
   if (!theme) return null
 
   return (
@@ -13,7 +14,7 @@ export const ThemeButton = ({ theme, onClick }: ThemeButtonProps) => {
       onClick={onClick}
       className={clsx(
         'r-carbon-sun text-lg hover:text-gray transition-colors',
-        'dark:r-carbon-moon dark:text-light'
+        'dark:r-carbon-moon dark:text-light',
       )}
     />
   )

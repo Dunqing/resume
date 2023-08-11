@@ -15,5 +15,5 @@ container.render(
         <App />
       </TemplateProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 )

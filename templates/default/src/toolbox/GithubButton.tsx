@@ -1,9 +1,10 @@
 import clsx from 'clsx'
+
 interface GithubLinkProps {
   github?: string
 }
 
-export const GithubLink = ({ github }: GithubLinkProps) => {
+export function GithubLink({ github }: GithubLinkProps) {
   if (!github) return null
 
   return (
@@ -13,7 +14,7 @@ export const GithubLink = ({ github }: GithubLinkProps) => {
       href={github}
       className={clsx(
         'r-carbon-logo-github text-lg hover:text-gray transition-colors',
-        'dark:text-light'
+        'dark:text-light',
       )}
     />
   )

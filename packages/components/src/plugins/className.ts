@@ -12,7 +12,7 @@ export const className: Plugin<[], Element> = function () {
         (element as Element).properties,
         {
           className: clsx(`r-${(element as Element).tagName}`, className),
-        }
+        },
       )
     })
   }

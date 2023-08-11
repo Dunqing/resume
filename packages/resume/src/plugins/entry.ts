@@ -5,7 +5,7 @@ interface EntryPluginOptions {
   template?: string
 }
 
-export const entry = ({ template }: EntryPluginOptions = {}): Plugin => {
+export function entry({ template }: EntryPluginOptions = {}): Plugin {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
   return {
     name: 'resume:entry',

@@ -5,9 +5,7 @@ import { useTemplate } from '../contexts/template'
 import useResume from '../hooks/useResume'
 import { FallbackComponent } from './FallbackComponent'
 
-const Resume = (
-  props: Omit<ResumeProps, 'children'> & { children?: string }
-) => {
+function Resume(props: Omit<ResumeProps, 'children'> & { children?: string }) {
   const [resume] = useResume()
   const { components } = useTemplate()
   return (

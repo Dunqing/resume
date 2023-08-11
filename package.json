@@ -11,31 +11,31 @@
     "prepublishOnly": "pnpm run build",
     "test": "vitest",
     "release": "bumpp packages/*/package.json templates/*/package.json --no-verify --commit --push --tag",
-    "check-type": "tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "eslint-plugin-prettier": "^4.2.1"
+    "eslint-plugin-prettier": "^5.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config-react": "^0.38.2",
+    "@antfu/eslint-config-react": "^0.40.2",
     "@resumejs/components": "workspace:*",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "14.0.0",
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.32",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "bumpp": "^9.1.0",
-    "eslint": "^8.37.0",
-    "eslint-config-prettier": "^8.8.0",
-    "jsdom": "^21.1.1",
-    "pnpm": "^8.1.0",
-    "prettier": "^2.8.7",
+    "@types/node": "^20.4.9",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jsdom": "^22.1.0",
+    "pnpm": "^8.6.12",
+    "prettier": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.0.3",
-    "vite": "^4.2.1",
-    "vitest": "^0.29.8"
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.1"
   },
   "pnpm": {
     "overrides": {

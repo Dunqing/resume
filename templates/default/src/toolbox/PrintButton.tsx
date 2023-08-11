@@ -1,10 +1,11 @@
 import clsx from 'clsx'
+
 interface PrintButtonProps {
   print: boolean
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const PrintButton = ({ print, onClick }: PrintButtonProps) => {
+export function PrintButton({ print, onClick }: PrintButtonProps) {
   if (!print) return null
 
   return (
@@ -13,7 +14,7 @@ export const PrintButton = ({ print, onClick }: PrintButtonProps) => {
       onClick={onClick}
       className={clsx(
         'r-carbon-printer text-lg hover:text-gray transition-colors',
-        'dark:text-light'
+        'dark:text-light',
       )}
     />
   )

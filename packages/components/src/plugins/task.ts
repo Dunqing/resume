@@ -40,11 +40,11 @@ export const task: Plugin<[], Element> = function () {
               (input) => {
                 if (input.properties!.type === 'checkbox')
                   input.tagName = 'task-item-checkbox'
-              }
+              },
             )
-          }
+          },
         )
-      }
+      },
     )
   }
 }

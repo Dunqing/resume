@@ -20,8 +20,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "main": "dist/index.js",
@@ -37,34 +37,34 @@
     "react-dom": "^17.0.2 || ^18.0.0"
   },
   "dependencies": {
-    "@iconify-json/carbon": "^1.1.16",
+    "@iconify-json/carbon": "^1.1.19",
     "@resumejs/template": "workspace:*",
-    "@types/hast": "^2.3.4",
-    "@unocss/preset-icons": "^0.50.6",
-    "@unocss/preset-wind": "^0.50.6",
-    "@unocss/reset": "^0.50.6",
-    "clsx": "^1.2.1",
-    "hast-util-has-property": "^2.0.1",
+    "@types/hast": "^3.0.0",
+    "@unocss/preset-icons": "^0.55.0",
+    "@unocss/preset-wind": "^0.55.0",
+    "@unocss/reset": "^0.55.0",
+    "clsx": "^2.0.0",
+    "hast-util-has-property": "^3.0.0",
     "omit.js": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.6",
+    "react-markdown": "^8.0.7",
     "rehype-raw": "^6.1.1",
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "unified": "^10.1.2",
-    "unist-builder": "^3.0.1",
-    "unist-util-is": "^5.2.1",
-    "unist-util-visit": "^4.1.2",
-    "unocss": "^0.50.6",
-    "vite-plugin-dts": "^2.1.0",
-    "yaml": "^2.2.1"
+    "unist-builder": "^4.0.0",
+    "unist-util-is": "^6.0.0",
+    "unist-util-visit": "^5.0.0",
+    "unocss": "^0.55.0",
+    "vite-plugin-dts": "^3.5.1",
+    "yaml": "^2.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.32",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.2.1",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "vite": "^4.4.9",
     "vite-plugin-import-css": "^0.0.1"
   },
   "publishConfig": {
