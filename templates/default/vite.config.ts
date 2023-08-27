@@ -36,7 +36,7 @@ export default defineConfig({
         if (s.length === 1) {
           s.unshift('.r-resume')
         } else {
-          s[0] = s[0].replace(/\.r/g, '.r $$')
+          s[0] = s[0] += ' $$ .r-resume'
         }
         util.selector = s.join(' $$ ')
       },
