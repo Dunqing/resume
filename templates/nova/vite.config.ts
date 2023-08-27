@@ -34,6 +34,16 @@ export default defineConfig({
         }),
         presetWind(),
       ],
+      postprocess(util) {
+        const { selector } = util
+        const s = selector.split(' $$ ')
+        if (s.length === 1) {
+          s.unshift('.r-resume')
+        } else {
+          s[0] = s[0] += ' $$ .r-resume'
+        }
+        util.selector = s.join(' $$ ')
+      },
     }),
     importCss(),
   ],

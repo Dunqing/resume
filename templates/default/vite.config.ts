@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import unocss from 'unocss/vite'
-import { presetWind } from 'unocss'
+import { presetUno } from 'unocss'
 import UnocssIcons from '@unocss/preset-icons'
 import transformerDirectives from '@unocss/transformer-directives'
 import dts from 'vite-plugin-dts'
@@ -30,11 +30,21 @@ export default defineConfig({
           },
         },
       ],
+      postprocess(util) {
+        const { selector } = util
+        const s = selector.split(' $$ ')
+        if (s.length === 1) {
+          s.unshift('.r-resume')
+        } else {
+          s[0] = s[0] += ' $$ .r-resume'
+        }
+        util.selector = s.join(' $$ ')
+      },
       presets: [
         UnocssIcons({
           prefix: 'r-',
         }),
-        presetWind(),
+        presetUno({}),
       ],
     }),
     importCss(),
