@@ -1,47 +1,51 @@
 <div align="center"><img width="100%" src="https://static.todev.cc/resume/logo.svg" />
-<a href="https://resume.todev.cc/">所见即所得的在线简历</a> | <a href="https://stackblitz.com/edit/node-ga2wh1?file=README.md">Stackblitz Playground</a></div>
+<a href="https://resume.todev.cc/">WYSIWYG Online resume</a> | <a href="https://stackblitz.com/edit/node-ga2wh1?file=README.md">Stackblitz Playground</a> | <a href="./README.zh-CN.md">中文</a></div> 
 
-## 项目介绍
+<p />
 
-### 初衷
+<div align="center"><a href="https://vercel.com/new/clone?project-name=resume&repository-name=resume&repository-url=https://github.com/Dunqing/resume/tree/main/examples/resume-example"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a></div>
 
-让简历可以随时随地预览，用程序员最熟悉的Markdown语法编写，并且不收费！
+## Introduction
 
-## 支持功能
+### Purpose
 
-- [x] 支持暗黑模式
-- [x] 支持嵌入 HTML
-- [x] 支持打印 PDF
-- [x] 支持在线预览
-- [x] 支持自定义模板
-- [x] 支持多模板组合使用
-- [x] 支持样式覆盖
-- [ ] 更多的个性化模板
+To allow resumes to be previewed anytime, anywhere, written in the Markdown syntax that programmers are most familiar with, and free of charge!
 
-## 使用方式
+## Supported Features
+
+- [x] Dark mode support
+- [x] HTML embedding support
+- [x] PDF printing support
+- [x] Online preview support
+- [x] Custom template support
+- [x] Multiple template combination support
+- [x] Style override support
+- [ ] More personalized templates
+
+## Usage
 
 ### [create-resumejs](./packages/create-resumejs/)
 
-快速创建简历项目，支持在 Vercel 中部署
+Quickly create a resume project, supports deployment on Vercel
 
-1. 创建
+1. Create
 
 ```shell
 pnpm create resumejs
 ```
 
-2. 选择模板
+2. Choose a template
 
-3. 编写 README.md
+3. Write your README.md
 
-4. 完成你的简历！
+4. Finish your resume!
 
 
 ## [@resumejs/components](./packages/components/)
 
-以组件方式引入到自己项目
+Import as components into your own project
 
-### 下载
+### Download
 
 ```shell
 pnpm add @resumejs/components
@@ -54,26 +58,26 @@ import { Resume } from '@resumejs/components'
 
 export default function App() {
   const resume = `
-    #名字
-    ##个人信息
-    ##工作信息
+    # Name
+    ## Personal Information
+    ## Work Information
   `
   return <Resume>{resume}</Resume>
 }
 ```
 
-### 使用示例
+### Usage Example
 
 - [vite-ant-design-pro](https://github.com/Dunqing/vite-ant-design-pro/tree/main/playground/src/pages/Resume)
 
 
 ## [@resumejs/resume](./packages/resume/)
 
-- cli 支持，使用方式和 vite 一样
-- 默认使用运行目录下的 README.md 做为你的简历 markdown
-- 支持 vite.config.ts 配置文件
+- CLI support, usage is the same as Vite
+- By default, use the README.md in the running directory as your resume markdown
+- Supports the vite.config.ts configuration file
 
-> 可以直接使用 create-resumejs 创建项目
+> You can directly use create-resumejs to create a project
 
 ### Install
 
@@ -81,80 +85,84 @@ export default function App() {
 pnpm add @resumjes/resume
 ```
 
-需要安装依赖 react 和 react-dom
+Dependencies react and react-dom need to be installed.
 
 ```shell
 pnpm add react react-dom
 ```
 
-### dev 开发
+### Development
 
 ```shell
 resume dev
 ```
 
-### build 打包
+### Build
 
 ```shell
 resume build
 ```
 
-### preview 预览
+### Preview
 
 ```shell
 resume preview
 ```
 
-### 自定义模板
+### Custom Templates
 
 ```shell
 resume dev --template @resumejs/template-nova
 resume build --template @resumejs/template-nova
 ```
 
-[参考示例](./examples/customize-template/)
-
-
+[Reference example](./examples/customize-template/)
 
 ## Templates
 
-- [@resumejs/template-default](./templates/default/) 默认模板
+- [@resumejs/template-default](./templates/default/) Default template
 - [@resumejs/template-nova](./templates/nova/)
 
-**简历默认模板**
+**Default resume template**
 
-## 如何自定义模板？
+## How to customize the template?
 
-### 自定义的写简历的 markdown 语法
+### Customize the markdown syntax for writing resumes
 
-1. 一级标题下的内容包括一级标题为简历头部的信息 可自定义`header`组件
+1. The content under the first-level title includes the information of the resume header with the first-level title as the header. You can customize the `header` component.
 
-    - 一级标题为名字 可自定义`header-name`组件
-    - 图片作为头像 可自定义`header-avatar`组件
-    - 包裹所有列表项 可自定义`header-content`组件
-    - 每个列表为行 可自定义`header-row`组件
-    - 列表的项为列 可自定义`header-col`组件
+  - The first-level title is the name. You can customize the `header-name` component.
+  - The picture is used as the avatar. You can customize the `header-avatar` component.
+  - Wrap all list items. You can customize the `header-content` component.
+  - Each list is a row. You can customize the `header-row` component.
+  - The item in the list is a column. You can customize the `header-col` component.
 
-2. 三级标题下方的第一段内容
+2. The first paragraph below the third-level title
 
-    - 表格将更改为三级标题的描述信息，可自定义`card`, `card-item`, `card-item-label`, `card-item-value`组件
-    - 标题下或 Table 下第一行文本将会更改为描述内容 可自定义`description`组件
+  - The table will be changed to the description information of the third-level title, and you can customize the `card`, `card-item`, `card-item-label`, `card-item-value` components.
+  - The first line of text below the title or Table will be changed to the description content, and you can customize the `description` component.
 
-3. FrontMatter (暗黑模式，Github, 打印按钮)
+3. FrontMatter (dark mode, Github, print button)
 
-    - 可自定义 toolbox 组件
+  - You can customize the toolbox component.
 
-### 示例
+### Example
 
-- [默认模板](templates/default/src/index.tsx)
-
-
-## 相关文章
-
-[一款更加完善，且易于拓展的用 Markdown 编写简历的开源简历项目](https://juejin.cn/post/7124536546677489678)
+- [Default template](templates/default/src/index.tsx)
 
 
-### Others
+## Related Articles
+
+[An open source resume project that is more complete and easy to expand using Markdown to write resumes](https://juejin.cn/post/7124536546677489678)
+
+
+## Deploy
+
+<a href="https://vercel.com/new/clone?project-name=resume&repository-name=resume&repository-url=https://github.com/Dunqing/resume/tree/main/examples/resume-example"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+
+This is very simple, just click the button above to deploy to Vercel. You can also deploy to other platforms that support Vite.
+
+## Others
 
 This project is tested with [BrowserStack](https://browserstack.com).
 
