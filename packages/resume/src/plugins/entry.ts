@@ -1,3 +1,5 @@
+import path from 'node:path'
+import { readFileSync } from 'node:fs'
 import type { Plugin } from 'vite'
 import MagicString from 'magic-string'
 
@@ -7,12 +9,24 @@ interface EntryPluginOptions {
 
 export function entry({ template }: EntryPluginOptions = {}): Plugin {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
+  let content = ''
+
   return {
     name: 'resume:entry',
+    configResolved(config) {
+      content = readFileSync(path.resolve(config.root, 'README.md')).toString()
+    },
     transformIndexHtml: {
       enforce: 'pre',
       transform() {
         return [
+          {
+            tag: 'script',
+            injectTo: 'body-prepend',
+            children: `
+              window.__RESUME__ = ${JSON.stringify(content)}
+            `,
+          },
           {
             tag: 'script',
             attrs: {
@@ -36,25 +50,24 @@ export function entry({ template }: EntryPluginOptions = {}): Plugin {
         }
         const ms = new MagicString(`
           import React from 'react'
-          import ReactDOM from 'react-dom'
+          import ReactDOM from 'react-dom/client'
           import { Resume } from '@resumejs/components'
           ${templateId ? `import CustomizeComponents from '${templateId}'` : ''}
-          import md from 'virtual:resume'
 
           const Show = () => {
             return (
               <Resume ${
                 templateId ? 'components={CustomizeComponents}' : ''
-              } className="md">{md}</Resume>
+              } className="md">{window.__RESUME__}</Resume>
             )
           }
 
-          ReactDOM.render(
-            <React.StrictMode>
-              <Show />
-            </React.StrictMode>,
-            document.getElementById('root')
-          )
+          ReactDOM.createRoot(document.getElementById('root'))
+            .render(
+              <React.StrictMode>
+                <Show />
+              </React.StrictMode>
+            )
         `)
 
         return {

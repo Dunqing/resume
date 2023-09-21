@@ -2,9 +2,9 @@ import path, { isAbsolute } from 'node:path'
 import process from 'node:process'
 import type { InlineConfig } from 'vite'
 import { build, createServer, preview } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
 import react from '@vitejs/plugin-react'
 import minimist from 'minimist'
-import { loadResume } from './plugins/loadResume'
 import { entry } from './plugins/entry'
 
 const cwd = process.cwd()
@@ -33,7 +33,7 @@ function getViteConfig() {
       entry({
         template,
       }),
-      loadResume(),
+      VitePWA({ registerType: 'autoUpdate' }),
     ],
   }
 

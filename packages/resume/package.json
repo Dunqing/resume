@@ -44,5 +44,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "vite-plugin-pwa": "^0.16.5"
   }
 }
