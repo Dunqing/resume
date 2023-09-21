@@ -15,7 +15,7 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       output: {
-        banner: '"use client";'
+        banner: '"use client";',
       },
       external: Object.keys(packageJson.dependencies),
     },
