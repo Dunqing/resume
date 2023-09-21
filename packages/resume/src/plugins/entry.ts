@@ -1,5 +1,4 @@
 import path from 'node:path'
-import { readFileSync } from 'node:fs'
 import type { Plugin } from 'vite'
 import MagicString from 'magic-string'
 
@@ -9,12 +8,12 @@ interface EntryPluginOptions {
 
 export function entry({ template }: EntryPluginOptions = {}): Plugin {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
-  let content = ''
+  let resumePath = ''
 
   return {
     name: 'resume:entry',
     configResolved(config) {
-      content = readFileSync(path.resolve(config.root, 'README.md')).toString()
+      resumePath = path.resolve(config.root, 'README.md')
     },
     transformIndexHtml: {
       enforce: 'pre',
@@ -22,10 +21,14 @@ export function entry({ template }: EntryPluginOptions = {}): Plugin {
         return [
           {
             tag: 'script',
-            injectTo: 'body-prepend',
+            attrs: {
+              type: 'module',
+            },
             children: `
-              window.__RESUME__ = ${JSON.stringify(content)}
+              import resume from ${JSON.stringify(`${resumePath}?raw`)}
+              window.__RESUME__ = resume
             `,
+            injectTo: 'body-prepend',
           },
           {
             tag: 'script',
