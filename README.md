@@ -150,12 +150,6 @@ resume build --template @resumejs/template-nova
 
 - [Default template](templates/default/src/index.tsx)
 
-
-## Related Articles
-
-[An open source resume project that is more complete and easy to expand using Markdown to write resumes](https://juejin.cn/post/7124536546677489678)
-
-
 ## Deploy
 
 <a href="https://vercel.com/new/clone?project-name=resume&repository-name=resume&repository-url=https://github.com/Dunqing/resume/tree/main/examples/resume-example"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
