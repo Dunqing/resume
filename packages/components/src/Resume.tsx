@@ -85,34 +85,34 @@ export function Resume(props: ResumeProps) {
         ...templateContextProps,
       }}
     >
-      <ReactMarkdown
-        className={clsx(
-          {
-            dark: !props.onDarkClass && dark,
-          },
-          'r-resume',
-          props.className,
-        )}
-        components={components}
-        remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
-        rehypePlugins={[
-          ...rehypePlugins,
-          task,
-          rehypeRaw,
-          card,
-          header,
-          description,
-          container,
-          toolbox,
-          className,
-        ]}
-        remarkRehypeOptions={{
-          allowDangerousHtml: true,
-          ...remarkRehypeOptions,
-        }}
+      <div
+        className={clsx({
+          dark: !props.onDarkClass && dark,
+        })}
       >
-        {children}
-      </ReactMarkdown>
+        <ReactMarkdown
+          className={clsx('r-resume', props.className)}
+          components={components}
+          remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
+          rehypePlugins={[
+            ...rehypePlugins,
+            task,
+            rehypeRaw,
+            card,
+            header,
+            description,
+            container,
+            toolbox,
+            className,
+          ]}
+          remarkRehypeOptions={{
+            allowDangerousHtml: true,
+            ...remarkRehypeOptions,
+          }}
+        >
+          {children}
+        </ReactMarkdown>
+      </div>
     </TemplateProvider>
   )
 }
