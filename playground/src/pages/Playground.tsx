@@ -1,12 +1,17 @@
 import type * as monaco from 'monaco-editor'
 import type { ChangeHandler } from 'react-monaco-editor'
 import MonacoEditor from 'react-monaco-editor'
-import { languages } from 'monaco-editor'
+import { editor, languages } from 'monaco-editor'
 import { useState } from 'react'
 import useResume from '../hooks/useResume'
 import Resume from '../components/Resume'
 import Template from '../components/Template'
 import './playground.css'
+import githubDarkTheme from '../constants/github-dark-theme'
+import githubLightTheme from '../constants/github-light-theme'
+
+editor.defineTheme('github-light', githubLightTheme)
+editor.defineTheme('github-dark', githubDarkTheme)
 
 languages.register({
   id: 'markdown',
@@ -41,7 +46,9 @@ function Playground() {
               value={code}
               options={options}
               theme={
-                document.body.classList.contains('dark') ? 'vs-dark' : 'vs'
+                document.body.classList.contains('dark')
+                  ? 'github-dark'
+                  : 'github-light'
               }
               onChange={onEditorChange}
             />
