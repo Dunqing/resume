@@ -97,10 +97,10 @@ importers:
   examples/resume-example:
     dependencies:
       '@resumejs/components':
-        specifier: workspace:*
+        specifier: latest
         version: link:../../packages/components
       '@resumejs/resume':
-        specifier: workspace:*
+        specifier: latest
         version: link:../../packages/resume
       react:
         specifier: ^18.0.0
