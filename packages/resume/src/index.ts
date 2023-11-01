@@ -10,11 +10,22 @@ import { entry } from './plugins/entry'
 const cwd = process.cwd()
 
 interface ArgvOptions extends minimist.ParsedArgs {
+  /**
+   * which template what you want to use
+   */
   template?: string
+  /**
+   * vite config file path
+   */
   config?: string
+  /**
+   * resume file path, should be *.md
+   * @default README.md
+   */
+  resumeFile?: string
 }
 
-const { _, config, template } = minimist(process.argv.slice(2), {
+const { _, config, template, resumeFile } = minimist(process.argv.slice(2), {
   string: '-',
 }) as ArgvOptions
 
@@ -32,6 +43,7 @@ function getViteConfig() {
       react(),
       entry({
         template,
+        resumeFile,
       }),
       VitePWA({ registerType: 'autoUpdate' }),
     ],

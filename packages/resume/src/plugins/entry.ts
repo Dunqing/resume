@@ -4,16 +4,20 @@ import MagicString from 'magic-string'
 
 interface EntryPluginOptions {
   template?: string
+  resumeFile?: string
 }
 
-export function entry({ template }: EntryPluginOptions = {}): Plugin {
+export function entry({
+  template,
+  resumeFile = 'README.md',
+}: EntryPluginOptions = {}): Plugin {
   const RESUME_ENTRY = '/RESUME_ENTRY.tsx'
   let resumePath = ''
 
   return {
     name: 'resume:entry',
     configResolved(config) {
-      resumePath = path.resolve(config.root, 'README.md')
+      resumePath = path.resolve(config.root, resumeFile)
     },
     transformIndexHtml: {
       enforce: 'pre',
