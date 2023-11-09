@@ -19,7 +19,7 @@
   "devDependencies": {
     "@antfu/eslint-config-react": "^0.40.2",
     "@resumejs/components": "workspace:*",
-    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "14.0.0",
     "@types/node": "^20.4.9",
     "@types/react": "^18.2.20",
