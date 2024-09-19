@@ -376,8 +376,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       monaco-editor:
-        specifier: ^0.41.0
-        version: 0.41.0
+        specifier: ^0.52.0
+        version: 0.52.0
       react:
         specifier: ^18.0.0
         version: 18.0.0
@@ -389,7 +389,7 @@ importers:
         version: 4.0.11(react@18.0.0)
       react-monaco-editor:
         specifier: ^0.54.0
-        version: 0.54.0(@types/react@18.0.0)(monaco-editor@0.41.0)(react@18.0.0)
+        version: 0.54.0(@types/react@18.0.0)(monaco-editor@0.52.0)(react@18.0.0)
       react-router-dom:
         specifier: ^6.15.0
         version: 6.15.0(react-dom@18.0.0)(react@18.0.0)
@@ -6583,8 +6583,8 @@ packages:
       pkg-types: 1.0.3
       ufo: 1.2.0
 
-  /monaco-editor@0.41.0:
-    resolution: {integrity: sha512-1o4olnZJsiLmv5pwLEAmzHTE/5geLKQ07BrGxlF4Ri/AXAc2yyDGZwHjiTqD8D/ROKUZmwMA28A+yEowLNOEcA==}
+  /monaco-editor@0.52.0:
+    resolution: {integrity: sha512-OeWhNpABLCeTqubfqLMXGsqf6OmPU6pHM85kF3dhy6kq5hnhuVS1p3VrEW/XhWHc71P2tHyS5JFySD8mgs1crw==}
     dev: false
 
   /mri@1.2.0:
@@ -7097,7 +7097,7 @@ packages:
       - supports-color
     dev: false
 
-  /react-monaco-editor@0.54.0(@types/react@18.0.0)(monaco-editor@0.41.0)(react@18.0.0):
+  /react-monaco-editor@0.54.0(@types/react@18.0.0)(monaco-editor@0.52.0)(react@18.0.0):
     resolution: {integrity: sha512-9JwO69851mfpuhYLHlKbae7omQWJ/2ICE2lbL0VHyNyZR8rCOH7440u+zAtDgiOMpLwmYdY1sEZCdRefywX6GQ==}
     peerDependencies:
       '@types/react': ^18.0.0
@@ -7105,7 +7105,7 @@ packages:
       react: ^18.0.0
     dependencies:
       '@types/react': 18.0.0
-      monaco-editor: 0.41.0
+      monaco-editor: 0.52.0
       prop-types: 15.8.1
       react: 18.0.0
     dev: false
@@ -8676,6 +8676,7 @@ packages:
 
   /workbox-google-analytics@7.0.0:
     resolution: {integrity: sha512-MEYM1JTn/qiC3DbpvP2BVhyIH+dV/5BjHk756u9VbwuAhu0QHyKscTnisQuz21lfRpOwiS9z4XdqeVAKol0bzg==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 7.0.0
       workbox-core: 7.0.0
