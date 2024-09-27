@@ -82,7 +82,7 @@ export default function App() {
 ### Install
 
 ```shell
-pnpm add @resumjes/resume
+pnpm add @resumejs/resume
 ```
 
 Dependencies react and react-dom need to be installed.
