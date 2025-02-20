@@ -1,0 +1,24 @@
+:root {
+  --font-noto-sans-sc: 'Noto Sans SC';
+}
+
+.r-resume {
+  font-family: var(--font-noto-sans-sc), system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media print {
+  .r-resume {
+    font-family: "SimSun", "宋体", "Microsoft YaHei", "微软雅黑", serif !important;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+    -webkit-text-size-adjust: 100%;
+    font-display: block;
+    text-rendering: geometricPrecision;
+  }
+
+  .r-resume * {
+    font-family: inherit !important;
+  }
+} 

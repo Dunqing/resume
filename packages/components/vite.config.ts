@@ -16,8 +16,18 @@ export default defineConfig({
     rollupOptions: {
       output: {
         banner: '"use client";',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') return 'index.css'
+          return assetInfo.name!
+        },
+        inlineDynamicImports: false,
       },
       external: Object.keys(packageJson.dependencies),
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [],
     },
   },
 })
