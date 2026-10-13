@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@8.7.0",
+  "packageManager": "pnpm@10.34.5",
   "scripts": {
     "dev": "pnpm --parallel --filter {packages/*} --filter {templates/*} dev",
     "build": "pnpm --filter {packages/*} --filter {templates/*} build",
@@ -29,7 +29,7 @@
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
     "jsdom": "^22.1.0",
-    "pnpm": "^8.6.12",
+    "pnpm": "^10.0.0",
     "prettier": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
