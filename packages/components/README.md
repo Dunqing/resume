@@ -4,22 +4,22 @@
 [![NPM version](https://img.shields.io/npm/v/@resumejs/components?color=a1b858&label=)](https://www.npmjs.com/package/@resumejs/components)
 
 
-### 下载
+### Install
 
 ```shell
 pnpm add @resumejs/components
 ```
 
-### 使用
+### Usage
 
 ```tsx
 import { Resume } from '@resumejs/components'
 
 export default function App() {
   const resume = `
-    #名字
-    ##个人信息
-    ##工作信息
+    # Name
+    ## Personal Information
+    ## Work Information
   `
   return <Resume>{resume}</Resume>
 }
