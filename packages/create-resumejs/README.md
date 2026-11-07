@@ -3,9 +3,9 @@
 [![NPM version](https://img.shields.io/npm/v/create-resumejs?color=a1b858&label=)](https://www.npmjs.com/package/create-resumejs)
 
 
-- cli 支持，使用方式和 vite 一样
-- 默认使用运行目录下的 README.md 做为你的简历 markdown
-- 支持 vite.config.ts 配置文件
+- CLI support, used the same way as Vite
+- By default, the README.md in the working directory is used as the resume Markdown
+- Supports a `vite.config.ts` configuration file
 
 ### Install
 
@@ -13,31 +13,31 @@
 pnpm add @resumjes/resume
 ```
 
-需要安装依赖 react 和 react-dom
+The `react` and `react-dom` dependencies also need to be installed.
 
 ```shell
 pnpm add react react-dom
 ```
 
-### dev 开发
+### Development
 
 ```shell
 resume dev
 ```
 
-### build 打包
+### Build
 
 ```shell
 resume build
 ```
 
-### preview 预览
+### Preview
 
 ```shell
 resume preview
 ```
 
-### 自定义模板
+### Custom templates
 
 ```shell
 resume dev --template @resumejs/template-nova

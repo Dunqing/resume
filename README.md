@@ -9,7 +9,7 @@
 
 ### Purpose
 
-To allow resumes to be previewed anytime, anywhere, written in the Markdown syntax that programmers are most familiar with, and free of charge!
+Preview a resume anytime, anywhere. Write it in the Markdown syntax programmers already know, at no charge.
 
 ## Supported Features
 
@@ -26,7 +26,7 @@ To allow resumes to be previewed anytime, anywhere, written in the Markdown synt
 
 ### [create-resumejs](./packages/create-resumejs/)
 
-Quickly create a resume project, supports deployment on Vercel
+Quickly create a resume project that can be deployed on Vercel.
 
 1. Create
 
@@ -43,7 +43,7 @@ pnpm create resumejs
 
 ## [@resumejs/components](./packages/components/)
 
-Import as components into your own project
+Import them into your own project as components.
 
 ### Download
 
@@ -51,7 +51,7 @@ Import as components into your own project
 pnpm add @resumejs/components
 ```
 
-### 使用
+### Usage
 
 ```tsx
 import { Resume } from '@resumejs/components'
@@ -73,11 +73,11 @@ export default function App() {
 
 ## [@resumejs/resume](./packages/resume/)
 
-- CLI support, usage is the same as Vite
-- By default, use the README.md in the running directory as your resume markdown
-- Supports the vite.config.ts configuration file
+- CLI support, used the same way as Vite
+- By default, the README.md in the working directory is used as the resume Markdown
+- Supports a `vite.config.ts` configuration file
 
-> You can directly use create-resumejs to create a project
+> You can create a project directly with create-resumejs.
 
 ### Install
 
@@ -85,7 +85,7 @@ export default function App() {
 pnpm add @resumejs/resume
 ```
 
-Dependencies react and react-dom need to be installed.
+The `react` and `react-dom` dependencies also need to be installed.
 
 ```shell
 pnpm add react react-dom
@@ -125,36 +125,40 @@ resume build --template @resumejs/template-nova
 
 **Default resume template**
 
-## How to customize the template?
+## How do I customize a template?
 
-### Customize the markdown syntax for writing resumes
+### Markdown syntax for writing a resume
 
-1. The content under the first-level title includes the information of the resume header with the first-level title as the header. You can customize the `header` component.
+1. Everything under the top-level heading, including that heading, is the resume header. Customize the `header` component.
 
-  - The first-level title is the name. You can customize the `header-name` component.
-  - The picture is used as the avatar. You can customize the `header-avatar` component.
-  - Wrap all list items. You can customize the `header-content` component.
-  - Each list is a row. You can customize the `header-row` component.
-  - The item in the list is a column. You can customize the `header-col` component.
+  - The top-level heading is the name. Customize the `header-name` component.
+  - An image is used as the avatar. Customize the `header-avatar` component.
+  - This wrapper surrounds every list item. Customize the `header-content` component.
+  - Each list is a row. Customize the `header-row` component.
+  - Each item in a list is a column. Customize the `header-col` component.
 
-2. The first paragraph below the third-level title
+2. The first block under a third-level heading
 
-  - The table will be changed to the description information of the third-level title, and you can customize the `card`, `card-item`, `card-item-label`, `card-item-value` components.
-  - The first line of text below the title or Table will be changed to the description content, and you can customize the `description` component.
+  - A table becomes the description for that third-level heading. Customize the `card`, `card-item`, `card-item-label`, and `card-item-value` components.
+  - The first line of text under the heading, or under the table, becomes the description. Customize the `description` component.
 
-3. FrontMatter (dark mode, Github, print button)
+3. Front matter (dark mode, GitHub, and the print button)
 
-  - You can customize the toolbox component.
+  - Customize the `toolbox` component.
 
 ### Example
 
 - [Default template](templates/default/src/index.tsx)
 
+## Related articles
+
+[A more complete, easy-to-extend open-source project for writing resumes in Markdown](https://juejin.cn/post/7124536546677489678)
+
 ## Deploy
 
 <a href="https://vercel.com/new/clone?project-name=resume&repository-name=resume&repository-url=https://github.com/Dunqing/resume/tree/main/examples/resume-example"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
 
-This is very simple, just click the button above to deploy to Vercel. You can also deploy to other platforms that support Vite.
+Deployment is straightforward: use the button above to deploy to Vercel. You can also deploy to any other platform that supports Vite.
 
 ## Others
 
