@@ -1,3 +1,4 @@
+import './styles/resume.css'
 import ReactMarkdown from 'react-markdown'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
@@ -19,6 +20,7 @@ import {
   toolbox,
 } from './plugins'
 import { RESUME_THEME_KEY } from './constants'
+import ResumeWrapper from './components/ResumeWrapper'
 
 export interface ResumeProps extends Omit<ReactMarkdownOptions, 'components'> {
   /**
@@ -85,34 +87,42 @@ export function Resume(props: ResumeProps) {
         ...templateContextProps,
       }}
     >
-      <div
-        className={clsx({
-          dark: !props.onDarkClass && dark,
-        })}
-      >
-        <ReactMarkdown
-          className={clsx('r-resume', props.className)}
-          components={components}
-          remarkPlugins={[...remarkPlugins, remarkFrontmatter, meta, remarkGfm]}
-          rehypePlugins={[
-            ...rehypePlugins,
-            task,
-            rehypeRaw,
-            card,
-            header,
-            description,
-            container,
-            toolbox,
-            className,
-          ]}
-          remarkRehypeOptions={{
-            allowDangerousHtml: true,
-            ...remarkRehypeOptions,
-          }}
+      <ResumeWrapper>
+        <div
+          className={clsx({
+            dark: !props.onDarkClass && dark,
+          })}
+          lang="zh-CN"
         >
-          {children}
-        </ReactMarkdown>
-      </div>
+          <ReactMarkdown
+            className={clsx('r-resume', props.className)}
+            components={components}
+            remarkPlugins={[
+              ...remarkPlugins,
+              remarkFrontmatter,
+              meta,
+              remarkGfm,
+            ]}
+            rehypePlugins={[
+              ...rehypePlugins,
+              task,
+              rehypeRaw,
+              card,
+              header,
+              description,
+              container,
+              toolbox,
+              className,
+            ]}
+            remarkRehypeOptions={{
+              allowDangerousHtml: true,
+              ...remarkRehypeOptions,
+            }}
+          >
+            {children}
+          </ReactMarkdown>
+        </div>
+      </ResumeWrapper>
     </TemplateProvider>
   )
 }
